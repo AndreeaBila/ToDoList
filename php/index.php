@@ -8,11 +8,11 @@
 
     <title>To Do List</title>
 
-    <!-- Bootstrap -->
-    <!-- <link href="../../Bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!--Bootstrap-->
+    <link href="../../Bootstrap2/css/bootstrap.min.css" rel="stylesheet"> 
 
     <!-- FontAwesome -->
-    <!-- <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.min.css"> 
 
     <!-- My CSS -->
     <!-- <link href="../css/#" rel="stylesheet"> -->
@@ -31,13 +31,22 @@
     <![endif] -->        
   </head>
   <body>
-  
+    <?php
+      include 'header.php';
+    ?>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Start Creating Your Lists</h1>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="../../Bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="../../Bootstrap/js/bootstrap.min.js"></script> 
 
     <!-- The js script for this file -->
     <!-- <script src="../js/#"></script> -->
