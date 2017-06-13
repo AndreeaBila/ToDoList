@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.min.css"> 
 
     <!-- My CSS -->
-    <!-- <link href="../css/#" rel="stylesheet"> -->
+    <link href="../css/index.css" rel="stylesheet"> 
     <!-- Icon -->
     <!-- <link rel="shortcut icon" href="../img/#"> -->
 
@@ -38,9 +38,17 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Start Creating Your Lists</h1>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        
       </div>
     </div>
+
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+    <form action="" method="POST" class="loginForm" id="loginForm">
+      
+    </form>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
