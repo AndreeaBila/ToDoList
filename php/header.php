@@ -18,12 +18,13 @@
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="#">About</a></li>
       </ul>
-
-      <a class="navbar-brand" href="#"><img class="text-center" src="../img/todo2.png" alt="Lists"></a>
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Log In/Out</a></li>
       </ul>
+
+      <div class="text-center"><img id="logo" src="../img/todo2.png" alt="Lists"></div>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

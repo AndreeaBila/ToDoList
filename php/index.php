@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.min.css"> 
 
     <!-- My CSS -->
-    <link href="../css/index.css" rel="stylesheet"> 
+    <link href="../css/main.css" rel="stylesheet"> 
     <!-- Icon -->
     <!-- <link rel="shortcut icon" href="../img/#"> -->
 
@@ -37,12 +37,12 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Start Creating Your Lists</h1>
+        <h1 class="text-center">Start Creating Your Lists</h1>
         
       </div>
     </div>
 
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    <p class="text-center"><a class="btn btn-primary btn-lg" id="learnMore" href="#" role="button">Learn more</a></p>
 
     <form action="" method="POST" class="loginForm" id="loginForm">
       
