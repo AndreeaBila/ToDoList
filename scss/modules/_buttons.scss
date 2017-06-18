@@ -1,5 +1,33 @@
-#learnMore {
+.myBtn {
   width: 200px;
+  background-color: black;
+  color: white;
+}
+
+#learnMore {
   padding: 20px !important;
+  margin-top: 550px;
+}
+
+.myBtn:hover,
+.myBtn:active,
+.myBtn:focus,
+.myBtn:active:focus {
+  outline: none;
+  transform: scale(0.97,0.97);
   background-color: black;
 }
+
+input[type="submit"] {
+  width: 150px;
+  border: none !important;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.redirects {
+  text-decoration: underline;
+  font-size: 110%;
+}
+

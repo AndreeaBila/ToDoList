@@ -74,18 +74,90 @@ body {
   width: 190px;
 }
 
+/* line 1, ../scss/modules/_typography.scss */
+form h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 /* line 1, ../scss/modules/_buttons.scss */
-#learnMore {
+.myBtn {
   width: 200px;
+  background-color: black;
+  color: white;
+}
+
+/* line 7, ../scss/modules/_buttons.scss */
+#learnMore {
   padding: 20px !important;
+  margin-top: 550px;
+}
+
+/* line 15, ../scss/modules/_buttons.scss */
+.myBtn:hover,
+.myBtn:active,
+.myBtn:focus,
+.myBtn:active:focus {
+  outline: none;
+  transform: scale(0.97, 0.97);
   background-color: black;
 }
 
+/* line 21, ../scss/modules/_buttons.scss */
+input[type="submit"] {
+  width: 150px;
+  border: none !important;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* line 29, ../scss/modules/_buttons.scss */
+.redirects {
+  text-decoration: underline;
+  font-size: 110%;
+}
+
 /* line 1, ../scss/modules/_components.scss */
+html, body, .jumbotron {
+  min-height: 95%;
+  height: 95%;
+}
+
+/* line 6, ../scss/modules/_components.scss */
 .jumbotron {
   background-image: url("../img/5.jpg") !important;
   background-size: 100%;
-  height: 700px;
   color: white;
   text-shadow: 2px 2px black;
+}
+
+/* line 16, ../scss/modules/_components.scss */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 350px !important;
+  height: 40px !important;
+  margin: 5px;
+}
+
+/* line 24, ../scss/modules/_components.scss */
+::-webkit-input-placeholder {
+  color: #bbbbbb !important;
+}
+
+/* line 27, ../scss/modules/_components.scss */
+:-moz-placeholder {
+  color: #bbbbbb;
+}
+
+/* line 30, ../scss/modules/_components.scss */
+:-ms-input-placeholder {
+  color: #bbbbbb;
+}
+
+/* line 34, ../scss/modules/_components.scss */
+::-moz-placeholder {
+  color: #bbbbbb;
 }
