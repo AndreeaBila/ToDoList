@@ -58,7 +58,7 @@
         <input class="form-control" type="password" name="password" id="loginPassword" placeholder="Password"  required>
       </div>
       
-      <div class="hidden alert alert-danger alert-dismissable alert-custom" id="login_emailAlert">
+      <div class="alert alert-danger alert-dismissable alert-custom" id="login_emailAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Error!</strong> The username or password are incorrect.
       </div>
@@ -75,14 +75,14 @@
     </form>
 
 
-    <form action="" method="POST" class="signupForm text-center" id="signupForm">
+    <form action="signUp.php" method="POST" onsubmit="return verifySignUp()" class="signupForm text-center" id="signupForm">
       <h2>Create Account</h2>
 
       <div class="form-group form-inline">
         <label for="username"><i class="fa fa-user-circle" aria-hidden="true"></i></label>
         <input class="form-control" type="text" name="username" id="signupUsername" placeholder="Username" required>
       </div>
-      <div class="hidden alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
+      <div class="alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Error!</strong> This username is already in use.
       </div>
@@ -91,11 +91,11 @@
         <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
         <input class="form-control" type="email" name="email" id="signupEmail" placeholder="Email" required>
       </div>
-      <div class="hidden alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
+      <div class="alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Error!</strong> The provided email address is already in use.
       </div>
-      <div class="hidden alert alert-info alert-dismissable alert-custom" id="signup_fillDetailsAlert">
+      <div class="alert alert-info alert-dismissable alert-custom" id="signup_fillDetailsAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Sorry!</strong>You have to fill in all the details and a valid email adress!
       </div>
@@ -114,7 +114,7 @@
         <label for="Retype Password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
         <input class="form-control" type="password" name="password" id="signupRePassword" placeholder="Retype Password" required>
       </div>
-      <div class="hidden alert alert-warning alert-dismissable alert-custom" id="signup_passwordAlert">
+      <div class="alert alert-warning alert-dismissable alert-custom" id="signup_passwordAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Warning!</strong> The two passwords do not match.
       </div>
