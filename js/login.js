@@ -66,3 +66,24 @@ function verifySignUp() {
         return false;
     }
 }
+
+//function needed to send the data to the server and perfom the login action
+function verifyLogIn() {
+    var user = $('#loginForm').serialize();
+    console.log(user);
+    // jQuery.ajaxSetup({ async: false });
+    // $.ajax({
+    //     data: user,
+    //     type: "post",
+    //     url: "logIn.php",
+    //     success: function(response) {
+    //         alert(response);
+    //         return true;
+    //     },
+    //     error: function(response) {
+    //         alert(response);
+    //         return false;
+    //     }
+    // });
+    // jQuery.ajaxSetup({ async: true });
+}

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -45,7 +46,7 @@
       </div>
     </div>
 
-    <form action="" method="POST" class="loginForm text-center" id="loginForm">
+    <form onsubmit="return verifyLogIn()" class="loginForm text-center" id="loginForm">
       <h2>Log In</h2>
 
       <div class="form-group form-inline">
@@ -64,9 +65,7 @@
       </div>
 
       <div class="checkbox">
-        <label>
-          <input type="checkbox"> Keep me loged in
-        </label>
+          <input type="checkbox" name="logInCheckbox" id="logInCheckbox"> Keep me loged in
       </div>
 
       <input class="myBtn" type="submit" name="submit" id="loginSubmit" value="Log In"><br>
