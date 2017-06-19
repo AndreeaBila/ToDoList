@@ -56,10 +56,10 @@ function verifySignUp() {
                 }
             },
             error: function(response) {
-
+                alert("Oops! It seems that an error has occured. Please come back later!");
             }
         });
-
+        jQuery.ajaxSetup({ async: true });
         return result;
     } else {
         $('#signup_passwordAlert').fadeIn(700);

@@ -86,6 +86,20 @@
         <a class="close" aria-label="close">&times;</a>
         <strong>Error!</strong> This username is already in use.
       </div>
+
+      <div class="form-group form-inline">
+        <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
+        <input class="form-control" type="password" name="password" id="signupPassword" placeholder="Password" required>
+      </div>
+
+      <div class="form-group form-inline">
+        <label for="Retype Password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
+        <input class="form-control" type="password" name="password" id="signupRePassword" placeholder="Retype Password" required>
+      </div>
+      <div class="alert alert-warning alert-dismissable alert-custom" id="signup_passwordAlert">
+        <a class="close" aria-label="close">&times;</a>
+        <strong>Warning!</strong> The two passwords do not match.
+      </div>
         
       <div class="form-group form-inline">
         <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
@@ -103,20 +117,6 @@
       <div class="form-group form-inline">
         <label for="dateOfBirth"><i class="fa fa-birthday-cake" aria-hidden="true"></i></label>
         <input class="form-control" type="text" name="signupDoB" id="signupDoB" onfocus="(this.type='date')" placeholder="Date of Birth" required>
-      </div>
- 
-      <div class="form-group form-inline">
-        <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
-        <input class="form-control" type="password" name="password" id="signupPassword" placeholder="Password" required>
-      </div>
-
-      <div class="form-group form-inline">
-        <label for="Retype Password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
-        <input class="form-control" type="password" name="password" id="signupRePassword" placeholder="Retype Password" required>
-      </div>
-      <div class="alert alert-warning alert-dismissable alert-custom" id="signup_passwordAlert">
-        <a class="close" aria-label="close">&times;</a>
-        <strong>Warning!</strong> The two passwords do not match.
       </div>
 
       <div class="checkbox">
