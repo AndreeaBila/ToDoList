@@ -1,4 +1,5 @@
 <?php
+  session_start();
   //script needed to create a user instance on the server
   //create a new database connection
   $db = new mysqli('localhost', 'root', '', 'tododb');
@@ -20,6 +21,14 @@
   $stmt->execute() or die("An error has occured!");
   $stmt->close();
 
+  //obtain the user's id to set its session id
+  $query = "SELECT UserID FROM Users WHERE(Username = ?)";
+  $stmt  = $db->prepare($query); 
+  $stmt->bind_param('s', $user->getUserName());
+  $stmt->execute() or die('An error has occured!');
+  $stmt->bind_result($_SESSION['ID']);
+  $stmt->fetch();
+  $stmt->close();
   //redirect the user to the main page
   header("Location: main.php");
 ?>
