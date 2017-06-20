@@ -1,14 +1,17 @@
+//Index page button class
 .myBtn {
   width: 200px;
   background-color: black;
   color: white;
 }
 
+//Index page Larn More button
 #learnMore {
   padding: 20px !important;
   margin-top: 550px;
 }
 
+//Index page buttons actions
 .myBtn:hover,
 .myBtn:active,
 .myBtn:focus,
@@ -18,7 +21,9 @@
   background-color: black;
 }
 
-input[type="submit"] {
+//Input buttons styles
+input[type="submit"],
+input[type="button"] {
   width: 150px;
   border: none !important;
   padding: 10px;
@@ -26,6 +31,7 @@ input[type="submit"] {
   margin: 10px;
 }
 
+//Form links styles
 .redirects {
   text-decoration: underline;
   font-size: 110%;

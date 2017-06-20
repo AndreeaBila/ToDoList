@@ -1,8 +1,10 @@
+//jumbotron image height
 html, body, .jumbotron {
   min-height: 95%;
   height: 95%;
 }
 
+//Index page jumbotron
 .jumbotron {
   background-image: url('../img/5.jpg') !important;
   background-size: 100%;
@@ -10,6 +12,7 @@ html, body, .jumbotron {
   text-shadow: 2px 2px black;
 }
 
+//Form inputs styles
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -21,6 +24,8 @@ input[type="date"] {
   // color: #f2f2f2;
 }
 
+
+//Placeholders styles
 ::-webkit-input-placeholder { 
     color: $placeholder-color !important;
 }
@@ -30,7 +35,6 @@ input[type="date"] {
 :-ms-input-placeholder {
   color: $placeholder-color;
 }
-
 ::-moz-placeholder {
   color: $placeholder-color;
 }
