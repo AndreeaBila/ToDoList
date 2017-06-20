@@ -1,4 +1,4 @@
-//hide the forms before the user clicks larn more button
+//hide the forms before the user clicks learn more button
 //must happen as fast as possible
 $('#loginForm').hide();
 $('#signupForm').hide();
