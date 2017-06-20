@@ -68,22 +68,22 @@ function verifySignUp() {
 }
 
 //function needed to send the data to the server and perfom the login action
-function verifyLogIn() {
+//jQuery evetn neede for when the submit button is pressed
+$('#loginSubmit').click(function() {
     var user = $('#loginForm').serialize();
-    console.log(user);
-    // jQuery.ajaxSetup({ async: false });
-    // $.ajax({
-    //     data: user,
-    //     type: "post",
-    //     url: "logIn.php",
-    //     success: function(response) {
-    //         alert(response);
-    //         return true;
-    //     },
-    //     error: function(response) {
-    //         alert(response);
-    //         return false;
-    //     }
-    // });
-    // jQuery.ajaxSetup({ async: true });
-}
+    $.ajax({
+        data: user,
+        type: "post",
+        url: "logIn.php",
+        success: function(response) {
+            if (response == "success") {
+                location.href = "main.php";
+            } else {
+                $('#login_generalAlert').fadeIn(700);
+            }
+        },
+        error: function(response) {
+            alert("An error has occured! Please try again later.");
+        }
+    });
+});

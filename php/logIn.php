@@ -25,11 +25,11 @@
         //create a cookie with the current sesion id
         setcookie("LoggedIn", $userID, time()+3600);
       }
-      header("Location: main.php");
+      echo "success";
     }else{
-      header("Location: index.php");
+      echo "error";
     }
   }else{
-    header("Location: index.php");
+    echo "error";
   }
 ?>

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+  session_start(); 
+  session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -46,7 +49,7 @@
       </div>
     </div>
 
-    <form onsubmit="return verifyLogIn()" class="loginForm text-center" id="loginForm">
+    <form class="loginForm text-center" id="loginForm">
       <h2>Log In</h2>
 
       <div class="form-group form-inline">
@@ -59,7 +62,7 @@
         <input class="form-control" type="password" name="password" id="loginPassword" placeholder="Password"  required>
       </div>
       
-      <div class="alert alert-danger alert-dismissable alert-custom" id="login_emailAlert">
+      <div class="alert alert-danger alert-dismissable alert-custom" id="login_generalAlert">
         <a class="close" aria-label="close">&times;</a>
         <strong>Error!</strong> The username or password are incorrect.
       </div>
@@ -68,7 +71,7 @@
           <input type="checkbox" name="logInCheckbox" id="logInCheckbox"> Keep me loged in
       </div>
 
-      <input class="myBtn" type="submit" name="submit" id="loginSubmit" value="Log In"><br>
+      <input class="myBtn" type="button" name="submit" id="loginSubmit" value="Log In"><br>
 
       <a href="#" class="redirects" id="loginCreateAccount">Create Account</a>
     </form>
