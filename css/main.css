@@ -65,7 +65,6 @@ table {
 /* line 1, ../scss/base/_base.scss */
 body {
   font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-  position: relative;
 }
 
 /* line 6, ../scss/layout/_nav.scss */
@@ -83,58 +82,52 @@ body {
 /* line 5, ../scss/layout/_footer.scss */
 footer {
   height: 240px;
-  position: absolute;
   margin-top: 20px;
-  right: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
 }
 
-/* line 17, ../scss/layout/_footer.scss */
+/* line 10, ../scss/layout/_footer.scss */
 .footer-component, footer {
   color: #7F8C8D;
   background-color: #191919;
 }
 
-/* line 23, ../scss/layout/_footer.scss */
+/* line 16, ../scss/layout/_footer.scss */
 .footer-component ul {
   margin-left: -35px;
 }
-/* line 25, ../scss/layout/_footer.scss */
+/* line 18, ../scss/layout/_footer.scss */
 .footer-component ul li {
   display: inline-block;
   padding: 8px;
 }
-/* line 28, ../scss/layout/_footer.scss */
+/* line 21, ../scss/layout/_footer.scss */
 .footer-component ul li img {
   width: 35px;
 }
-/* line 34, ../scss/layout/_footer.scss */
+/* line 27, ../scss/layout/_footer.scss */
 .footer-component input[type="email"] {
   height: 30px !important;
   width: 175px !important;
 }
-/* line 39, ../scss/layout/_footer.scss */
+/* line 32, ../scss/layout/_footer.scss */
 .footer-component input[type="submit"] {
   padding: 5px !important;
   width: 75px;
 }
 
-/* line 45, ../scss/layout/_footer.scss */
+/* line 38, ../scss/layout/_footer.scss */
 hr {
   height: 12px;
   border: 0;
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* line 51, ../scss/layout/_footer.scss */
+/* line 44, ../scss/layout/_footer.scss */
 .clear {
   clear: both;
 }
 
-/* line 55, ../scss/layout/_footer.scss */
+/* line 48, ../scss/layout/_footer.scss */
 .below-footer {
   margin-top: -5px;
 }
