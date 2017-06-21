@@ -45,9 +45,27 @@
       include 'header.php';
     ?>
     
+    <div class="box effect2">
+      <button type="button" class="newListBtn"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
+    </div>
+    
+    <hr class="main-hr">
 
-    
-    
+    <div class="yourLists">
+      <h2>Manage your Lists</h2>  
+
+      <div class="listSquare effect2">
+        <div class="pull-left"><button type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
+
+        <div class="pull-right"><button type="button"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
+
+        <div class="clear"></div>
+
+        <p class="listName">shopping</p>
+      </div>
+
+    </div>
+
     <?php
       include 'footer.php';
     ?>

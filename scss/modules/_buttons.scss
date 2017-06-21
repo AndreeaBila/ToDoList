@@ -37,3 +37,42 @@ input[type="button"] {
   font-size: 110%;
 }
 
+.newListBtn {
+  width: 150px;
+  height: 150px;
+  border: none;
+  i {
+    margin-top: 30px;
+  }
+  font-size: 130%;
+  background-color: $lists-color;
+  border: 0.01px solid #eeeeee;
+}
+
+.newListBtn:active,
+.newListBtn:focus,
+.newListBtn:active:focus {
+  transform: scale(0.97,0.97);
+  outline: none;
+  border: 0.01px solid #e1e1e1;
+}
+
+.listSquare {
+  width: 150px;
+  height: 150px;
+  background-color: $lists-color;
+  border: 0.01px solid #eeeeee;
+  
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+  }
+
+  .listName { 
+    line-height: 80px;
+    height: 80px;
+  }
+}
+
+
