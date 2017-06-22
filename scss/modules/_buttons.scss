@@ -53,6 +53,14 @@ input[type="button"] {
 .newListBtn:focus,
 .newListBtn:active:focus {
   transform: scale(0.97,0.97);
+}
+
+.newListBtn:active,
+.newListBtn:focus,
+.newListBtn:active:focus,
+.listSquare:active,
+.listSquare:focus,
+.listSquare:active:focus {
   outline: none;
   border: 0.01px solid #e1e1e1;
 }
@@ -72,7 +80,24 @@ input[type="button"] {
   .listName { 
     line-height: 80px;
     height: 80px;
+    font-size: 120%;
   }
 }
 
+.deleteBtn:hover,
+.deleteBtn:active,
+.deleteBtn:focus,
+.deleteBtn:active:focus {
+  color: $danger-color;
+  transform: scale(1.1,1.1);
+  outline: none;
+}
 
+.checkBtn:hover,
+.checkBtn:active,
+.checkBtn:focus,
+.checkBtn:active:focus {
+  color: $success-color;
+  transform: scale(1.1,1.1);
+  outline: none;
+}

@@ -117,16 +117,28 @@ body {
 }
 
 /* line 49, ../scss/base/_base.scss */
-.main-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+.yourLists {
+  margin: 60px auto;
+  text-align: center;
 }
 
 /* line 55, ../scss/base/_base.scss */
-.yourLists {
-  margin: 50px auto;
-  text-align: center;
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 61, ../scss/base/_base.scss */
+.listObject {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* line 67, ../scss/base/_base.scss */
+.listSquare {
+  margin-bottom: 15px;
 }
 
 /* line 6, ../scss/layout/_nav.scss */
@@ -179,18 +191,11 @@ footer {
 }
 
 /* line 38, ../scss/layout/_footer.scss */
-.footer-hr {
-  height: 12px;
-  border: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
-}
-
-/* line 44, ../scss/layout/_footer.scss */
 .clear {
   clear: both;
 }
 
-/* line 48, ../scss/layout/_footer.scss */
+/* line 42, ../scss/layout/_footer.scss */
 .below-footer {
   margin-top: -5px;
 }
@@ -259,27 +264,57 @@ input[type="button"] {
 .newListBtn:focus,
 .newListBtn:active:focus {
   transform: scale(0.97, 0.97);
+}
+
+/* line 63, ../scss/modules/_buttons.scss */
+.newListBtn:active,
+.newListBtn:focus,
+.newListBtn:active:focus,
+.listSquare:active,
+.listSquare:focus,
+.listSquare:active:focus {
   outline: none;
   border: 0.01px solid #e1e1e1;
 }
 
-/* line 60, ../scss/modules/_buttons.scss */
+/* line 68, ../scss/modules/_buttons.scss */
 .listSquare {
   width: 150px;
   height: 150px;
   background-color: #f1f1f1;
   border: 0.01px solid #eeeeee;
 }
-/* line 66, ../scss/modules/_buttons.scss */
+/* line 74, ../scss/modules/_buttons.scss */
 .listSquare button {
   border: none;
   background-color: transparent;
   padding: 10px;
 }
-/* line 72, ../scss/modules/_buttons.scss */
+/* line 80, ../scss/modules/_buttons.scss */
 .listSquare .listName {
   line-height: 80px;
   height: 80px;
+  font-size: 120%;
+}
+
+/* line 90, ../scss/modules/_buttons.scss */
+.deleteBtn:hover,
+.deleteBtn:active,
+.deleteBtn:focus,
+.deleteBtn:active:focus {
+  color: #d9534f;
+  transform: scale(1.1, 1.1);
+  outline: none;
+}
+
+/* line 99, ../scss/modules/_buttons.scss */
+.checkBtn:hover,
+.checkBtn:active,
+.checkBtn:focus,
+.checkBtn:active:focus {
+  color: #5cb85c;
+  transform: scale(1.1, 1.1);
+  outline: none;
 }
 
 /* line 2, ../scss/modules/_components.scss */
@@ -324,4 +359,28 @@ input[type="date"] {
 /* line 38, ../scss/modules/_components.scss */
 ::-moz-placeholder {
   color: #bbbbbb;
+}
+
+/* line 55, ../scss/modules/_components.scss */
+.modal-dialog {
+  width: 500px !important;
+  margin-top: 10% !important;
+}
+
+/* line 60, ../scss/modules/_components.scss */
+.modal-sm {
+  width: 350px !important;
+  font-size: 120%;
+  margin-top: 15% !important;
+}
+
+/* line 67, ../scss/modules/_components.scss */
+.modal-body input[type="text"],
+.modal-body input[type="date"] {
+  width: 90% !important;
+}
+
+/* line 71, ../scss/modules/_components.scss */
+.modal-body label {
+  margin-top: 10px !important;
 }

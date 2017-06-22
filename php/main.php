@@ -46,24 +46,102 @@
     ?>
     
     <div class="box effect2">
-      <button type="button" class="newListBtn"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
+      <button type="button" class="newListBtn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
     </div>
     
-    <hr class="main-hr">
+    <hr>
 
     <div class="yourLists">
       <h2>Manage your Lists</h2>  
+      
+      <div class="listObject">
+        <div class="listSquare effect2" id="listSquare1">
+          <div class="pull-left"><button class="checkBtn" id="checkBtn1" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
 
-      <div class="listSquare effect2">
-        <div class="pull-left"><button type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
+          <div class="pull-right"><button class="deleteBtn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
 
-        <div class="pull-right"><button type="button"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
+          <div class="clear"></div>
+          
 
-        <div class="clear"></div>
-
-        <p class="listName">shopping</p>
+          <p class="listName">To Do List</p>
+        </div>
+        <div id="status1" class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+            80% Complete
+          </div>
+        </div>
       </div>
 
+      <div class="listObject">
+        <div class="listSquare effect2">
+          <div class="pull-left"><button class="checkBtn" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
+
+          <div class="pull-right"><button class="deleteBtn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
+
+          <div class="clear"></div>
+
+          <p class="listName">Shopping List</p>
+        </div>
+        <div id="status2" class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% Complete (success)
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+
+    <!-- Delete List modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>Are you sure you want to delete this list?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group form-inline">
+              <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
+              <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
+            </div>
+
+            <div class="form-group form-inline">
+              <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
+              <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" required>
+            </div>
+            
+            <div class="form-group form-inline">
+              <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
+              <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="2017-06-22" required>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+            <button type="button" class="btn btn-success">Create List</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <?php
@@ -77,6 +155,6 @@
     <script src="../../Bootstrap/js/bootstrap.min.js"></script> 
 
     <!-- The js script for this file -->
-    <script src="../js/login.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

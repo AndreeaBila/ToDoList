@@ -52,4 +52,23 @@ input[type="date"] {
 
 //Add new list button div
 
+.modal-dialog {
+  width: 500px !important;
+  margin-top: 10% !important;
+}
+
+.modal-sm {
+  width: 350px !important;
+  font-size: 120%;
+  margin-top: 15% !important;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="date"] {
+  width: 90% !important;
+}
+
+.modal-body label {
+  margin-top: 10px !important;
+}
 

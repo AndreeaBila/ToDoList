@@ -31,7 +31,7 @@
 
   <div class="clear"></div>
 
-  <hr class="footer-hr">
+  <hr>
 
   <div class="col-md-6">
     <p>Created by &copy; Andreea & Vlad </p>
