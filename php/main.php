@@ -56,9 +56,9 @@
       
       <div class="listObject">
         <div class="listSquare effect2" id="listSquare1">
-          <div class="pull-left"><button class="checkBtn" id="checkBtn1" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
+          <button class="checkBtn pull-left" id="checkBtn1" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
 
-          <div class="pull-right"><button class="deleteBtn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
+          <button class="deleteBtn pull-right" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
 
           <div class="clear"></div>
           
@@ -74,9 +74,9 @@
 
       <div class="listObject">
         <div class="listSquare effect2">
-          <div class="pull-left"><button class="checkBtn" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button></div>
+          <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
 
-          <div class="pull-right"><button class="deleteBtn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></div>
+          <button class="deleteBtn pull-right" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
 
           <div class="clear"></div>
 
