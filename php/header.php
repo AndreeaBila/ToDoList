@@ -19,7 +19,7 @@
         <li><a href="#">About</a></li>
       </ul>
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id='btnLogIn_Out'>
         <li><a href="#">Log In/Out</a></li>
       </ul>
 

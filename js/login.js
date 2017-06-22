@@ -4,6 +4,8 @@ $('#loginForm').hide();
 $('#signupForm').hide();
 $(".alert").hide();
 
+getCookie();
+
 //this area will run only after the entire page was loaded
 $(document).ready(function() {
     $('#learnMore').click(function() {
@@ -87,3 +89,13 @@ $('#loginSubmit').click(function() {
         }
     });
 });
+
+
+function getCookie() {
+    //code needed to check cookies
+    var loggedIn = decodeURIComponent(document.cookie);
+    loggedIn = (Number)(loggedIn.split(';')[0].split('=')[1]);
+    if (Number.isInteger(loggedIn)) {
+        location.href = 'main.php';
+    }
+}
