@@ -2,18 +2,17 @@ $(function() {
     var clicks = 0;
     $('[data-toggle="tooltip"]').tooltip();
     $('.checkBtn').on('click', function() {
-        var listID = $(this).parents().attr('id');
-        alert(listID);
+        var listID = $(this).parent().parent().attr('id');
         if ($(this).parent().hasClass("checked")) {
             $(this).parent().removeClass("checked");
-            $('.progress-bar').attr('aria-valuenow', '50');
-            $('.progress-bar').css({ "width": "50%" });
-            $('.progress-bar').text("50% Complete");
+            $('.progress').attr('aria-valuenow', '50');
+            $('.progress').css({ "width": "50%" });
+            $('.progress').text("50% Complete");
         } else {
             $(this).parent().addClass("checked");
-            $('.progress-bar').attr('aria-valuenow', '100');
-            $('.progress-bar').css({ "width": "100%" });
-            $('.progress-bar').text("100% Complete");
+            $('.progress').attr('aria-valuenow', '100');
+            $('.progress').css({ "width": "100%" });
+            $('.progress').text("100% Complete");
         }
     });
 
