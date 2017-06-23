@@ -2,17 +2,17 @@ $(function() {
     var clicks = 0;
     $('[data-toggle="tooltip"]').tooltip();
     $('.checkBtn').on('click', function() {
-        var listID = $(this).parent().parent().attr('id');
+        var listID = $(this).parent().attr('id');
         if ($(this).parent().hasClass("checked")) {
             $(this).parent().removeClass("checked");
-            $('.progress').attr('aria-valuenow', '50');
-            $('.progress').css({ "width": "50%" });
-            $('.progress').text("50% Complete");
+            $('.list' + listID).attr('aria-valuenow', '50');
+            $('.list' + listID).css({ "width": "50%" });
+            $('.list' + listID).text("50% Complete");
         } else {
             $(this).parent().addClass("checked");
-            $('.progress').attr('aria-valuenow', '100');
-            $('.progress').css({ "width": "100%" });
-            $('.progress').text("100% Complete");
+            $('.list' + listID).attr('aria-valuenow', '100');
+            $('.list' + listID).css({ "width": "100%" });
+            $('.list' + listID).text("100% Complete");
         }
     });
 
