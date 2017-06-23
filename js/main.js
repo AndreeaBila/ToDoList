@@ -8,7 +8,7 @@ $(function() {
             $(this).css({ "color": "#5cb85c" });
         } else {
             $(this).parent().css({ "border": "none" });
-            $(this).css({ "color": "#5cb85c" });
+            $(this).css({ "color": "#333333"});
         }
         clicks++;
     });
