@@ -264,9 +264,10 @@ input[type="button"] {
 .newListBtn:focus,
 .newListBtn:active:focus {
   transform: scale(0.97, 0.97);
+  border: 0.01px solid #e1e1e1;
 }
 
-/* line 63, ../scss/modules/_buttons.scss */
+/* line 64, ../scss/modules/_buttons.scss */
 .newListBtn:active,
 .newListBtn:focus,
 .newListBtn:active:focus,
@@ -274,7 +275,6 @@ input[type="button"] {
 .listSquare:focus,
 .listSquare:active:focus {
   outline: none;
-  border: 0.01px solid #e1e1e1;
 }
 
 /* line 68, ../scss/modules/_buttons.scss */
@@ -297,7 +297,14 @@ input[type="button"] {
   font-size: 120%;
 }
 
-/* line 90, ../scss/modules/_buttons.scss */
+/* line 89, ../scss/modules/_buttons.scss */
+.listSquare:active,
+.listSquare:focus,
+.listSquare:active:focus {
+  border: 0.1px solid #e1e1e1;
+}
+
+/* line 96, ../scss/modules/_buttons.scss */
 .deleteBtn:hover,
 .deleteBtn:active,
 .deleteBtn:focus,
@@ -307,14 +314,36 @@ input[type="button"] {
   outline: none;
 }
 
-/* line 99, ../scss/modules/_buttons.scss */
+/* line 105, ../scss/modules/_buttons.scss */
 .checkBtn:hover,
 .checkBtn:active,
 .checkBtn:focus,
 .checkBtn:active:focus {
+  outline: none;
+}
+
+/* line 109, ../scss/modules/_buttons.scss */
+.checkBtn:hover {
   color: #5cb85c;
   transform: scale(1.1, 1.1);
-  outline: none;
+}
+
+/* line 114, ../scss/modules/_buttons.scss */
+.checked {
+  border: 3px solid #5cb85c;
+  border-radius: 5px;
+}
+/* line 117, ../scss/modules/_buttons.scss */
+.checked .checkBtn {
+  color: #5cb85c;
+  transform: scale(1.1, 1.1);
+}
+
+/* line 125, ../scss/modules/_buttons.scss */
+.checked:active,
+.checked:focus,
+.checked:active:focus {
+  border: 2px solid #5cb85c;
 }
 
 /* line 2, ../scss/modules/_components.scss */

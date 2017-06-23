@@ -42,7 +42,7 @@
             </div>
             <div id="status2" class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.$percentage.'" aria-valuemin="0" aria-valuemax="100" style="width:'.$percentage.'%">
-                '.$percentage.'% Complete (success)
+                '.$percentage.'% Complete
               </div>
             </div>
           </div>';

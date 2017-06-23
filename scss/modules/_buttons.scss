@@ -53,6 +53,7 @@ input[type="button"] {
 .newListBtn:focus,
 .newListBtn:active:focus {
   transform: scale(0.97,0.97);
+  border: 0.01px solid #e1e1e1;
 }
 
 .newListBtn:active,
@@ -62,7 +63,6 @@ input[type="button"] {
 .listSquare:focus,
 .listSquare:active:focus {
   outline: none;
-  border: 0.01px solid #e1e1e1;
 }
 
 .listSquare {
@@ -84,6 +84,12 @@ input[type="button"] {
   }
 }
 
+.listSquare:active,
+.listSquare:focus,
+.listSquare:active:focus {
+  border: 0.1px solid #e1e1e1;
+}
+
 .deleteBtn:hover,
 .deleteBtn:active,
 .deleteBtn:focus,
@@ -97,7 +103,25 @@ input[type="button"] {
 .checkBtn:active,
 .checkBtn:focus,
 .checkBtn:active:focus {
+  outline: none;
+}
+
+.checkBtn:hover {
   color: $success-color;
   transform: scale(1.1,1.1);
-  outline: none;
+}
+
+.checked {
+  border: 3px solid #5cb85c;
+  border-radius: 5px;
+  .checkBtn {
+    color: #5cb85c;
+    transform: scale(1.1,1.1);
+  }
+}
+
+.checked:active,
+.checked:focus,
+.checked:active:focus {
+  border: 2px solid $success-color;
 }
