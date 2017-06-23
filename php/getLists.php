@@ -30,7 +30,7 @@
   }
 
   function createListBox(ToDoList $list, $percentage){
-    echo '<div class="listObject">
+    echo '<div class="listObject" id="'.$list->getListID().'">
             <div class="listSquare effect2">
               <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
 
@@ -40,7 +40,7 @@
 
               <p class="listName">'.$list->getTitle().'</p>
             </div>
-            <div id="status2" class="progress">
+            <div id="'.$list->getListID().'" class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.$percentage.'" aria-valuemin="0" aria-valuemax="100" style="width:'.$percentage.'%">
                 '.$percentage.'% Complete
               </div>
