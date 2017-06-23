@@ -1,5 +1,5 @@
 //jumbotron image height
-html, body, .jumbotron {
+.jumbotron {
   min-height: 95%;
   height: 95%;
 }
@@ -10,6 +10,7 @@ html, body, .jumbotron {
   background-size: 100%;
   color: white;
   text-shadow: 2px 2px black;
+  margin-top: 50px;
 }
 
 //Form inputs styles

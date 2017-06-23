@@ -141,6 +141,11 @@ hr {
   margin-bottom: 15px;
 }
 
+/* line 71, ../scss/base/_base.scss */
+#loginForm {
+  margin-bottom: 82px;
+}
+
 /* line 6, ../scss/layout/_nav.scss */
 #logo {
   margin-top: -1px !important;
@@ -157,7 +162,7 @@ hr {
 /* line 5, ../scss/layout/_footer.scss */
 footer {
   height: 240px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 /* line 10, ../scss/layout/_footer.scss */
@@ -347,7 +352,7 @@ input[type="button"] {
 }
 
 /* line 2, ../scss/modules/_components.scss */
-html, body, .jumbotron {
+.jumbotron {
   min-height: 95%;
   height: 95%;
 }
@@ -358,9 +363,10 @@ html, body, .jumbotron {
   background-size: 100%;
   color: white;
   text-shadow: 2px 2px black;
+  margin-top: 50px;
 }
 
-/* line 19, ../scss/modules/_components.scss */
+/* line 20, ../scss/modules/_components.scss */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -370,46 +376,46 @@ input[type="date"] {
   margin: 5px;
 }
 
-/* line 29, ../scss/modules/_components.scss */
+/* line 30, ../scss/modules/_components.scss */
 ::-webkit-input-placeholder {
   color: #bbbbbb !important;
 }
 
-/* line 32, ../scss/modules/_components.scss */
+/* line 33, ../scss/modules/_components.scss */
 :-moz-placeholder {
   color: #bbbbbb;
 }
 
-/* line 35, ../scss/modules/_components.scss */
+/* line 36, ../scss/modules/_components.scss */
 :-ms-input-placeholder {
   color: #bbbbbb;
 }
 
-/* line 38, ../scss/modules/_components.scss */
+/* line 39, ../scss/modules/_components.scss */
 ::-moz-placeholder {
   color: #bbbbbb;
 }
 
-/* line 55, ../scss/modules/_components.scss */
+/* line 56, ../scss/modules/_components.scss */
 .modal-dialog {
   width: 500px !important;
   margin-top: 10% !important;
 }
 
-/* line 60, ../scss/modules/_components.scss */
+/* line 61, ../scss/modules/_components.scss */
 .modal-sm {
   width: 350px !important;
   font-size: 120%;
   margin-top: 15% !important;
 }
 
-/* line 67, ../scss/modules/_components.scss */
+/* line 68, ../scss/modules/_components.scss */
 .modal-body input[type="text"],
 .modal-body input[type="date"] {
   width: 90% !important;
 }
 
-/* line 71, ../scss/modules/_components.scss */
+/* line 72, ../scss/modules/_components.scss */
 .modal-body label {
   margin-top: 10px !important;
 }
