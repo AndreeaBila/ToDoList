@@ -1,10 +1,16 @@
 $(function() {
-
+    var clicks = 0;
     $('[data-toggle="tooltip"]').tooltip();
 
     $('.checkBtn').on('click', function() {
-        $(this).parent().css({ "border": "3px solid #5cb85c", "border-radius": "5px" });
-        $(this).css({ "color": "#5cb85c" });
+        if (clicks % 2 == 0) {
+            $(this).parent().css({ "border": "3px solid #5cb85c", "border-radius": "5px" });
+            $(this).css({ "color": "#5cb85c" });
+        } else {
+            $(this).parent().css({ "border": "none" });
+            $(this).css({ "color": "#5cb85c" });
+        }
+        clicks++;
     });
 
     //function needed for the log out action

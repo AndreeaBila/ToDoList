@@ -52,27 +52,14 @@
     <hr>
 
     <div class="yourLists">
-      <h2>Manage your Lists</h2>  
-      
-      <div class="listObject">
-        <div class="listSquare effect2" id="listSquare1">
-          <button class="checkBtn pull-left" id="checkBtn1" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
+      <h2>Manage your Lists</h2>
 
-          <button class="deleteBtn pull-right" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
+      <!-- call the create lists file -->
+      <?php
+        include 'getLists.php';
+      ?>
 
-          <div class="clear"></div>
-          
-
-          <p class="listName">To Do List</p>
-        </div>
-        <div id="status1" class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-            80% Complete
-          </div>
-        </div>
-      </div>
-
-      <div class="listObject">
+      <!--<div class="listObject">
         <div class="listSquare effect2">
           <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
 
@@ -87,7 +74,7 @@
             50% Complete (success)
           </div>
         </div>
-      </div>
+      </div>-->
   
       
     </div>

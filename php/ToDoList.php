@@ -1,50 +1,58 @@
 <?php
-  class List{
+  class ToDoList{
     private $listID;
     private $title;
     private $status;
     private $dateCreated;
+    private $size;
     private $userID;
 
-    function __construct($listID, $title, $status, $dateCreated, $userID){
+    function __construct($listID, $title, $status, $dateCreated, $size, $userID){
       $this->listID=$listID;
       $this->title=$title;
       $this->status=$status;
       $this->dateCreated=$dateCreated;
+      $this->size = $size;
       $this->userID=$userID;
     }
 
     //getters
-    public getListID(){
+    public function getListID(){
       return $this->listID;
     }
-    public getTitle(){
+    public function getTitle(){
       return $this->title;
     }
-    public getStatus(){
+    public function getStatus(){
       return $this->status;
     }
-    public getDateCreated(){
+    public function getDateCreated(){
       return $this->dateCreated;
     }
-    public getUserID(){
+    public function getSize(){
+      return $this->size;
+    }
+    public function getUserID(){
       return $this->userID;
     }
 
     //setters
-    public setListID($listID){
+    public function setListID($listID){
       $this->listID = $listID;
     }
-    public setTitle($title){
+    public function setTitle($title){
       $this->title = $title;
     }
-    public setStatus($status){
+    public function setStatus($status){
       $this->status = $status;
     }
-    public setDateCreated($dateCreated){
+    public function setDateCreated($dateCreated){
       $this->dateCreated = $dateCreated;
     }
-    public setUserID($userID){
+    public function setSize($size){
+      $this->size = $size;
+    }
+    public function setUserID($userID){
       $this->userID = $userID;
     }
   }
