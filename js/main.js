@@ -16,4 +16,9 @@ $(function() {
         //the session will then be destroyed on the index page
     });
 
+    //this code will fetch all the lists for the given user from the database using an asynchronous call
+    $.getJSON('../php/getLists.php', function(response) {
+
+    });
+
 });
