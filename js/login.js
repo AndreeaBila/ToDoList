@@ -30,6 +30,19 @@ $(document).ready(function() {
     $('.close').click(function() {
         $(this).parent().hide(500);
     });
+
+    //listen for the click event on the enter key for the login or signup automatic click
+    $('#loginForm').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $('#loginSubmit').click();
+        }
+    });
+
+    $('#signupForm').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $('#signupSubmit').click();
+        }
+    });
 });
 
 

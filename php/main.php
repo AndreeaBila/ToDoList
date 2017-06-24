@@ -57,6 +57,8 @@
       <!-- call the create lists file -->
       <?php
         include 'getLists.php';
+        $listArray =  json_encode($listArray);
+        echo '<input type="hidden" name="listArray" id="listArray" value="'.$listArray.'">';
       ?>
 
       <!--<div class="listObject">
