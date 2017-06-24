@@ -4,7 +4,6 @@
   //get the list id and its status from the front end
   $listID = (int)(strip_tags($_GET['listID']));
   $listStatus = (boolean)(strip_tags($_GET['status']));
-  var_dump($listID);
 
   //create a query to save the given information in the database
   $query = "UPDATE Lists SET Status = ? WHERE(ListID = ?)";

@@ -1,11 +1,11 @@
 <?php
   class ToDoList{
-    private $listID;
-    private $title;
-    private $status;
-    private $dateCreated;
-    private $size;
-    private $userID;
+    public $listID;
+    public $title;
+    public $status;
+    public $dateCreated;
+    public $size;
+    public $userID;
 
     function __construct($listID, $title, $status, $dateCreated, $size, $userID){
       $this->listID=$listID;

@@ -13,11 +13,13 @@ $(function() {
             status: 0
         };
         if ($(this).parent().hasClass("checked")) {
+            //get the value of the hidden input
+            var actualCompletition = $('input#' + listID).val();
             //mark the list as uncomplete by removing the checked class
             $(this).parent().removeClass("checked");
-            $('#' + listID + ' .progress-bar').attr('aria-valuenow', '50');
-            $('#' + listID + ' .progress-bar').css({ "width": "50%" });
-            $('#' + listID + ' .progress-bar').text("50% Complete");
+            $('#' + listID + ' .progress-bar').attr('aria-valuenow', actualCompletition);
+            $('#' + listID + ' .progress-bar').css({ "width": actualCompletition + "%" });
+            $('#' + listID + ' .progress-bar').text(actualCompletition + "% Complete");
             listObject.status = 0;
         } else {
             //mark the list as complete by adding the checked class
@@ -44,7 +46,5 @@ $(function() {
         //the session will then be destroyed on the index page
     });
 
-    function checkIfStatusComplete() {
-        console.log($('#listArray').val());
-    }
+    function checkIfStatusComplete() {}
 });

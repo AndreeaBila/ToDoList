@@ -14,7 +14,7 @@
     $percentage = ($list->getStatus()) ? 100 : (int)(($listCompletition * 100)/$list->getSize());
     array_push($listArray, $list);
     //call the create html item function
-    createListBox($list, $percentage);
+    createListBox($list, $percentage, $db);
   }
 
 
@@ -29,9 +29,10 @@
     return $count;
   }
 
-  function createListBox(ToDoList $list, $percentage){
+  function createListBox(ToDoList $list, $percentage, $db){
+    $addedClass = ($list->getStatus() == 1) ? 'checked' : '';
     echo '<div class="listObject" id="list'.$list->getListID().'">
-            <div class="listSquare effect2">
+            <div class="listSquare effect2 '.$addedClass.'">
               <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
 
               <button class="deleteBtn pull-right" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
@@ -45,6 +46,7 @@
                 '.$percentage.'% Complete
               </div>
             </div>
+            <input type="hidden" name="currentProgress" id="list'.$list->getListID().'" value="'.(int)((getListCompletition($list, $db) * 100)/$list->getSize()).'">
           </div>';
   }
 ?>

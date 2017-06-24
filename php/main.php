@@ -57,28 +57,7 @@
       <!-- call the create lists file -->
       <?php
         include 'getLists.php';
-        $listArray =  json_encode($listArray);
-        echo '<input type="hidden" name="listArray" id="listArray" value="'.$listArray.'">';
-      ?>
-
-      <!--<div class="listObject">
-        <div class="listSquare effect2">
-          <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
-
-          <button class="deleteBtn pull-right" type="button" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
-
-          <div class="clear"></div>
-
-          <p class="listName">Shopping List</p>
-        </div>
-        <div id="status2" class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-            50% Complete (success)
-          </div>
-        </div>
-      </div>-->
-  
-      
+      ?>     
     </div>
 
     <!-- Delete List modal -->
