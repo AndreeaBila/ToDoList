@@ -73,7 +73,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
           </div>
         </div>
       </div>
@@ -88,25 +88,31 @@
             <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
           </div>
           <div class="modal-body">
-            <div class="form-group form-inline">
-              <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
-              <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
-            </div>
+            <form id='createListForm'>
+              <div class="form-group form-inline">
+                <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
+                <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
+              </div>
 
-            <div class="form-group form-inline">
-              <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
-              <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" required>
-            </div>
-            
-            <div class="form-group form-inline">
-              <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
-              <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="2017-06-22" required>
-            </div>
-            
+              <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
+                <a class="close" aria-label="close">&times;</a>
+                <strong>Sorry!</strong>You have to fill in all the details and a unique list name!
+              </div>
+
+              <div class="form-group form-inline">
+                <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
+                <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" required>
+              </div>
+              
+              <div class="form-group form-inline">
+                <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
+                <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="2017-06-22" required>
+              </div> 
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
-            <button type="button" class="btn btn-success">Create List</button>
+            <button type="button" class="btn btn-success" id='btnCreateList'>Create List</button>
           </div>
         </div>
       </div>

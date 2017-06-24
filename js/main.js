@@ -1,7 +1,9 @@
 $(function() {
-    //check if any of the lists has a status of completed and call the check function
-    checkIfStatusComplete();
-
+    //hide all the alerts
+    $('.alert').hide();
+    $('.close').click(function() {
+        $(this).parent().hide(500);
+    });
     //function needed to display information about the check button
     $('[data-toggle="tooltip"]').tooltip();
     //function needed to save a file as completed
@@ -46,5 +48,42 @@ $(function() {
         //the session will then be destroyed on the index page
     });
 
-    function checkIfStatusComplete() {}
+    //function need to chekc if any of the lists is being deleted
+    $('.deleteBtn').click(function() {
+        var deletedList = {
+            listID: $(this).parent().parent().attr('id')
+        };
+        $('#btnConfirmDelete').click(function() {
+            //create an ajax call to delete the list from the database and alos from the main page
+            $('div#' + deletedList.listID).remove(); //delete the list from the actual page
+            deletedList.listID = deletedList.listID.substr(deletedList.listID.length - 1);
+            console.log(deletedList);
+            $.ajax({
+                data: deletedList,
+                url: '../php/deleteList.php',
+                type: 'get'
+            });
+        });
+    });
+
+    //function needed when the user creates a new list
+    $('#btnCreateList').click(function() {
+        //first of all check if the user has filled every detail
+        var listInfo = {
+            listName: $('#newListName').val(),
+            listDetails: $('#listDetails').val(),
+            listDeadline: $('#listDeadline').val()
+        };
+        if (listInfo.listName == '' || listInfo.listDetails == '' || listInfo.listDeadline == '') {
+            $('#createListAlert').show(500);
+        } else {
+            $("p[class*='listName']").each(function(c, el) {
+                //It'll be an array of elements
+
+                // if (el.value() == listInfo.listName) {
+                //     $('#createListAlert').show(500);
+                // }
+            });
+        }
+    });
 });
