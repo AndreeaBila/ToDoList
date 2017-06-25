@@ -6,6 +6,9 @@
   if(!checkSession()){
     header("Location: index.php");
   }
+  if(!checkAccesPermissions()){
+    header("Location: main.php");
+  }
 ?>
 
 <!DOCTYPE html>
