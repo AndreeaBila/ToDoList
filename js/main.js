@@ -14,16 +14,17 @@ $(function() {
             listID: listID.replace('list', ''),
             status: 0
         };
-        console.log(listObject.listID);
         if ($(this).parent().hasClass("checked")) {
             //get the value of the hidden input
             var actualCompletition = $('input#' + listID).val();
-            //mark the list as uncomplete by removing the checked class
-            $(this).parent().removeClass("checked");
-            $('#' + listID + ' .progress-bar').attr('aria-valuenow', actualCompletition);
-            $('#' + listID + ' .progress-bar').css({ "width": actualCompletition + "%" });
-            $('#' + listID + ' .progress-bar').text(actualCompletition + "% Complete");
-            listObject.status = 0;
+            if (actualCompletition < 100) {
+                //mark the list as uncomplete by removing the checked class
+                $(this).parent().removeClass("checked");
+                $('#' + listID + ' .progress-bar').attr('aria-valuenow', actualCompletition);
+                $('#' + listID + ' .progress-bar').css({ "width": actualCompletition + "%" });
+                $('#' + listID + ' .progress-bar').text(actualCompletition + "% Complete");
+                listObject.status = 0;
+            }
         } else {
             //mark the list as complete by adding the checked class
             $(this).parent().addClass("checked");
@@ -114,9 +115,11 @@ $(function() {
     });
 
     //when the user clicks a list rediret him to the list's current page
-    $('.listSquare').click(function() {
-        var listID = $(this).parent().attr('id');
-        listID = listID.replace('list', '');
-        location.href = "list.php?listID=" + listID;
-    });
+    //create a new button on the list page to redirect the user to the list's page
+    // $('.listSquare').click(function() {
+    //     console.log($(this).attr('class'));
+    //     var listID = $(this).parent().attr('id');
+    //     listID = listID.replace('list', '');
+    //     //location.href = "list.php?listID=" + listID;
+    // });
 });

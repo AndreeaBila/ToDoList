@@ -29,7 +29,7 @@
   }
 
   function createListBox(ToDoList $list, $percentage, $db){
-    $addedClass = ($list->getStatus() == 1) ? 'checked' : '';
+    $addedClass = ($list->getStatus() == 1  || $percentage == 100) ? 'checked' : '';
     echo '<div class="listObject" id="list'.$list->getListID().'">
             <div class="listSquare effect2 '.$addedClass.'">
               <button class="checkBtn pull-left" data-toggle="tooltip" data-placement="top" title="Mark as Completed" type="button"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></button>
