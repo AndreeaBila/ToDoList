@@ -11,9 +11,10 @@ $(function() {
         //get the list id of the list that is being marked as completed
         var listID = $(this).parent().parent().attr('id');
         var listObject = {
-            listID: listID.substr(listID.length - 1),
+            listID: listID.replace('list', ''),
             status: 0
         };
+        console.log(listObject.listID);
         if ($(this).parent().hasClass("checked")) {
             //get the value of the hidden input
             var actualCompletition = $('input#' + listID).val();
@@ -57,7 +58,6 @@ $(function() {
             //create an ajax call to delete the list from the database and alos from the main page
             $('div#' + deletedList.listID).remove(); //delete the list from the actual page
             deletedList.listID = deletedList.listID.replace('list', '');
-            console.log(deletedList.listID);
             $.ajax({
                 data: deletedList,
                 url: '../php/deleteList.php',
@@ -95,8 +95,7 @@ $(function() {
                         type: 'get',
                         success: function(response) {
                             //navigate the user to the page of the list
-                            alert('Success');
-                            console.log(response);
+                            location.href = "list.php?listID=" + response;
                         },
                         error: function(response) {
                             alert('An error has occured!');
@@ -105,5 +104,19 @@ $(function() {
                 }
             });
         }
+    });
+
+    //create an event listener to check if the eneter key is pressed for creaeting a new list
+    $('#createListForm').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $('#btnCreateList').click();
+        }
+    });
+
+    //when the user clicks a list rediret him to the list's current page
+    $('.listSquare').click(function() {
+        var listID = $(this).parent().attr('id');
+        listID = listID.replace('list', '');
+        location.href = "list.php?listID=" + listID;
     });
 });
