@@ -56,8 +56,8 @@ $(function() {
         $('#btnConfirmDelete').click(function() {
             //create an ajax call to delete the list from the database and alos from the main page
             $('div#' + deletedList.listID).remove(); //delete the list from the actual page
-            deletedList.listID = deletedList.listID.substr(deletedList.listID.length - 1);
-            console.log(deletedList);
+            deletedList.listID = deletedList.listID.replace('list', '');
+            console.log(deletedList.listID);
             $.ajax({
                 data: deletedList,
                 url: '../php/deleteList.php',
@@ -77,12 +77,32 @@ $(function() {
         if (listInfo.listName == '' || listInfo.listDetails == '' || listInfo.listDeadline == '') {
             $('#createListAlert').show(500);
         } else {
-            $("p[class*='listName']").each(function(c, el) {
-                //It'll be an array of elements
-
-                // if (el.value() == listInfo.listName) {
-                //     $('#createListAlert').show(500);
-                // }
+            var duplicate = false;
+            //get every list from the database and ckec their names
+            $.getJSON('../php/getListNames.php', function(listArray) {
+                listArray.forEach(function(element) {
+                    if (element == listInfo.listName) {
+                        duplicate = true;
+                    }
+                }, this);
+                if (duplicate) {
+                    $('#createListAlert').show(500);
+                } else {
+                    //send the list information to the database
+                    $.ajax({
+                        data: listInfo,
+                        url: '../php/createNewList.php',
+                        type: 'get',
+                        success: function(response) {
+                            //navigate the user to the page of the list
+                            alert('Success');
+                            console.log(response);
+                        },
+                        error: function(response) {
+                            alert('An error has occured!');
+                        }
+                    });
+                }
             });
         }
     });

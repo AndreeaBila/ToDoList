@@ -10,8 +10,7 @@
   $listArray = array();
   while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
     $list = new ToDoList($row['ListID'], $row['Title'], $row['Status'], $row['DateCreated'], $row['Size'], $row['UserID']);
-    $listCompletition = getListCompletition($list, $db);
-    $percentage = ($list->getStatus()) ? 100 : (int)(($listCompletition * 100)/$list->getSize());
+    $percentage = ($list->getStatus()) ? 100 : calculatePercentage($list, $db);
     array_push($listArray, $list);
     //call the create html item function
     createListBox($list, $percentage, $db);
@@ -46,7 +45,12 @@
                 '.$percentage.'% Complete
               </div>
             </div>
-            <input type="hidden" name="currentProgress" id="list'.$list->getListID().'" value="'.(int)((getListCompletition($list, $db) * 100)/$list->getSize()).'">
+            <input type="hidden" name="currentProgress" id="list'.$list->getListID().'" value="'.calculatePercentage($list, $db).'">
           </div>';
+  }
+
+  function calculatePercentage($list, $db){
+    $listCompletition = getListCompletition($list, $db);
+    return ($listCompletition == 0) ? 0 : (int)(($listCompletition * 100)/$list->getSize());
   }
 ?>
