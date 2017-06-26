@@ -39,6 +39,8 @@
               <div class="clear"></div>
 
               <p class="listName">'.$list->getTitle().'</p>
+
+              <button class="editBtn pull-right" type="button"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></button>
             </div>
             <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.$percentage.'" aria-valuemin="0" aria-valuemax="100" style="width:'.$percentage.'%">

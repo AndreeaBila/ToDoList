@@ -297,8 +297,8 @@ input[type="button"] {
 }
 /* line 80, ../scss/modules/_buttons.scss */
 .listSquare .listName {
-  line-height: 80px;
-  height: 80px;
+  line-height: 65px;
+  height: 65px;
   font-size: 120%;
 }
 
@@ -349,6 +349,20 @@ input[type="button"] {
 .checked:focus,
 .checked:active:focus {
   border: 2px solid #5cb85c;
+}
+
+/* line 132, ../scss/modules/_buttons.scss */
+.editBtn:hover,
+.editBtn:active,
+.editBtn:focus,
+.editBtn:active:focus {
+  outline: none;
+}
+
+/* line 136, ../scss/modules/_buttons.scss */
+.editBtn:hover {
+  color: #428bca;
+  transform: scale(1.1, 1.1);
 }
 
 /* line 2, ../scss/modules/_components.scss */
