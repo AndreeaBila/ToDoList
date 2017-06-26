@@ -72,7 +72,7 @@
             <p>Are you sure you want to delete this list?</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
           </div>
         </div>

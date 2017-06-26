@@ -65,8 +65,10 @@ $(function() {
                 type: 'get'
             });
         });
+        $('#btnCancelDelete').click(function() {
+            location.reload();
+        });
     });
-
     //function needed when the user creates a new list
     $('#btnCreateList').click(function() {
         //first of all check if the user has filled every detail
@@ -112,6 +114,12 @@ $(function() {
         if (e.keyCode == 13) {
             $('#btnCreateList').click();
         }
+    });
+
+    $('.editBtn').click(function() {
+        var listID = $(this).parent().parent().attr('id');
+        listID = listID.replace('list', '');
+        location.href = "list.php?listID=" + listID;
     });
 
     //when the user clicks a list rediret him to the list's current page
