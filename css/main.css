@@ -439,71 +439,84 @@ input[type="date"] {
   width: 50%;
   margin: 10px auto;
   border: 0.1px solid #cccccc;
+  margin-bottom: 150px;
 }
-/* line 80, ../scss/modules/_components.scss */
-.listWrapper h1, .listWrapper h3 {
-  padding: 20px;
+/* line 81, ../scss/modules/_components.scss */
+.listWrapper h1 {
+  margin: 20px;
+  margin-bottom: 10px;
+}
+/* line 86, ../scss/modules/_components.scss */
+.listWrapper h6 {
+  margin: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+/* line 92, ../scss/modules/_components.scss */
+.listWrapper h3 {
+  margin: 20px;
+  margin-top: 27px;
 }
 
-/* line 85, ../scss/modules/_components.scss */
+/* line 98, ../scss/modules/_components.scss */
 .addNewTaskForm {
   margin: 50px auto;
   margin-bottom: 10px;
 }
-/* line 88, ../scss/modules/_components.scss */
+/* line 101, ../scss/modules/_components.scss */
 .addNewTaskForm input, .addNewTaskForm button {
   margin: -1.6px !important;
   border-radius: 0px !important;
   height: 50px !important;
   width: 400px !important;
 }
-/* line 95, ../scss/modules/_components.scss */
+/* line 108, ../scss/modules/_components.scss */
 .addNewTaskForm .dropdown-toggle, .addNewTaskForm .dropdown-menu {
   width: 160px !important;
   background-color: #f1f1f1;
 }
-/* line 100, ../scss/modules/_components.scss */
+/* line 113, ../scss/modules/_components.scss */
 .addNewTaskForm .dropdown-menu li .low:hover {
   background-color: #5cb85c !important;
   opacity: 0.5;
   color: white;
 }
-/* line 106, ../scss/modules/_components.scss */
+/* line 119, ../scss/modules/_components.scss */
 .addNewTaskForm .dropdown-menu li .moderate:hover {
   background-color: #f0ad4e !important;
   opacity: 0.5;
   color: white;
 }
-/* line 112, ../scss/modules/_components.scss */
+/* line 125, ../scss/modules/_components.scss */
 .addNewTaskForm .dropdown-menu li .high:hover {
   background-color: #d9534f !important;
   opacity: 0.5;
   color: white;
 }
-/* line 118, ../scss/modules/_components.scss */
+/* line 131, ../scss/modules/_components.scss */
 .addNewTaskForm .addNew {
   width: 50px !important;
 }
-/* line 122, ../scss/modules/_components.scss */
+/* line 135, ../scss/modules/_components.scss */
 .addNewTaskForm input:focus {
   outline: none !important;
 }
 
-/* line 127, ../scss/modules/_components.scss */
+/* line 140, ../scss/modules/_components.scss */
 .listDescription {
   margin: 50px auto;
 }
 
-/* line 131, ../scss/modules/_components.scss */
+/* line 144, ../scss/modules/_components.scss */
 .listTasks {
-  margin-bottom: 200px;
+  margin-bottom: 55px;
 }
 
-/* line 135, ../scss/modules/_components.scss */
+/* line 148, ../scss/modules/_components.scss */
 .listComponent {
   margin: 10px auto;
 }
-/* line 137, ../scss/modules/_components.scss */
+/* line 150, ../scss/modules/_components.scss */
 .listComponent p, .listComponent button {
   margin: -1.6px;
   display: inline-block;
@@ -511,11 +524,11 @@ input[type="date"] {
   width: 50px;
   border-radius: 0px;
 }
-/* line 145, ../scss/modules/_components.scss */
+/* line 158, ../scss/modules/_components.scss */
 .listComponent button {
   margin-top: -12px;
 }
-/* line 149, ../scss/modules/_components.scss */
+/* line 162, ../scss/modules/_components.scss */
 .listComponent p {
   width: 400px !important;
   line-height: 50px;
@@ -529,9 +542,16 @@ input[type="date"] {
   font-size: 120%;
   color: #909090;
 }
-/* line 164, ../scss/modules/_components.scss */
+/* line 177, ../scss/modules/_components.scss */
 .listComponent .checkCircle {
   color: #cccccc;
   margin-top: 15px;
   margin-right: 10px;
+}
+
+/* line 184, ../scss/modules/_components.scss */
+.listHr {
+  border: 0;
+  height: 1px !important;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
 }

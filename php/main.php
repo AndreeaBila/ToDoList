@@ -49,7 +49,7 @@
       <button type="button" class="newListBtn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
     </div>
     
-    <hr>
+    <hr class="hrDefault">
 
     <div class="yourLists">
       <h2>Manage your Lists</h2>

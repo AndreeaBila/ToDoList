@@ -53,37 +53,46 @@
       <h3 class="pull-right">Your Deadline</h3>
       <div class="clear"></div>
 
-      <hr>
       
-      <h6 class="listDescription">Your list description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore esse voluptates eius, corporis obcaecati molestias modi quasi 
-        repellat eaque odio temporibus quisquam, similique velit, magni consequuntur architecto! Et, quia, distinctio. </h6>
-      
+      <h6 class="listDescription text-left pull-left">Your list description THis is a list of shit i have to buy cuz I need it soon for stuff that I must dos </h6>
+
+      <div class="clear"></div>
+
+      <hr class="listHr">
       <br>
       
       <div class="listTasks">
         <div class="listComponent">
-          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
           <p>Wash Dishes</p>
           <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
           <div class="clear"></div>  
         </div>
 
         <div class="listComponent">
-          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
           <p>Clean Room</p>
           <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
           <div class="clear"></div>  
         </div>
 
         <div class="listComponent">
-          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
           <p>Cook Dinner</p>
           <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
           <div class="clear"></div>  
         </div>
-      </div>
 
-      <form class="form-inline addNewTaskForm">
+        <div class="listComponent">
+          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
+          <p>Feed Cat</p>
+          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
+          <div class="clear"></div>  
+        </div>
+      </div>
+    </div>
+
+      <form class="form-inline addNewTaskForm text-center">
         <div class="form-group">
           <input type="text" class="form-control" id="newTask" placeholder="New Task" required>
         </div>
@@ -103,7 +112,7 @@
     
         <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>   
       </form>
-    </div>
+    
 
     <?php
       include 'footer.php';
@@ -116,6 +125,6 @@
     <script src="../../Bootstrap/js/bootstrap.min.js"></script> 
 
     <!-- The js script for this file -->
-    <!--<script src="../js/main.js"></script>-->
+    <script src="../js/list.js"></script>
   </body>
 </html>
