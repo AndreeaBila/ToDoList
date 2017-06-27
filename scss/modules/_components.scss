@@ -73,3 +73,97 @@ input[type="date"] {
   margin-top: 10px !important;
 }
 
+.listWrapper {
+  width: 50%;
+  margin: 10px auto;
+  border: 0.1px solid #cccccc;
+  h1, h3 {
+    padding: 20px;
+  }
+}
+
+.addNewTaskForm {
+  margin: 50px auto;
+  margin-bottom: 10px;
+  input, button {
+    margin: -1.6px !important;
+    border-radius: 0px !important;
+    height: 50px !important;
+    width: 400px !important;
+  }
+
+  .dropdown-toggle, .dropdown-menu {
+    width: 160px !important;
+    background-color: #f1f1f1;
+  }
+
+  .dropdown-menu li .low:hover {
+    background-color: $success-color !important;
+    opacity: 0.5;
+    color: white;
+  }
+
+  .dropdown-menu li .moderate:hover {
+    background-color: #f0ad4e !important;
+    opacity: 0.5;
+    color: white;
+  }
+
+  .dropdown-menu li .high:hover {
+    background-color: $danger-color !important;
+    opacity: 0.5;
+    color: white;
+  }
+
+  .addNew {
+    width: 50px !important;
+  }
+
+  input:focus {
+    outline: none !important;
+  }
+}
+
+.listDescription {
+  margin: 50px auto;
+}
+
+.listTasks {
+  margin-bottom: 200px;
+}
+
+.listComponent {
+  margin: 10px auto;
+  p, button {
+    margin: -1.6px;
+    display: inline-block;
+    height: 50px;
+    width: 50px; 
+    border-radius: 0px;
+  }
+
+  button {
+    margin-top: -12px;
+  }
+
+  p {
+    width: 400px !important;
+    line-height: 50px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    
+    text-align: left;
+    padding-left: 10px;
+    font-size: 120%;
+    color: #909090;
+  }
+  
+  .checkCircle {
+    color: #cccccc;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}

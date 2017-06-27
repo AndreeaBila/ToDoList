@@ -433,3 +433,105 @@ input[type="date"] {
 .modal-body label {
   margin-top: 10px !important;
 }
+
+/* line 76, ../scss/modules/_components.scss */
+.listWrapper {
+  width: 50%;
+  margin: 10px auto;
+  border: 0.1px solid #cccccc;
+}
+/* line 80, ../scss/modules/_components.scss */
+.listWrapper h1, .listWrapper h3 {
+  padding: 20px;
+}
+
+/* line 85, ../scss/modules/_components.scss */
+.addNewTaskForm {
+  margin: 50px auto;
+  margin-bottom: 10px;
+}
+/* line 88, ../scss/modules/_components.scss */
+.addNewTaskForm input, .addNewTaskForm button {
+  margin: -1.6px !important;
+  border-radius: 0px !important;
+  height: 50px !important;
+  width: 400px !important;
+}
+/* line 95, ../scss/modules/_components.scss */
+.addNewTaskForm .dropdown-toggle, .addNewTaskForm .dropdown-menu {
+  width: 160px !important;
+  background-color: #f1f1f1;
+}
+/* line 100, ../scss/modules/_components.scss */
+.addNewTaskForm .dropdown-menu li .low:hover {
+  background-color: #5cb85c !important;
+  opacity: 0.5;
+  color: white;
+}
+/* line 106, ../scss/modules/_components.scss */
+.addNewTaskForm .dropdown-menu li .moderate:hover {
+  background-color: #f0ad4e !important;
+  opacity: 0.5;
+  color: white;
+}
+/* line 112, ../scss/modules/_components.scss */
+.addNewTaskForm .dropdown-menu li .high:hover {
+  background-color: #d9534f !important;
+  opacity: 0.5;
+  color: white;
+}
+/* line 118, ../scss/modules/_components.scss */
+.addNewTaskForm .addNew {
+  width: 50px !important;
+}
+/* line 122, ../scss/modules/_components.scss */
+.addNewTaskForm input:focus {
+  outline: none !important;
+}
+
+/* line 127, ../scss/modules/_components.scss */
+.listDescription {
+  margin: 50px auto;
+}
+
+/* line 131, ../scss/modules/_components.scss */
+.listTasks {
+  margin-bottom: 200px;
+}
+
+/* line 135, ../scss/modules/_components.scss */
+.listComponent {
+  margin: 10px auto;
+}
+/* line 137, ../scss/modules/_components.scss */
+.listComponent p, .listComponent button {
+  margin: -1.6px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 0px;
+}
+/* line 145, ../scss/modules/_components.scss */
+.listComponent button {
+  margin-top: -12px;
+}
+/* line 149, ../scss/modules/_components.scss */
+.listComponent p {
+  width: 400px !important;
+  line-height: 50px;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 120%;
+  color: #909090;
+}
+/* line 164, ../scss/modules/_components.scss */
+.listComponent .checkCircle {
+  color: #cccccc;
+  margin-top: 15px;
+  margin-right: 10px;
+}

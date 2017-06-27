@@ -47,8 +47,63 @@
     <?php
       include 'header.php';
     ?>
+
+    <div class="listWrapper text-center">
+      <h1 class="pull-left">Your List Title</h1>
+      <h3 class="pull-right">Your Deadline</h3>
+      <div class="clear"></div>
+
+      <hr>
+      
+      <h6 class="listDescription">Your list description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore esse voluptates eius, corporis obcaecati molestias modi quasi 
+        repellat eaque odio temporibus quisquam, similique velit, magni consequuntur architecto! Et, quia, distinctio. </h6>
+      
+      <br>
+      
+      <div class="listTasks">
+        <div class="listComponent">
+          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <p>Wash Dishes</p>
+          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
+          <div class="clear"></div>  
+        </div>
+
+        <div class="listComponent">
+          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <p>Clean Room</p>
+          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
+          <div class="clear"></div>  
+        </div>
+
+        <div class="listComponent">
+          <i class="fa fa-circle-thin fa-2x checkCircle" aria-hidden="true"></i>
+          <p>Cook Dinner</p>
+          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
+          <div class="clear"></div>  
+        </div>
+      </div>
+
+      <form class="form-inline addNewTaskForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="newTask" placeholder="New Task" required>
+        </div>
+        <div class="form-group">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Importance  
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#" class="low">Low</a></li>
+              <li><a href="#" class="moderate">Moderate</a></li>
+              <li><a href="#" class="high">High</a></li>
+            </ul>
+          </div>
+        </div> 
     
-  
+        <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>   
+      </form>
+    </div>
 
     <?php
       include 'footer.php';
