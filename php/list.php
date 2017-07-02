@@ -62,13 +62,6 @@
       <br>
       
       <div class="listTasks">
-        <div class="listComponent">
-          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
-          <p>Wash Dishes</p>
-          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
-          <div class="clear"></div>  
-        </div>
-
         <?php
           //create a new database connection
           $db = new mysqli('localhost', 'root', '', 'tododb');

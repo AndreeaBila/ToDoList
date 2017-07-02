@@ -20,4 +20,11 @@ $(document).ready(function() {
             type: 'post'
         });
     });
+
+    //listen for the add new item button click event on enter
+    $('.addNewTaskForm').keyDown(function(e) {
+        if (e.keyCode == 13) {
+            $('.addNewTaskForm .addNew').click();
+        }
+    });
 });
