@@ -69,26 +69,22 @@
           <div class="clear"></div>  
         </div>
 
-        <div class="listComponent">
-          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
-          <p>Clean Room</p>
-          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
-          <div class="clear"></div>  
-        </div>
-
-        <div class="listComponent">
-          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
-          <p>Cook Dinner</p>
-          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
-          <div class="clear"></div>  
-        </div>
-
-        <div class="listComponent">
-          <i class="fa fa-circle-o fa-2x checkCircle" aria-hidden="true"></i>
-          <p>Feed Cat</p>
-          <button type="submit" class="addNew btn btn-default btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button> 
-          <div class="clear"></div>  
-        </div>
+        <?php
+          //create a new database connection
+          $db = new mysqli('localhost', 'root', '', 'tododb');
+          //get all the items from that partcullar list and show them
+          $userID = $_SESSION['ID'];
+          $listID = $_GET['listID'];
+          $result = $db->query("SELECT * FROM Items WHERE(UserID = $userID AND ListID = $listID)");
+          while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+            echo "<div class='listComponent' id='".$row['ItemID']."'>
+                    <i class='fa fa-circle-o fa-2x checkCircle' aria-hidden='true'></i>
+                    <p>".$row['Content']."</p>
+                    <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
+                    <div class='clear'></div> 
+                    </div>";
+          }
+        ?>
       </div>
     </div>
 
