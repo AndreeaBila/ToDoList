@@ -92,24 +92,16 @@
       </div>
     </div>
 
-      <form class="form-inline addNewTaskForm text-center">
+      <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
         <div class="form-group">
-          <input type="text" class="form-control" id="newTask" placeholder="New Task" required>
+          <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
         </div>
-        <div class="form-group">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Importance  
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#" class="low">Low</a></li>
-              <li><a href="#" class="moderate">Moderate</a></li>
-              <li><a href="#" class="high">High</a></li>
-            </ul>
-          </div>
-        </div> 
-    
+            <select id='importanceSelector' name="importanceSelector">
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+            </select>
+        <input type="hidden" name="listID" id="listID" value=<?php echo $_GET['listID'] ?>>
         <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>   
       </form>
     
