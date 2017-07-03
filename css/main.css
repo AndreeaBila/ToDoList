@@ -365,10 +365,20 @@ input[type="button"] {
   transform: scale(1.1, 1.1);
 }
 
-/* line 141, ../scss/modules/_buttons.scss */
-.listBtns button {
+/* line 142, ../scss/modules/_buttons.scss */
+.listBtns {
+  margin: 40px auto !important;
+}
+/* line 144, ../scss/modules/_buttons.scss */
+.listBtns button, .listBtns a {
   width: 150px;
   height: 40px;
+  line-height: 27px;
+}
+/* line 149, ../scss/modules/_buttons.scss */
+.listBtns .backBtn {
+  background-color: #333333;
+  color: white;
 }
 
 /* line 2, ../scss/modules/_components.scss */
@@ -466,7 +476,7 @@ input[type="date"] {
 /* line 97, ../scss/modules/_components.scss */
 .addNewTaskForm {
   margin: 50px auto;
-  margin-bottom: 10px;
+  margin-bottom: 60px !important;
 }
 /* line 100, ../scss/modules/_components.scss */
 .addNewTaskForm input, .addNewTaskForm button {

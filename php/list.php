@@ -100,7 +100,7 @@
     <hr>
 
     <div class="listWrapper listBtns">
-    <button type="button" class="pull-left btn btn-default btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</button>
+    <a class="pull-left btn btn-default backBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</a>
 
     <button type="button" class="pull-right btn btn-default btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
     </div>
