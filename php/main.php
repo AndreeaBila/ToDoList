@@ -106,7 +106,7 @@
               
               <div class="form-group form-inline">
                 <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
-                <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="2017-06-22" required>
+                <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="<?php echo date("Y-m-d") ?>" required>
               </div> 
             </form>
           </div>
