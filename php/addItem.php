@@ -13,5 +13,6 @@
   $stmt->bind_param('sssss', $item['content'], $item['importance'], $date,$_SESSION['ID'], $item['listID']);
   $stmt->execute() or die('error');
   $stmt->close();
+  $db->query("UPDATE Lists SET Size = Size + 1 WHERE(ListID = $item[listID])");
   header('Location: list.php?listID='.$item['listID']);
 ?>

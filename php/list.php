@@ -82,8 +82,14 @@
           $listID = $_GET['listID'];
           $result = $db->query("SELECT * FROM Items WHERE(UserID = $userID AND ListID = $listID)");
           while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-            echo "<div class='listComponent' id='".$row['ItemID']."'>
-                    <i class='fa fa-circle-o fa-2x checkCircle' aria-hidden='true'></i>
+            $className = '';
+            $circleClass = 'fa-circle-o';
+            if($row['Status'] == true) {
+              $className = 'taskAchieved';
+              $circleClass = 'fa-check-circle-o';
+            }
+            echo "<div class='listComponent ".$className."' id='".$row['ItemID']."'>
+                    <i class='fa ".$circleClass." fa-2x checkCircle' aria-hidden='true'></i>
                     <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
                     <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
                     <div class='clear'></div> 
