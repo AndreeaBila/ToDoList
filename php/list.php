@@ -53,16 +53,15 @@
       $db = new mysqli('localhost', 'root', '', 'tododb');
       //get the list id from the url
       $listID = strip_tags($_GET['listID']);
-      $query = "SELECT * FROM Lists WHERE(ListID = ?);";
+      $query = "SELECT Title, Description, DateCreated FROM Lists WHERE(ListID = ?);";
       $stmt = $db->prepare($query);
       $stmt->bind_param('s', $listID);
       $stmt->execute();
-      $stmt->bind_result($listInfo['Title'], $listInfo['Deadline'], $listInfo['Description']);
+      $stmt->bind_result($listInfo['Title'], $listInfo['Description'], $listInfo['Deadline']);
       $stmt->fetch();
-      var_dump($listInfo);
     ?>
     <div class="listWrapper text-center">
-      <h1 class="pull-left">Your List Title</h1>
+      <h1 class="pull-left"><?php $listInfo['Title'];?></h1>
       <h3 class="pull-right">Your Deadline</h3>
       <div class="clear"></div>
 
