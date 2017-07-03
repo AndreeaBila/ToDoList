@@ -61,12 +61,12 @@
       $stmt->fetch();
     ?>
     <div class="listWrapper text-center">
-      <h1 class="pull-left"><?php $listInfo['Title'];?></h1>
-      <h3 class="pull-right">Your Deadline</h3>
+      <h1 class="pull-left"><?php echo ucfirst($listInfo['Title']);?></h1>
+      <h3 class="pull-right"><?php echo $listInfo['Deadline'];?></h3>
       <div class="clear"></div>
 
       
-      <h6 class="listDescription text-left pull-left">Your list description THis is a list of shit i have to buy cuz I need it soon for stuff that I must dos </h6>
+      <h6 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h6>
 
       <div class="clear"></div>
 
@@ -84,7 +84,7 @@
           while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
             echo "<div class='listComponent' id='".$row['ItemID']."'>
                     <i class='fa fa-circle-o fa-2x checkCircle' aria-hidden='true'></i>
-                    <p class='".$row['Importance']."Importance'>".$row['Content']."</p>
+                    <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
                     <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
                     <div class='clear'></div> 
                     </div>";
