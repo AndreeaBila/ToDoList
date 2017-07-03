@@ -91,9 +91,13 @@
           }
         ?>
       </div>
+
+      <div class="text-center defaultMsg">
+        <h3>Start adding items to this list</h3>
+      </div>
     </div>
    
-
+      
 
       <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
         <div class="form-group">
