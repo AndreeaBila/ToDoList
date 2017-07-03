@@ -47,7 +47,20 @@
     <?php
       include 'header.php';
     ?>
-
+    <?php
+      //script needed to retrieve list information from the database
+      //create a new database connection
+      $db = new mysqli('localhost', 'root', '', 'tododb');
+      //get the list id from the url
+      $listID = strip_tags($_GET['listID']);
+      $query = "SELECT * FROM Lists WHERE(ListID = ?);";
+      $stmt = $db->prepare($query);
+      $stmt->bind_param('s', $listID);
+      $stmt->execute();
+      $stmt->bind_result($listInfo['Title'], $listInfo['Deadline'], $listInfo['Description']);
+      $stmt->fetch();
+      var_dump($listInfo);
+    ?>
     <div class="listWrapper text-center">
       <h1 class="pull-left">Your List Title</h1>
       <h3 class="pull-right">Your Deadline</h3>
