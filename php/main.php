@@ -53,7 +53,6 @@
 
     <div class="yourLists">
       <h2>Manage your Lists</h2>
-
       <!-- call the create lists file -->
       <?php
         include 'getLists.php';

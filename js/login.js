@@ -16,6 +16,10 @@ $(document).ready(function() {
         $('.jumbotron').css({ "min-height": "55%", "height": "55%" });
     });
 
+    $('#btnLogIn_Out').click(function(){
+        $('#learnMore').click();
+    });
+
     $('#loginCreateAccount').click(function() {
         $('#loginForm').hide(500);
         $('#signupForm').show(500);

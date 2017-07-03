@@ -629,3 +629,9 @@ input[type="date"] {
   margin-top: 0px !important;
   margin-bottom: -16px !important;
 }
+
+/* line 264, ../scss/modules/_components.scss */
+.noListMsg {
+  margin: 105.5px auto !important;
+  color: #888;
+}

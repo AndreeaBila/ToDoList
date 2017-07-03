@@ -20,7 +20,13 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right" id='btnLogIn_Out'>
-        <li><a href="#">Log In/Out</a></li>
+        <li><a href="#"><?php
+          if(isset($_SESSION['ID'])){
+            echo 'Log Out';
+          }else{
+            echo 'Log In';
+          }
+        ?></a></li>
       </ul>
 
       <div class="text-center"><a href="index.php"><img id="logo" src="../img/todo2.png" alt="Lists"></a></div>

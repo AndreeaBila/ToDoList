@@ -55,6 +55,8 @@ $(function() {
         var deletedList = {
             listID: $(this).parent().parent().attr('id')
         };
+        var count = $(this).parent().parent().siblings().length-1;
+        
         $('#btnConfirmDelete').click(function() {
             //create an ajax call to delete the list from the database and alos from the main page
             $('div#' + deletedList.listID).remove(); //delete the list from the actual page
@@ -64,6 +66,10 @@ $(function() {
                 url: '../php/deleteList.php',
                 type: 'get'
             });
+
+            if(count === 0) {
+                location.reload();
+            }
         });
         $('#btnCancelDelete').click(function() {
             location.reload();

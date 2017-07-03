@@ -16,6 +16,10 @@
     createListBox($list, $percentage, $db);
   }
 
+  if(count($listArray)===0){
+    include 'addNoLists.php';
+  }
+
 
   function getListCompletition(ToDoList $list, $db){
     //find the number of completed items from that todo list to establish a p0ercentage
