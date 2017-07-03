@@ -130,10 +130,29 @@
     <div class="listWrapper listBtns">
     <a class="pull-left btn btn-default backBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</a>
 
-    <button type="button" class="pull-right btn btn-default btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
+    <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
     </div>
 
     <div class="clear"></div>
+
+     <!-- Delete List modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>Are you sure you want to delete this list?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+          </div>
+        </div>
+      </div>
+    </div>
 
     <?php
       include 'footer.php';

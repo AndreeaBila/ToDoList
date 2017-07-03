@@ -34,7 +34,7 @@ $(document).ready(function() {
             url: '../php/deleteItem.php',
             type: 'post'
         });
-        if(count === 0){
+        if (count === 0) {
             $('.listTasks').append('<div class="text-center defaultMsg"><h3>Start adding items to this list</h3></div>');
         }
     });
@@ -44,5 +44,22 @@ $(document).ready(function() {
         if (e.keyCode == 13) {
             $('.addNewTaskForm .addNew').click();
         }
+    });
+
+    //drop the list
+    //function need to chekc if any of the lists is being deleted
+    $('#btnConfirmDelete').click(function() {
+        //get the id of the list that is being deleted
+        var listID = location.href.split('=')[1];
+        var list = {
+            listID: listID
+        };
+        //send async message to delete the liist
+        $.ajax({
+            data: list,
+            type: 'get',
+            url: '../php/deleteList.php'
+        });
+        location.href = "main.php";
     });
 });
