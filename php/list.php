@@ -81,7 +81,9 @@
           $userID = $_SESSION['ID'];
           $listID = $_GET['listID'];
           $result = $db->query("SELECT * FROM Items WHERE(UserID = $userID AND ListID = $listID)");
+          $count = 0;
           while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+            $count++;
             $className = '';
             $circleClass = 'fa-circle-o';
             if($row['Status'] == true) {
@@ -98,9 +100,13 @@
         ?>
       </div>
 
-      <div class="text-center defaultMsg">
-        <h3>Start adding items to this list</h3>
-      </div>
+      <?php
+        if($count===0){
+          echo '<div class="text-center defaultMsg">
+                  <h3>Start adding items to this list</h3>
+                </div>';
+        }
+      ?>
     </div>
    
       

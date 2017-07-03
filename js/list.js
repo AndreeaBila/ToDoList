@@ -23,9 +23,10 @@ $(document).ready(function() {
         });
     });
 
-    //to delete the list
+    //to delete the item
     $('.listComponent .addNew').click(function() {
         var item = { itemID: $(this).parent().attr('id') };
+        var count = $(this).parent().siblings().length;
         $(this).parent().remove();
         //send async message to database to delete the item 
         $.ajax({
@@ -33,6 +34,9 @@ $(document).ready(function() {
             url: '../php/deleteItem.php',
             type: 'post'
         });
+        if(count === 0){
+            $('.listTasks').append('<div class="text-center defaultMsg"><h3>Start adding items to this list</h3></div>');
+        }
     });
 
     //listen for the add new item button click event on enter
