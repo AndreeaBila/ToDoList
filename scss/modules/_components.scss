@@ -96,7 +96,7 @@ input[type="date"] {
 
 .addNewTaskForm {
   margin: 50px auto;
-  margin-bottom: 60px !important;
+  margin-bottom: 65px !important;
   input, button {
     margin: -1.6px !important;
     margin-top: -8px !important;
@@ -257,5 +257,6 @@ input[type="date"] {
 }
 
 .defaultMsg {
-  margin-top: 57px !important;
+  margin-top: 0px !important;
+  margin-bottom: -16px  !important;
 }

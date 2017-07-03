@@ -476,7 +476,7 @@ input[type="date"] {
 /* line 97, ../scss/modules/_components.scss */
 .addNewTaskForm {
   margin: 50px auto;
-  margin-bottom: 60px !important;
+  margin-bottom: 65px !important;
 }
 /* line 100, ../scss/modules/_components.scss */
 .addNewTaskForm input, .addNewTaskForm button {
@@ -626,5 +626,6 @@ input[type="date"] {
 
 /* line 259, ../scss/modules/_components.scss */
 .defaultMsg {
-  margin-top: 57px !important;
+  margin-top: 0px !important;
+  margin-bottom: -16px !important;
 }
