@@ -76,7 +76,6 @@ input[type="date"] {
 .listWrapper {
   width: 50%;
   margin: 10px auto;
-  border: 0.1px solid #cccccc;
   margin-bottom: 150px;
   h1 {
     margin: 20px;
@@ -100,32 +99,73 @@ input[type="date"] {
   margin-bottom: 10px;
   input, button {
     margin: -1.6px !important;
+    margin-top: -8px !important;
     border-radius: 0px !important;
     height: 50px !important;
     width: 400px !important;
   }
 
-  .dropdown-toggle, .dropdown-menu {
-    width: 160px !important;
-    background-color: #f1f1f1;
+  select:active, select:hover {
+    outline: none !important;
+    box-shadow: none;
+    option:active, option:hover {
+      outline: none !important;
+      box-shadow: none;
+    }
   }
 
-  .dropdown-menu li .low:hover {
-    background-color: $success-color !important;
-    opacity: 0.5;
-    color: white;
-  }
+  select {
+    margin: -1.6px !important;
+    border-radius: 0px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    width: 200px !important;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-align: left;
+    padding-left: 10px;
+    color: #bbbbbb;
 
-  .dropdown-menu li .moderate:hover {
-    background-color: #f0ad4e !important;
-    opacity: 0.5;
-    color: white;
-  }
+    #selectName {
+      color: #cfcfcf;
+    }
 
-  .dropdown-menu li .high:hover {
-    background-color: $danger-color !important;
-    opacity: 0.5;
-    color: white;
+    option {
+      color: #888888;
+    }
+
+    #low {
+      color: $success-color !important;
+    }
+
+    #moderate {
+      color: #f0ad4e !important;
+    }
+
+    #high {
+      color: $danger-color !important;
+    }
+
+    // #low:hover, #low:active {
+    // outline-color: $success-color !important;
+    // opacity: 0.5;
+    // color: white !important;
+    // }
+
+    // #moderate:hover {
+    //   outline-color: #f0ad4e !important;
+    //   opacity: 0.5;
+    //   color: white;
+    // }
+
+    // #high:hover {
+    //   outline-color: $danger-color !important;
+    //   opacity: 0.5;
+    //   color: white;
+    // }
   }
 
   .addNew {
@@ -160,14 +200,13 @@ input[type="date"] {
   }
 
   p {
-    width: 400px !important;
+    width: 560px !important;
     line-height: 50px;
     background-color: #ffffff;
     background-image: none;
     border: 1px solid #cccccc;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    
     text-align: left;
     padding-left: 10px;
     font-size: 120%;
@@ -179,10 +218,40 @@ input[type="date"] {
     margin-top: 15px;
     margin-right: 10px;
   }
+
+  .lowImportance {
+    background-color: #CFEDF6;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  } 
+
+  .moderateImportance {
+    background-color: #FFE7D8;
+    border: 1px solid $moderate-color;
+    color: $moderate-color;
+  }
+
+  .highImportance {
+    background-color:	#F7C0C0;
+    border: 1px solid $danger-color;
+    color: $danger-color;
+  }
 }
 
 .listHr {
   border: 0;
   height: 1px !important;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
+}
+
+.taskAchieved {
+  .checkCircle {
+    color: $success-color;
+  }
+
+  p {
+    background-color: #B2E3BE!important;
+    border: 1px solid $success-color !important;
+    color: $success-color !important;
+  }
 }

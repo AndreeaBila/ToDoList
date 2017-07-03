@@ -365,6 +365,12 @@ input[type="button"] {
   transform: scale(1.1, 1.1);
 }
 
+/* line 141, ../scss/modules/_buttons.scss */
+.listBtns button {
+  width: 150px;
+  height: 40px;
+}
+
 /* line 2, ../scss/modules/_components.scss */
 .jumbotron {
   min-height: 95%;
@@ -438,85 +444,108 @@ input[type="date"] {
 .listWrapper {
   width: 50%;
   margin: 10px auto;
-  border: 0.1px solid #cccccc;
   margin-bottom: 150px;
 }
-/* line 81, ../scss/modules/_components.scss */
+/* line 80, ../scss/modules/_components.scss */
 .listWrapper h1 {
   margin: 20px;
   margin-bottom: 10px;
 }
-/* line 86, ../scss/modules/_components.scss */
+/* line 85, ../scss/modules/_components.scss */
 .listWrapper h6 {
   margin: 20px;
   margin-top: 0px;
   margin-bottom: 5px;
 }
-/* line 92, ../scss/modules/_components.scss */
+/* line 91, ../scss/modules/_components.scss */
 .listWrapper h3 {
   margin: 20px;
   margin-top: 27px;
 }
 
-/* line 98, ../scss/modules/_components.scss */
+/* line 97, ../scss/modules/_components.scss */
 .addNewTaskForm {
   margin: 50px auto;
   margin-bottom: 10px;
 }
-/* line 101, ../scss/modules/_components.scss */
+/* line 100, ../scss/modules/_components.scss */
 .addNewTaskForm input, .addNewTaskForm button {
   margin: -1.6px !important;
+  margin-top: -8px !important;
   border-radius: 0px !important;
   height: 50px !important;
   width: 400px !important;
 }
 /* line 108, ../scss/modules/_components.scss */
-.addNewTaskForm .dropdown-toggle, .addNewTaskForm .dropdown-menu {
-  width: 160px !important;
-  background-color: #f1f1f1;
+.addNewTaskForm select:active, .addNewTaskForm select:hover {
+  outline: none !important;
+  box-shadow: none;
 }
-/* line 113, ../scss/modules/_components.scss */
-.addNewTaskForm .dropdown-menu li .low:hover {
-  background-color: #5cb85c !important;
-  opacity: 0.5;
-  color: white;
+/* line 111, ../scss/modules/_components.scss */
+.addNewTaskForm select:active option:active, .addNewTaskForm select:active option:hover, .addNewTaskForm select:hover option:active, .addNewTaskForm select:hover option:hover {
+  outline: none !important;
+  box-shadow: none;
 }
-/* line 119, ../scss/modules/_components.scss */
-.addNewTaskForm .dropdown-menu li .moderate:hover {
-  background-color: #f0ad4e !important;
-  opacity: 0.5;
-  color: white;
+/* line 117, ../scss/modules/_components.scss */
+.addNewTaskForm select {
+  margin: -1.6px !important;
+  border-radius: 0px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  width: 200px !important;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  text-align: left;
+  padding-left: 10px;
+  color: #bbbbbb;
 }
-/* line 125, ../scss/modules/_components.scss */
-.addNewTaskForm .dropdown-menu li .high:hover {
-  background-color: #d9534f !important;
-  opacity: 0.5;
-  color: white;
+/* line 132, ../scss/modules/_components.scss */
+.addNewTaskForm select #selectName {
+  color: #cfcfcf;
 }
-/* line 131, ../scss/modules/_components.scss */
+/* line 136, ../scss/modules/_components.scss */
+.addNewTaskForm select option {
+  color: #888888;
+}
+/* line 140, ../scss/modules/_components.scss */
+.addNewTaskForm select #low {
+  color: #5cb85c !important;
+}
+/* line 144, ../scss/modules/_components.scss */
+.addNewTaskForm select #moderate {
+  color: #f0ad4e !important;
+}
+/* line 148, ../scss/modules/_components.scss */
+.addNewTaskForm select #high {
+  color: #d9534f !important;
+}
+/* line 171, ../scss/modules/_components.scss */
 .addNewTaskForm .addNew {
   width: 50px !important;
 }
-/* line 135, ../scss/modules/_components.scss */
+/* line 175, ../scss/modules/_components.scss */
 .addNewTaskForm input:focus {
   outline: none !important;
 }
 
-/* line 140, ../scss/modules/_components.scss */
+/* line 180, ../scss/modules/_components.scss */
 .listDescription {
   margin: 50px auto;
 }
 
-/* line 144, ../scss/modules/_components.scss */
+/* line 184, ../scss/modules/_components.scss */
 .listTasks {
   margin-bottom: 55px;
 }
 
-/* line 148, ../scss/modules/_components.scss */
+/* line 188, ../scss/modules/_components.scss */
 .listComponent {
   margin: 10px auto;
 }
-/* line 150, ../scss/modules/_components.scss */
+/* line 190, ../scss/modules/_components.scss */
 .listComponent p, .listComponent button {
   margin: -1.6px;
   display: inline-block;
@@ -524,13 +553,13 @@ input[type="date"] {
   width: 50px;
   border-radius: 0px;
 }
-/* line 158, ../scss/modules/_components.scss */
+/* line 198, ../scss/modules/_components.scss */
 .listComponent button {
   margin-top: -12px;
 }
-/* line 162, ../scss/modules/_components.scss */
+/* line 202, ../scss/modules/_components.scss */
 .listComponent p {
-  width: 400px !important;
+  width: 560px !important;
   line-height: 50px;
   background-color: #ffffff;
   background-image: none;
@@ -542,16 +571,45 @@ input[type="date"] {
   font-size: 120%;
   color: #909090;
 }
-/* line 177, ../scss/modules/_components.scss */
+/* line 216, ../scss/modules/_components.scss */
 .listComponent .checkCircle {
   color: #cccccc;
   margin-top: 15px;
   margin-right: 10px;
 }
+/* line 222, ../scss/modules/_components.scss */
+.listComponent .lowImportance {
+  background-color: #CFEDF6;
+  border: 1px solid #428bca;
+  color: #428bca;
+}
+/* line 228, ../scss/modules/_components.scss */
+.listComponent .moderateImportance {
+  background-color: #FFE7D8;
+  border: 1px solid #f0ad4e;
+  color: #f0ad4e;
+}
+/* line 234, ../scss/modules/_components.scss */
+.listComponent .highImportance {
+  background-color: #F7C0C0;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+}
 
-/* line 184, ../scss/modules/_components.scss */
+/* line 241, ../scss/modules/_components.scss */
 .listHr {
   border: 0;
   height: 1px !important;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
+}
+
+/* line 248, ../scss/modules/_components.scss */
+.taskAchieved .checkCircle {
+  color: #5cb85c;
+}
+/* line 252, ../scss/modules/_components.scss */
+.taskAchieved p {
+  background-color: #B2E3BE!important;
+  border: 1px solid #5cb85c !important;
+  color: #5cb85c !important;
 }

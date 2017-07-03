@@ -1,11 +1,13 @@
 $(document).ready(function() {
     $('.checkCircle').on('click', function() {
-        if ($(this).parent().hasClass("checked")) {
-            $(this).parent().removeClass("checked");
+        if ($(this).parent().hasClass("taskAchieved")) {
+            $(this).parent().removeClass("taskAchieved");
+            $(this).removeClass("fa-check-circle-o");
+            $(this).addClass("fa-circle-o");
         } else {
-            $('.checkCircle').removeClass("fa-circle-o");
-            $('.checkCircle').addClass("fa-check-circle-o");
-            $('.checkCircle').css({ "color": "#5cb85c" });
+            $(this).parent().addClass("taskAchieved")
+            $(this).removeClass("fa-circle-o");
+            $(this).addClass("fa-check-circle-o");
         }
     });
 

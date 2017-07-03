@@ -72,7 +72,7 @@
           while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
             echo "<div class='listComponent' id='".$row['ItemID']."'>
                     <i class='fa fa-circle-o fa-2x checkCircle' aria-hidden='true'></i>
-                    <p>".$row['Content']."</p>
+                    <p class='".$row['Importance']."Importance'>".$row['Content']."</p>
                     <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
                     <div class='clear'></div> 
                     </div>";
@@ -80,20 +80,32 @@
         ?>
       </div>
     </div>
+   
+
 
       <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
         <div class="form-group">
           <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
         </div>
             <select id='importanceSelector' name="importanceSelector">
-              <option value="low">Low</option>
-              <option value="moderate">Moderate</option>
-              <option value="high">High</option>
+              <option value="placeholder" id="selectName" disabled selected>Importance</option>
+              <option value="low" id="low">Low</option>
+              <option value="moderate" id="moderate">Moderate</option>
+              <option value="high" id="high">High</option>
             </select>
         <input type="hidden" name="listID" id="listID" value=<?php echo $_GET['listID'] ?>>
         <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>   
       </form>
     
+    <hr>
+
+    <div class="listWrapper listBtns">
+    <button type="button" class="pull-left btn btn-default btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</button>
+
+    <button type="button" class="pull-right btn btn-default btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
+    </div>
+
+    <div class="clear"></div>
 
     <?php
       include 'footer.php';
