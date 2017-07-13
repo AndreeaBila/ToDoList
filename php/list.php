@@ -22,10 +22,10 @@
     <title>To Do List</title>
 
     <!--Bootstrap-->
-    <link href="../../Bootstrap2/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="../Bootstrap2/css/bootstrap.min.css" rel="stylesheet"> 
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.min.css"> 
+    <script src="https://use.fontawesome.com/8dd7dadaef.js"></script> 
 
     <!-- My CSS -->
     <link href="../css/main.css" rel="stylesheet"> 
@@ -50,10 +50,10 @@
     <?php
       //script needed to retrieve list information from the database
       //create a new database connection
-      $db = new mysqli('localhost', 'root', '', 'tododb');
+       require 'createConnection.php';
       //get the list id from the url
       $listID = strip_tags($_GET['listID']);
-      $query = "SELECT Title, Description, DateCreated FROM Lists WHERE(ListID = ?);";
+      $query = "SELECT Title, Description, DateCreated FROM lists WHERE(ListID = ?);";
       $stmt = $db->prepare($query);
       $stmt->bind_param('s', $listID);
       $stmt->execute();
@@ -76,11 +76,11 @@
       <div class="listTasks">
         <?php
           //create a new database connection
-          $db = new mysqli('localhost', 'root', '', 'tododb');
+          require 'createConnection.php';
           //get all the items from that partcullar list and show them
           $userID = $_SESSION['ID'];
           $listID = $_GET['listID'];
-          $result = $db->query("SELECT * FROM Items WHERE(UserID = $userID AND ListID = $listID)");
+          $result = $db->query("SELECT * FROM items WHERE(UserID = $userID AND ListID = $listID)");
           $count = 0;
           while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
             $count++;
@@ -115,8 +115,8 @@
         <div class="form-group">
           <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
         </div>
-            <select id='importanceSelector' name="importanceSelector">
-              <option value="placeholder" id="selectName" disabled selected>Importance</option>
+            <select id='importanceSelector' name="importanceSelector" required>
+              <option value="placeholder" id="selectName" selected>Importance</option>
               <option value="low" id="low">Low</option>
               <option value="moderate" id="moderate">Moderate</option>
               <option value="high" id="high">High</option>
@@ -162,7 +162,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../Bootstrap/js/bootstrap.min.js"></script> 
+    <script src="../Bootstrap2/js/bootstrap.min.js"></script> 
 
     <!-- The js script for this file -->
     <script src="../js/list.js"></script>

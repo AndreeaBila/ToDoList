@@ -2,7 +2,7 @@
   session_start();
   //script needed to create a user instance on the server
   //create a new database connection
-  $db = new mysqli('localhost', 'root', '', 'tododb');
+  require_once 'createConnection.php';
 
   //im[port the user file
   require_once "User.php";
@@ -15,16 +15,21 @@
   $user->setSalt($salt);
 
   //add the user information to the database
-  $query = "INSERT INTO Users VALUES(NULL, ?, ?, ?, ?, ?);";
+  $query = "INSERT INTO users VALUES(NULL, ?, ?, ?, ?, ?);";
   $stmt = $db->prepare($query);
-  $stmt->bind_param("sssss", $user->getUserName(), $user->getPassword(), $user->getSalt(), $user->getEmail(), $user->getBirth());
+  $userArray = array('username' => $user->getUserName(),
+                    'password' => $user->getPassword(),
+                    'salt' => $user->getSalt(),
+                    'email' => $user->getEmail(),
+                    'birth' => $user->getBirth());
+  $stmt->bind_param("sssss", $userArray["username"], $userArray["password"], $userArray["salt"], $userArray["email"], $userArray["birth"]);
   $stmt->execute() or die("An error has occured!");
   $stmt->close();
 
   //obtain the user's id to set its session id
-  $query = "SELECT UserID FROM Users WHERE(Username = ?)";
+  $query = "SELECT UserID FROM users WHERE(Username = ?)";
   $stmt  = $db->prepare($query); 
-  $stmt->bind_param('s', $user->getUserName());
+  $stmt->bind_param('s', $userArray["username"]);
   $stmt->execute() or die('An error has occured!');
   $stmt->bind_result($_SESSION['ID']);
   $stmt->fetch();

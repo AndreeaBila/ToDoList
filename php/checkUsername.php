@@ -1,10 +1,10 @@
 <?php
   //create a database connection
-  $db = new mysqli('localhost', 'root', '', 'tododb') or die("Couldn't establish the connection!");
+  require_once 'createConnection.php';
   //get the username form the front end
   $username = strip_tags($_GET['username']);
   //check the username agains the database and return
-  $query = "SELECT count(*) AS Count FROM Users WHERE(Username = ?)";
+  $query = "SELECT count(*) AS Count FROM users WHERE(Username = ?)";
   $stmt = $db->prepare($query);
   $stmt->bind_param("s", $username);
   $stmt->execute();

@@ -1,10 +1,10 @@
 <?php
   //create a database connection
-  $db = new mysqli('localhost', 'root', '', 'tododb') or die("An unexpected error has occured");
+  require_once 'createConnection.php';
   require_once "ToDoList.php";
   //create query to extract all the lists from the database associated with a user
   $userID = $_SESSION['ID'];
-  $query = "SELECT * FROM Lists WHERE(UserID = $userID)";
+  $query = "SELECT * FROM lists WHERE(UserID = $userID)";
   $result = $db->query($query);
   //iterate through the results and fetch eatch list as an object
   $listArray = array();
@@ -25,7 +25,7 @@
     //find the number of completed items from that todo list to establish a p0ercentage
     $listID = $list->getListID();
     $listUserID = $list->getUserID();
-    $query = "SELECT count(*) AS Completed FROM Items WHERE(ListID = $listID AND UserID = $listUserID AND Status = 1)";
+    $query = "SELECT count(*) AS Completed FROM items WHERE(ListID = $listID AND UserID = $listUserID AND Status = 1)";
     $result = $db->query($query);
     $resultArr = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = $resultArr['Completed'];
