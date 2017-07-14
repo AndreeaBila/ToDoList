@@ -44,7 +44,7 @@ $(function() {
     //function needed for the log out action
     $('#btnLogIn_Out').click(function() {
         //delete cookie
-        document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/WebDev/ToDoList/php;";
+        document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/php;";
         //redirect the user to the login page
         location.href = 'index';
         //the session will then be destroyed on the index page
