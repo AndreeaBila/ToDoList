@@ -1,0 +1,25 @@
+# HTID:1871807: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:1871807:
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+Redirect 301 /WebDev/ToDoList/php/addItem /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/addNoLists /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/changeItemStatus /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/checkUsername /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/createConnection /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/createNewList /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/deleteItem /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/deleteList /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/footer /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/getListNames /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/getLists /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/header /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/logIn /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/security /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/setListStatus /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/signUp /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/ToDoList /WebDev/ToDoList/php/index
+Redirect 301 /WebDev/ToDoList/php/User /WebDev/ToDoList/php/index
