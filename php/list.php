@@ -19,10 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>To Do List</title>
+    <title>List Manager</title>
 
     <!--Bootstrap-->
-    <link href="../Bootstrap2/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- FontAwesome -->
     <script src="https://use.fontawesome.com/8dd7dadaef.js"></script> 
@@ -30,7 +30,7 @@
     <!-- My CSS -->
     <link href="../css/main.css" rel="stylesheet"> 
     <!-- Icon -->
-    <!-- <link rel="shortcut icon" href="../img/#"> -->
+     <link rel="shortcut icon" href="../img/small.png"> 
 
     <!-- JavaScript -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -165,7 +165,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../Bootstrap2/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- The js script for this file -->
     <script src="../js/list.js"></script>
