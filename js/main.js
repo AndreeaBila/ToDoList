@@ -64,12 +64,13 @@ $(function() {
             $.ajax({
                 data: deletedList,
                 url: '../php/deleteList.php',
-                type: 'get'
+                type: 'get',
+                success: function() {
+                    if (count === 0) {
+                        location.reload();
+                    }
+                }
             });
-
-            if (count === 0) {
-                location.reload();
-            }
         });
         $('#btnCancelDelete').click(function() {
             location.reload();
