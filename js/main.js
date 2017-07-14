@@ -46,7 +46,7 @@ $(function() {
         //delete cookie
         document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/WebDev/ToDoList/php;";
         //redirect the user to the login page
-        location.href = 'index.php';
+        location.href = 'index';
         //the session will then be destroyed on the index page
     });
 
@@ -55,8 +55,8 @@ $(function() {
         var deletedList = {
             listID: $(this).parent().parent().attr('id')
         };
-        var count = $(this).parent().parent().siblings().length-1;
-        
+        var count = $(this).parent().parent().siblings().length - 1;
+
         $('#btnConfirmDelete').click(function() {
             //create an ajax call to delete the list from the database and alos from the main page
             $('div#' + deletedList.listID).remove(); //delete the list from the actual page
@@ -67,7 +67,7 @@ $(function() {
                 type: 'get'
             });
 
-            if(count === 0) {
+            if (count === 0) {
                 location.reload();
             }
         });
@@ -104,7 +104,7 @@ $(function() {
                         type: 'get',
                         success: function(response) {
                             //navigate the user to the page of the list
-                            location.href = "list.php?listID=" + response;
+                            location.href = "list?listID=" + response;
                         },
                         error: function(response) {
                             alert('An error has occured!');
@@ -125,7 +125,7 @@ $(function() {
     $('.editBtn').click(function() {
         var listID = $(this).parent().parent().attr('id');
         listID = listID.replace('list', '');
-        location.href = "list.php?listID=" + listID;
+        location.href = "list?listID=" + listID;
     });
 
     //when the user clicks a list rediret him to the list's current page

@@ -4,10 +4,10 @@
   //call the cookie and set the session if it hasn't been set
   checkCookie();
   if(!checkSession()){
-    header("Location: index.php");
+    header("Location: index");
   }
   if(!checkAccesPermissions()){
-    header("Location: main.php");
+    header("Location: main");
   }
 ?>
 
@@ -128,7 +128,7 @@
     <hr>
 
     <div class="listWrapper listBtns">
-    <a class="pull-left btn btn-default backBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</a>
+    <a class="pull-left btn btn-default backBtn" href="main"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</a>
 
     <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
     </div>

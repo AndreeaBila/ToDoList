@@ -15,7 +15,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="#">About</a></li>
       </ul>
       
@@ -29,7 +29,7 @@
         ?></a></li>
       </ul>
 
-      <div class="text-center"><a href="index.php"><img id="logo" src="../img/todo2.png" alt="Lists"></a></div>
+      <div class="text-center"><a href="index"><img id="logo" src="../img/todo2.png" alt="Lists"></a></div>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
