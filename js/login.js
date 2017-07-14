@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('.jumbotron').css({ "height": "25vh" });
     });
 
-    $('#btnLogIn_Out').click(function(){
+    $('#btnLogIn_Out').click(function() {
         $('#learnMore').click();
     });
 
@@ -94,7 +94,7 @@ $('#loginSubmit').click(function() {
         url: "logIn.php",
         success: function(response) {
             if (response == "success") {
-                location.href = "main.php";
+                location.href = "main";
             } else {
                 $('#login_generalAlert').fadeIn(700);
             }
@@ -111,6 +111,6 @@ function getCookie() {
     var loggedIn = decodeURIComponent(document.cookie);
     loggedIn = (Number)(loggedIn.split(';')[0].split('=')[1]);
     if (Number.isInteger(loggedIn)) {
-        location.href = 'main.php';
+        location.href = 'main';
     }
 }

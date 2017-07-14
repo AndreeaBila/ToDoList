@@ -61,7 +61,7 @@ $(document).ready(function() {
             type: 'get',
             url: '../php/deleteList.php'
         });
-        location.href = "main.php";
+        location.href = "main";
     });
 
     //function needed for the log out action
@@ -69,7 +69,7 @@ $(document).ready(function() {
         //delete cookie
         document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/WebDev/ToDoList/php;";
         //redirect the user to the login page
-        location.href = 'index.php';
+        location.href = 'index';
         //the session will then be destroyed on the index page
     });
 });

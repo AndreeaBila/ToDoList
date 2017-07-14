@@ -14,5 +14,5 @@
   $stmt->execute() or die('error');
   $stmt->close();
   $db->query("UPDATE lists SET Size = Size + 1 WHERE(ListID = $item[listID])");
-  header('Location: list.php?listID='.$item['listID']);
+  header('Location: list?listID='.$item['listID']);
 ?>

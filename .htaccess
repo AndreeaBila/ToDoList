@@ -1,0 +1,27 @@
+# HTID:1871807: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:1871807:
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+Redirect 301 /php/addItem /php/index
+Redirect 301 /php/addNoLists /php/index
+Redirect 301 /php/changeItemStatus /php/index
+Redirect 301 /php/checkUsername /php/index
+Redirect 301 /php/createConnection /php/index
+Redirect 301 /php/createNewList /php/index
+Redirect 301 /php/deleteItem /php/index
+Redirect 301 /php/deleteList /php/index
+Redirect 301 /php/footer /php/index
+Redirect 301 /php/getListNames /php/index
+Redirect 301 /php/getLists /php/index
+Redirect 301 /php/header /php/index
+Redirect 301 /php/logIn /php/index
+Redirect 301 /php/security /php/index
+Redirect 301 /php/setListStatus /php/index
+Redirect 301 /php/signUp /php/index
+Redirect 301 /php/ToDoList /php/index
+Redirect 301 /php/User /php/index
