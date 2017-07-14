@@ -1,14 +1,43 @@
 //Index page button class
 .myBtn {
   width: 200px;
-  background-color: black;
-  color: white;
+  background-color: $footer-color;
+  color: $footer-text-color;
 }
 
 //Index page Larn More button
 #learnMore {
   padding: 20px !important;
-  margin-top: 550px;
+  margin-top: 70vh;
+}
+
+
+@media screen and (max-height: 600.9999px) {
+  #learnMore {
+    margin-top: 40vh;
+  }
+}
+
+@media screen and (min-height: 601px) and (max-height: 800px){
+  #learnMore {
+    margin-top: 50vh;
+  }
+}
+
+@media screen
+and (max-width: 992.9999px)
+and (orientation: landscape) {
+  #learnMore {
+    margin-top: 30vh;
+  }
+}
+
+@media screen and (min-width: 993px)
+and (max-width: 1200px)
+and (orientation: landscape) {
+  #learnMore {
+    margin-top: 50vh;
+  }
 }
 
 //Index page buttons actions
@@ -16,9 +45,10 @@
 .myBtn:active,
 .myBtn:focus,
 .myBtn:active:focus {
-  outline: none;
+  outline: none !important;
   transform: scale(0.97,0.97);
-  background-color: black;
+  background-color: $footer-color;
+  color: $footer-text-color;
 }
 
 //Input buttons styles
@@ -138,16 +168,29 @@ input[type="button"] {
   transform: scale(1.1,1.1);
 }
 
+@media screen and (max-width: 991.99999px) {
+  .listObject {
+    font-size: 120%;
+    .listSquare {
+      button {
+        i {
+          font-size: 140%
+        }
+      }
+    }
+  }
+}
 
 .listBtns {
   margin: 40px auto !important;
+  margin-bottom: 120px !important;
   button, a {
-    width: 150px;
+    width: 120px;
     height: 40px;
     line-height: 27px;
   }
   .backBtn {
-    background-color: #333333;
-    color: white;
+    background-color: $footer-color;
+    color: $footer-text-color;
   }
 }

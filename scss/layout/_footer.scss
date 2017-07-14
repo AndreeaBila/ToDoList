@@ -3,8 +3,12 @@
 }
 
 footer {
-    height: 240px;
-    margin-top: 60px;
+  height: $footer-height;
+  margin-top: 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .footer-component, footer {
@@ -25,11 +29,13 @@ footer {
   }
 
   input[type="email"] {
+    display: inline-block;
     height: 30px !important;
     width: 175px !important;
   }
 
   input[type="submit"] {
+    display: inline-block;
     padding: 5px !important;
     width: 75px;
   }
@@ -42,3 +48,75 @@ footer {
 .below-footer {
   margin-top: -5px;
 }
+
+
+@media screen and (min-width: 1039px)
+ and (max-width: 1200px) {
+  footer {
+    height: 250px;
+  }  
+  .wrapper {
+    padding-bottom: 250px;
+  }
+}
+
+@media screen and (max-width: 1038.99999px) 
+and (min-width: 992px) {
+  footer {
+    height: 280px;
+  }  
+  .wrapper {
+    padding-bottom: 280px;
+  }
+}
+
+@media screen and (max-width: 991.99999px) 
+and (min-width: 768px) {
+  footer {
+    height: 550px;
+  }  
+  .wrapper {
+    padding-bottom: 550px;
+  }
+}
+
+@media screen and (max-width: 767.99999px) 
+and (min-width: 442px) {
+  footer {
+    height: 570px;
+  }  
+  .wrapper {
+    padding-bottom: 570px;
+  }
+}
+
+@media screen and (max-width: 441.99999px) 
+and (min-width: 345px) {
+  footer {
+    height: 600px;
+  }  
+  .wrapper {
+    padding-bottom: 600px;
+  }
+}
+
+@media screen and (max-width: 344.99999px) {
+  footer {
+    height: 650px;
+  }  
+  .wrapper {
+    padding-bottom: 650px;
+  }
+}
+
+
+
+
+
+
+
+// @media screen and (max-width: 992.99999px) {
+//   footer {
+//     height: $footer-height-mobile !important;
+//   }
+// }

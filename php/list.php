@@ -44,119 +44,122 @@
     <![endif] -->        
   </head>
   <body>
-    <?php
-      include 'header.php';
-    ?>
-    <?php
-      //script needed to retrieve list information from the database
-      //create a new database connection
-       require 'createConnection.php';
-      //get the list id from the url
-      $listID = strip_tags($_GET['listID']);
-      $query = "SELECT Title, Description, DateCreated FROM lists WHERE(ListID = ?);";
-      $stmt = $db->prepare($query);
-      $stmt->bind_param('s', $listID);
-      $stmt->execute();
-      $stmt->bind_result($listInfo['Title'], $listInfo['Description'], $listInfo['Deadline']);
-      $stmt->fetch();
-    ?>
-    <div class="listWrapper text-center">
-      <h1 class="pull-left"><?php echo ucfirst($listInfo['Title']);?></h1>
-      <h3 class="pull-right"><?php echo $listInfo['Deadline'];?></h3>
-      <div class="clear"></div>
+    <div class="wrapper">
+      <?php
+        include 'header.php';
+      ?>
+      <?php
+        //script needed to retrieve list information from the database
+        //create a new database connection
+        require 'createConnection.php';
+        //get the list id from the url
+        $listID = strip_tags($_GET['listID']);
+        $query = "SELECT Title, Description, DateCreated FROM lists WHERE(ListID = ?);";
+        $stmt = $db->prepare($query);
+        $stmt->bind_param('s', $listID);
+        $stmt->execute();
+        $stmt->bind_result($listInfo['Title'], $listInfo['Description'], $listInfo['Deadline']);
+        $stmt->fetch();
+      ?>
+      <div class="listWrapper text-center">
+        <h1 class="pull-left"><?php echo ucfirst($listInfo['Title']);?></h1>
+        <h3 class="pull-right"><?php echo $listInfo['Deadline'];?></h3>
+        <div class="clear"></div>
 
-      
-      <h6 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h6>
+        
+        <h5 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h5>
 
-      <div class="clear"></div>
+        <div class="clear"></div>
 
-      <hr class="listHr">
-      <br>
-      
-      <div class="listTasks">
-        <?php
-          //create a new database connection
-          require 'createConnection.php';
-          //get all the items from that partcullar list and show them
-          $userID = $_SESSION['ID'];
-          $listID = $_GET['listID'];
-          $result = $db->query("SELECT * FROM items WHERE(UserID = $userID AND ListID = $listID)");
-          $count = 0;
-          while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-            $count++;
-            $className = '';
-            $circleClass = 'fa-circle-o';
-            if($row['Status'] == true) {
-              $className = 'taskAchieved';
-              $circleClass = 'fa-check-circle-o';
+        <hr class="listHr">
+        <br>
+        
+        <div class="listTasks">
+          <?php
+            //create a new database connection
+            require 'createConnection.php';
+            //get all the items from that partcullar list and show them
+            $userID = $_SESSION['ID'];
+            $listID = $_GET['listID'];
+            $result = $db->query("SELECT * FROM items WHERE(UserID = $userID AND ListID = $listID)");
+            $count = 0;
+            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+              $count++;
+              $className = '';
+              $circleClass = 'fa-circle-o';
+              if($row['Status'] == true) {
+                $className = 'taskAchieved';
+                $circleClass = 'fa-check-circle-o';
+              }
+              echo "<div class='listComponent ".$className."' id='".$row['ItemID']."'>
+                      <i class='fa ".$circleClass." fa-2x checkCircle' aria-hidden='true'></i>
+                      <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
+                      <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
+                      <div class='clear'></div> 
+                      </div>";
             }
-            echo "<div class='listComponent ".$className."' id='".$row['ItemID']."'>
-                    <i class='fa ".$circleClass." fa-2x checkCircle' aria-hidden='true'></i>
-                    <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
-                    <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
-                    <div class='clear'></div> 
-                    </div>";
+          ?>
+        </div>
+
+        <?php
+          if($count===0){
+            echo '<div class="text-center defaultMsg">
+                    <h3>Start adding items to this list</h3>
+                  </div>';
           }
         ?>
       </div>
-
-      <?php
-        if($count===0){
-          echo '<div class="text-center defaultMsg">
-                  <h3>Start adding items to this list</h3>
-                </div>';
-        }
-      ?>
-    </div>
-   
-      
-
-      <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
-        <div class="form-group">
-          <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
-        </div>
-            <select id='importanceSelector' name="importanceSelector" required>
-              <option value="placeholder" id="selectName" selected>Importance</option>
-              <option value="low" id="low">Low</option>
-              <option value="moderate" id="moderate">Moderate</option>
-              <option value="high" id="high">High</option>
-            </select>
-        <input type="hidden" name="listID" id="listID" value=<?php echo $_GET['listID'] ?>>
-        <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>   
-      </form>
     
-    <hr>
+        
 
-    <div class="listWrapper listBtns">
-    <a class="pull-left btn btn-default backBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back To My Lists</a>
+        <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
+          <div class="form-group">
+            <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
+          
+              <select id='importanceSelector' name="importanceSelector" required>
+                <option value="placeholder" id="selectName" selected>Importance</option>
+                <option value="low" id="low">Low</option>
+                <option value="moderate" id="moderate">Moderate</option>
+                <option value="high" id="high">High</option>
+              </select>
+          <input type="hidden" name="listID" id="listID" value=<?php echo $_GET['listID'] ?>>
+          <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+          </div>  
+        </form>
+      
+      <hr>
 
-    <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
-    </div>
+      <div class="listWrapper listBtns">
+      <a class="pull-left btn btn-default backBtn myBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</a>
 
-    <div class="clear"></div>
+      <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
+      </div>
 
-     <!-- Delete List modal -->
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
-          </div>
-          <div class="modal-body text-center">
-            <p>Are you sure you want to delete this list?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+      <div class="clear"></div>
+
+      <!-- Delete List modal -->
+      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
+            </div>
+            <div class="modal-body text-center">
+              <p>Are you sure you want to delete this list?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <?php
-      include 'footer.php';
-    ?>
+      <?php
+        include 'footer.php';
+      ?>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 

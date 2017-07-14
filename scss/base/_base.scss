@@ -1,5 +1,22 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: $default-font;
+  min-width: 300px;
+  
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: $footer-height;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
 }
 
 .box, .listSquare {
@@ -68,6 +85,8 @@ hr {
   margin-bottom: 15px;
 }
 
-#loginForm {
-  margin-bottom: 82px;
+
+
+#signupForm, #loginForm {
+  margin-bottom: 3vh;
 }

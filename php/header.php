@@ -1,37 +1,20 @@
-<header>
+<header class="headerStyle">
   <!--<link rel="stylesheet" href="../css/header.css">-->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+  <nav>
+    <div class="pull-left"><a href="main.php"><img id="logo" src="../img/logo2.png" alt="Lists"></a></div> 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right" id='btnLogIn_Out'>
-        <li><a href="#"><?php
-          if(isset($_SESSION['ID'])){
-            echo 'Log Out';
-          }else{
-            echo 'Log In';
-          }
-        ?></a></li>
-      </ul>
+  
+    <ul class="pull-right" id='btnLogIn_Out'>
+      <li><a  class="active" href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+      <li><a href="#"><?php
+        if(isset($_SESSION['ID'])){
+          echo '<i class="fa fa-sign-out" aria-hidden="true"></i> Log Out';
+        }else{
+          echo '<i class="fa fa-sign-in" aria-hidden="true"></i> Log In';
+        }
+      ?></a></li>
+    </ul>        
+  </nav>
 
-      <div class="text-center"><a href="index.php"><img id="logo" src="../img/todo2.png" alt="Lists"></a></div>
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 </header>
+  <div class="clear"></div>

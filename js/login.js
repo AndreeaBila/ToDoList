@@ -11,9 +11,7 @@ $(document).ready(function() {
     $('#learnMore').click(function() {
         $('#loginForm').show(500);
         $('#learnMore').hide();
-        $('html').css({ "min-height": "55%", "height": "55%" });
-        $('body').css({ "min-height": "55%", "height": "55%" });
-        $('.jumbotron').css({ "min-height": "55%", "height": "55%" });
+        $('.jumbotron').css({ "height": "25vh" });
     });
 
     $('#btnLogIn_Out').click(function(){

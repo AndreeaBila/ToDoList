@@ -41,85 +41,87 @@
     <![endif] -->        
   </head>
   <body>
-    <?php
-      include 'header.php';
-    ?>
-    
-    <div class="box effect2">
-      <button type="button" class="newListBtn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
-    </div>
-    
-    <hr class="hrDefault">
-
-    <div class="yourLists">
-      <h2>Manage your Lists</h2>
-      <!-- call the create lists file -->
+    <div class="wrapper">
       <?php
-        include 'getLists.php';
-      ?>     
-    </div>
+        include 'header.php';
+      ?>
+      
+      <div class="box effect2">
+        <button type="button" class="newListBtn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus fa-5x" aria-hidden="true"></i><p class="abc">Add new list</p></button>
+      </div>
+      
+      <hr class="hrDefault">
 
-    <!-- Delete List modal -->
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
-          </div>
-          <div class="modal-body text-center">
-            <p>Are you sure you want to delete this list?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+      <div class="yourLists">
+        <h2>Manage your Lists</h2>
+        <!-- call the create lists file -->
+        <?php
+          include 'getLists.php';
+        ?>     
+      </div>
+
+      <!-- Delete List modal -->
+      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
+            </div>
+            <div class="modal-body text-center">
+              <p>Are you sure you want to delete this list?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Large modal -->
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
-          </div>
-          <div class="modal-body">
-            <form id='createListForm'>
-              <div class="form-group form-inline">
-                <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
-                <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
-              </div>
+      <!-- Large modal -->
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
+            </div>
+            <div class="modal-body">
+              <form id='createListForm'>
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
+                </div>
 
-              <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
-                <a class="close" aria-label="close">&times;</a>
-                <strong>Sorry!</strong>You have to fill in all the details and a unique list name!
-              </div>
+                <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
+                  <a class="close" aria-label="close">&times;</a>
+                  <strong>Sorry!</strong>You have to fill in all the details and a unique list name!
+                </div>
 
-              <div class="form-group form-inline">
-                <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
-                <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" required>
-              </div>
-              
-              <div class="form-group form-inline">
-                <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
-                <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="<?php echo date("Y-m-d") ?>" required>
-              </div> 
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
-            <button type="button" class="btn btn-success" id='btnCreateList'>Create List</button>
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" required>
+                </div>
+                
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
+                  <input class="form-control newListInput" type="text" name="deadline" id="listDeadline" onfocus="(this.type='date')" placeholder="Deadline" min="<?php echo date("Y-m-d") ?>" required>
+                </div> 
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn btn-success" id='btnCreateList'>Create List</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <?php
-      include 'footer.php';
-    ?>
+      <?php
+        include 'footer.php';
+      ?>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 

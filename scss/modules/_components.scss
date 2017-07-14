@@ -1,16 +1,25 @@
 //jumbotron image height
 .jumbotron {
-  min-height: 95%;
-  height: 95%;
+  height: 93vh;
 }
+
+// @media screen and (max-width: 992px) {
+//   .jumbotron {
+//     height: 93vh;
+//   }
+// }
 
 //Index page jumbotron
 .jumbotron {
-  background-image: url('../img/5.jpg') !important;
-  background-size: 100%;
+  background-image: url('../img/4.jpg') !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
   color: white;
   text-shadow: 2px 2px black;
-  margin-top: 50px;
+  margin-top: -0.7vh;
+  margin-bottom: 0px;
 }
 
 //Form inputs styles
@@ -21,8 +30,23 @@ input[type="date"] {
   width: 350px !important;
   height: 40px !important;
   margin: 5px;
+  display: inline-block;
   // background-color: $input-color !important;
   // color: #f2f2f2;
+}
+
+.alert {
+  width: 350px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 390px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"] {
+    width: 270px !important;
+  }
 }
 
 
@@ -56,12 +80,14 @@ input[type="date"] {
 .modal-dialog {
   width: 500px !important;
   margin-top: 10% !important;
+  margin: 0 auto;
 }
 
 .modal-sm {
   width: 350px !important;
   font-size: 120%;
   margin-top: 15% !important;
+  margin: 0 auto;
 }
 
 .modal-body input[type="text"],
@@ -73,8 +99,43 @@ input[type="date"] {
   margin-top: 10px !important;
 }
 
+@media screen and (max-width:500px)
+and (min-width: 391px) {
+  .modal-dialog {
+    width: 380px !important;
+  }
+
+  .modal-sm {
+    margin-top: 20% !important;
+  }
+  
+  .modal-body input[type="text"],
+  .modal-body input[type="date"] {
+    width: 85% !important;
+  }
+}
+
+@media screen and (max-width: 390.99999px) {
+  .modal-dialog {
+    margin: 0 auto;
+    width: 290px !important;
+    margin-top: 10% !important;
+  }
+
+  .modal-sm {
+    margin: 0 auto;
+    width: 290px !important;
+    margin-top: 20% !important;
+  }
+
+  .modal-body input[type="text"],
+  .modal-body input[type="date"] {
+    width: 85% !important;
+  }
+}
+
 .listWrapper {
-  width: 50%;
+  width: 60%;
   margin: 10px auto;
   margin-bottom: 150px;
   h1 {
@@ -82,7 +143,7 @@ input[type="date"] {
     margin-bottom: 10px;
   }
 
-  h6 {
+  h5 {
     margin: 20px;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -103,6 +164,7 @@ input[type="date"] {
     border-radius: 0px !important;
     height: 50px !important;
     width: 400px !important;
+    display: inline-block;
   }
 
   select:active, select:hover {
@@ -115,7 +177,12 @@ input[type="date"] {
   }
 
   select {
-    margin: -1.6px !important;
+    display: inline-block;
+    margin-left: -3px !important;
+    margin-right: -2px !important;
+    box-sizing: border-box;
+    padding-top: 5px !important;
+
     border-radius: 0px !important;
     height: 50px !important;
     line-height: 50px !important;
@@ -138,7 +205,7 @@ input[type="date"] {
     }
 
     #low {
-      color: $success-color !important;
+      color: $primary-color !important;
     }
 
     #moderate {
@@ -177,6 +244,114 @@ input[type="date"] {
   }
 }
 
+@media screen and (max-width: 768.99999px) 
+and (min-width: 400px) {
+  .listWrapper {
+    width: 90%;
+    margin-bottom: 80px;
+  }
+  .addNewTaskForm {
+    margin-bottom: 30px !important;
+    input, button {
+      width: 200px !important;
+    }
+    button {
+      margin-top: -5px !important;
+    }
+    select {
+      padding-top: 0px !important;
+      width: 110px !important;
+    }
+    .addNew {
+      width: 50px !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 399.99999px)
+and (min-width: 350px) {
+  .listWrapper {
+    width: 90%;
+    margin-bottom: 80px;
+    h1 {
+      margin: 5px;
+      margin-bottom: 5px;
+    }
+
+    h5 {
+      margin: 5px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      margin: 5px;
+      margin-top: 15px;
+    }
+  }
+  .addNewTaskForm {
+    input, button {
+      width: 250px !important;
+    }
+
+    select {
+      width: 250px !important;
+      margin-top: 1px !important;
+      margin-left: -2px !important;
+    }
+
+    .addNew {
+      margin-top: 0px !important;
+      width: 250px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 349.99999px) {
+  .listWrapper {
+    width: 90%;
+    margin-bottom: 80px;
+    h1 {
+      clear: both;
+      margin: 5px;
+      margin-bottom: 5px;
+    }
+
+    h5 {
+      clear: both;
+      margin: 5px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      clear: both;
+      float: left !important;
+      margin: 5px;
+      margin-top: 0px;
+    }
+  }
+  .addNewTaskForm {
+    input, button {
+      width: 250px !important;
+    }
+
+    select {
+      width: 250px !important;
+      margin-top: 1px !important;
+      margin-left: -2px !important;
+    }
+
+    .addNew {
+      margin-top: 0px !important;
+      width: 250px !important;
+    }
+  }
+}
+
+
+
 .listDescription {
   margin: 50px auto;
 }
@@ -188,7 +363,7 @@ input[type="date"] {
 .listComponent {
   margin: 10px auto;
   p, button {
-    margin: -1.6px;
+    margin: -2px;
     display: inline-block;
     height: 50px;
     width: 50px; 
@@ -196,7 +371,7 @@ input[type="date"] {
   }
 
   button {
-    margin-top: -12px;
+    margin-top: -6px;
   }
 
   p {
@@ -235,6 +410,27 @@ input[type="date"] {
     background-color:	#F7C0C0;
     border: 1px solid $danger-color;
     color: $danger-color;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  .listComponent {
+    margin: 5px auto;
+
+    p {
+      width: 70% !important;      
+      padding-left: 5px;
+      font-size: 100%;
+    }
+    
+    .checkCircle {
+      margin-top: 20px;
+      margin-right: 2px;
+    }
   }
 }
 
