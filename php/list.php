@@ -101,6 +101,17 @@
           ?>
         </div>
 
+        <!-- DELETE THIS !! -->
+        <style>
+          p{
+            word-wrap: break-word;
+            overflow-y: scroll;
+          }
+          p ::-webkit-scrollbar{
+              display: none;
+          }
+        </style>
+
         <?php
           if($count===0){
             echo '<div class="text-center defaultMsg">
