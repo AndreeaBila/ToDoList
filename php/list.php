@@ -103,12 +103,9 @@
 
         <!-- DELETE THIS !! -->
         <style>
-          p{
-            word-wrap: break-word;
+          .listComponent p{
+            word-wrap: break-word; 
             overflow-y: scroll;
-          }
-          p ::-webkit-scrollbar{
-              display: none;
           }
         </style>
 
