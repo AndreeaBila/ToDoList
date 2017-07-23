@@ -194,3 +194,23 @@ input[type="button"] {
     color: $footer-text-color;
   }
 }
+
+.editListBtn {
+  background-color: transparent;
+  display: none;
+}
+
+.editListBtn:hover,
+.editListBtn:active,
+.editListBtn:focus,
+.editListBtn:active:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+h2:hover {
+  .editListBtn {
+    display: initial;
+  }
+}

@@ -36,7 +36,7 @@ input[type="date"] {
 }
 
 .alert {
-  width: 350px;
+  width: 90% !important;
   margin: 0 auto;
 }
 
@@ -138,21 +138,21 @@ and (min-width: 391px) {
   width: 60%;
   margin: 10px auto;
   margin-bottom: 150px;
-  h1 {
+  h2 {
     margin: 20px;
     margin-bottom: 10px;
   }
 
-  h5 {
+  h4 {
     margin: 20px;
     margin-top: 0px;
     margin-bottom: 5px;
   }
 
-  h3 {
-    margin: 20px;
-    margin-top: 27px;
-  }
+  // h3 {
+  //   margin: 20px;
+  //   margin-top: 27px;
+  // }
 }
 
 .addNewTaskForm {
@@ -274,21 +274,21 @@ and (min-width: 350px) {
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
-    h1 {
+    h2 {
       margin: 5px;
       margin-bottom: 5px;
     }
 
-    h5 {
+    h4 {
       margin: 5px;
       margin-top: 0px;
       margin-bottom: 0px;
     }
 
-    h3 {
-      margin: 5px;
-      margin-top: 15px;
-    }
+    // h3 {
+    //   margin: 5px;
+    //   margin-top: 15px;
+    // }
   }
   .addNewTaskForm {
     input, button {
@@ -312,25 +312,25 @@ and (min-width: 350px) {
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
-    h1 {
+    h2 {
       clear: both;
       margin: 5px;
       margin-bottom: 5px;
     }
 
-    h5 {
+    h4 {
       clear: both;
       margin: 5px;
       margin-top: 0px;
       margin-bottom: 0px;
     }
 
-    h3 {
-      clear: both;
-      float: left !important;
-      margin: 5px;
-      margin-top: 0px;
-    }
+    // h4 {
+    //   clear: both;
+    //   float: left !important;
+    //   margin: 5px;
+    //   margin-top: 0px;
+    // }
   }
   .addNewTaskForm {
     input, button {
@@ -371,10 +371,27 @@ and (min-width: 350px) {
   }
 
   button {
-    margin-top: -6px;
+    margin-top: -40px;
+  }
+
+  .checkItemBtn:hover,
+  .checkItemBtn:active, 
+  .checkItemBtn:focus,
+  .checkItemBtn:active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  
+  .btnUnchecked,
+  .btnUnchecked:active, {
+    background-color: #ddd;
+    color: white;
   }
 
   p {
+    margin-top: 10px !important;
+    margin-left: -1px !important;
     width: 70% !important;
     line-height: 50px;
     background-color: #ffffff;
@@ -387,12 +404,9 @@ and (min-width: 350px) {
     font-size: 120%;
     color: #909090;
   }
+
   
-  .checkCircle {
-    color: #cccccc;
-    margin-top: 15px;
-    margin-right: 10px;
-  }
+
 
   .lowImportance {
     background-color: #CFEDF6;
@@ -441,8 +455,11 @@ and (min-width: 350px) {
 }
 
 .taskAchieved {
-  .checkCircle {
-    color: $success-color;
+  transition: 5s;
+  button.checkItemBtn {
+    background-color: $success-color;
+    color: white;
+    border: 1px solid $success-color;
   }
 
   p {
@@ -460,4 +477,10 @@ and (min-width: 350px) {
 .noListMsg {
   margin: 105.5px auto !important;
   color: #888;
+}
+
+.bs-example-modal-lg {
+  .alert {
+
+  }
 }

@@ -62,15 +62,18 @@
         $stmt->fetch();
       ?>
       <div class="listWrapper text-center">
-        <h1 class="pull-left"><?php echo ucfirst($listInfo['Title']);?></h1>
-        <h3 class="pull-right"><?php echo $listInfo['Deadline'];?></h3>
+        <h2 class="pull-left"><?php echo ucfirst($listInfo['Title']);?><button class="btn editListBtn" data-toggle='modal' data-target='.bs-example-modal-lg'><i class="fa fa-pencil-square-o fa-lg" data-toggle="tooltip" data-placement='bottom' title='Edit This List' aria-hidden="true"></i></button></h2>
+        
+        <h2 class="pull-right">Deadline</h2>
+        
         <div class="clear"></div>
 
         
-        <h5 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h5>
+        <h4 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h4>
+        <h4 class="pull-right"><?php echo $listInfo['Deadline'];?></h4>
 
         <div class="clear"></div>
-
+ 
         <hr class="listHr">
         <br>
         
@@ -86,15 +89,18 @@
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
               $count++;
               $className = '';
-              $circleClass = 'fa-circle-o';
+              $btnClass = 'btnUnchecked';
+              $circleClass = 'fa-check';
               if($row['Status'] == true) {
                 $className = 'taskAchieved';
-                $circleClass = 'fa-check-circle-o';
+                $btnClass = 'btn-success';
+                $circleClass = 'fa-check';
               }
               echo "<div class='listComponent ".$className."' id='".$row['ItemID']."'>
-                      <i class='fa ".$circleClass." fa-2x checkCircle' aria-hidden='true'></i>
+                      <button class=' btn btn-default ".$btnClass." checkItemBtn'><i class='fa ".$circleClass." fa-2x' aria-hidden='true' data-toggle='tooltip' data-placement='bottom' title='Check Item'></i></button>
                       <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
-                      <button type='submit' class='addNew btn btn-default btn-danger'><i class='fa fa-times' aria-hidden='true'></i></button>
+                      <button class='btn btn-default btn-primary' data-toggle='modal' data-target='.editModal'><i class='fa fa-pencil fa-2x' data-toggle='tooltip' data-placement='bottom' title='Edit Item' aria-hidden='true'></i></button>
+                      <button type='submit' class='addNew btn btn-default btn-danger' data-toggle='tooltip' data-placement='bottom' title='Delete Item'><i class='fa fa-times fa-lg' aria-hidden='true'></i></button>
                       <div class='clear'></div> 
                       </div>";
             }
@@ -122,23 +128,23 @@
 
         <form action="addItem.php" method="POST" class="form-inline addNewTaskForm text-center">
           <div class="form-group">
-            <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" required>
+            <input type="text" name="newTask" class="form-control" id="newTask" placeholder="New Task" data-toggle='tooltip' data-placement='bottom' title='Insert new item' required>
           
-              <select id='importanceSelector' name="importanceSelector" required>
+              <select id='importanceSelector' name="importanceSelector" data-toggle='tooltip' data-placement='bottom' title='Is this item prioritary?' required>
                 <option value="placeholder" id="selectName" selected>Importance</option>
                 <option value="low" id="low">Low</option>
                 <option value="moderate" id="moderate">Moderate</option>
                 <option value="high" id="high">High</option>
               </select>
           <input type="hidden" name="listID" id="listID" value=<?php echo $_GET['listID'] ?>>
-          <button type="submit" class="addNew btn btn-default btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+          <button type="submit" class="addNew btn btn-default btn-success" data-toggle='tooltip' data-placement='bottom' title='Add Item'><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button> 
           </div>  
         </form>
       
       <hr>
 
       <div class="listWrapper listBtns">
-      <a class="pull-left btn btn-default backBtn" href="main.php"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</a>
+      <a class="pull-left btn btn-default backBtn" href="main.php" data-toggle='tooltip' data-placement='bottom' title='Return to Your Lists'><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</a>
 
       <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
       </div>
@@ -159,6 +165,45 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Large modal -->
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
+            </div>
+            <div class="modal-body">
+              <form id='createListForm'>
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control newListInput" name="listName" id="newListName" data-toggle="tooltip" data-placement="bottom" title="What is this list for?" placeholder="List Name" required>
+                </div>
+
+                <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
+                  <a class="close" aria-label="close">&times;</a>
+                  <strong>Sorry!</strong>You have to fill in all the details and a unique list name!
+                </div>
+
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" data-toggle="tooltip" data-placement="bottom" title="Give aditional details"  required>
+                </div>
+                
+                <div class="form-group form-inline">
+                  <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
+                  <input class="form-control newListInput" type="date" name="deadline" id="listDeadline" min="<?php echo date("Y-m-d") ?>" data-toggle="tooltip" data-placement="bottom" title="Choose your deadline" required>
+                </div> 
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn btn-success">Apply Changes</button>
             </div>
           </div>
         </div>

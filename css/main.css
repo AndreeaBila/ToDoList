@@ -164,6 +164,11 @@ hr {
   margin-bottom: 3vh;
 }
 
+/* line 94, ../scss/base/_base.scss */
+.clear {
+  clear: both;
+}
+
 /* line 7, ../scss/layout/_nav.scss */
 header {
   box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5) !important;
@@ -261,111 +266,117 @@ footer {
   width: 100%;
   padding: 0;
 }
+/* line 12, ../scss/layout/_footer.scss */
+footer #subscribeBtn {
+  color: #191919;
+  background-color: #7f8c8d;
+  font-weight: bold;
+}
 
-/* line 14, ../scss/layout/_footer.scss */
+/* line 19, ../scss/layout/_footer.scss */
 .footer-component, footer {
   color: #7F8C8D;
   background-color: #191919;
 }
 
-/* line 20, ../scss/layout/_footer.scss */
+/* line 25, ../scss/layout/_footer.scss */
 .footer-component ul {
   margin-left: -35px;
 }
-/* line 22, ../scss/layout/_footer.scss */
+/* line 27, ../scss/layout/_footer.scss */
 .footer-component ul li {
   display: inline-block;
   padding: 8px;
 }
-/* line 25, ../scss/layout/_footer.scss */
+/* line 30, ../scss/layout/_footer.scss */
 .footer-component ul li img {
   width: 35px;
 }
-/* line 31, ../scss/layout/_footer.scss */
+/* line 36, ../scss/layout/_footer.scss */
 .footer-component input[type="email"] {
   display: inline-block;
   height: 30px !important;
   width: 175px !important;
 }
-/* line 37, ../scss/layout/_footer.scss */
+/* line 42, ../scss/layout/_footer.scss */
 .footer-component input[type="submit"] {
   display: inline-block;
   padding: 5px !important;
   width: 75px;
 }
 
-/* line 44, ../scss/layout/_footer.scss */
+/* line 49, ../scss/layout/_footer.scss */
 .clear {
   clear: both;
 }
 
-/* line 48, ../scss/layout/_footer.scss */
+/* line 53, ../scss/layout/_footer.scss */
 .below-footer {
   margin-top: -5px;
 }
 
 @media screen and (min-width: 1039px) and (max-width: 1200px) {
-  /* line 55, ../scss/layout/_footer.scss */
+  /* line 60, ../scss/layout/_footer.scss */
   footer {
     height: 250px;
   }
 
-  /* line 58, ../scss/layout/_footer.scss */
+  /* line 63, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 250px;
   }
 }
 @media screen and (max-width: 1038.99999px) and (min-width: 992px) {
-  /* line 65, ../scss/layout/_footer.scss */
+  /* line 70, ../scss/layout/_footer.scss */
   footer {
     height: 280px;
   }
 
-  /* line 68, ../scss/layout/_footer.scss */
+  /* line 73, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 280px;
   }
 }
 @media screen and (max-width: 991.99999px) and (min-width: 768px) {
-  /* line 75, ../scss/layout/_footer.scss */
+  /* line 80, ../scss/layout/_footer.scss */
   footer {
     height: 550px;
   }
 
-  /* line 78, ../scss/layout/_footer.scss */
+  /* line 83, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 550px;
   }
 }
 @media screen and (max-width: 767.99999px) and (min-width: 442px) {
-  /* line 85, ../scss/layout/_footer.scss */
+  /* line 90, ../scss/layout/_footer.scss */
   footer {
     height: 570px;
   }
 
-  /* line 88, ../scss/layout/_footer.scss */
+  /* line 93, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 570px;
   }
 }
 @media screen and (max-width: 441.99999px) and (min-width: 345px) {
-  /* line 95, ../scss/layout/_footer.scss */
+  /* line 100, ../scss/layout/_footer.scss */
   footer {
     height: 600px;
   }
 
-  /* line 98, ../scss/layout/_footer.scss */
+  /* line 103, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 600px;
   }
 }
 @media screen and (max-width: 344.99999px) {
-  /* line 104, ../scss/layout/_footer.scss */
+  /* line 109, ../scss/layout/_footer.scss */
   footer {
     height: 650px;
   }
 
-  /* line 107, ../scss/layout/_footer.scss */
+  /* line 112, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 650px;
   }
@@ -582,6 +593,27 @@ input[type="button"] {
   color: #7f8c8d;
 }
 
+/* line 198, ../scss/modules/_buttons.scss */
+.editListBtn {
+  background-color: transparent;
+  display: none;
+}
+
+/* line 206, ../scss/modules/_buttons.scss */
+.editListBtn:hover,
+.editListBtn:active,
+.editListBtn:focus,
+.editListBtn:active:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* line 213, ../scss/modules/_buttons.scss */
+h2:hover .editListBtn {
+  display: initial;
+}
+
 /* line 2, ../scss/modules/_components.scss */
 .jumbotron {
   height: 93vh;
@@ -613,7 +645,7 @@ input[type="date"] {
 
 /* line 38, ../scss/modules/_components.scss */
 .alert {
-  width: 350px;
+  width: 90% !important;
   margin: 0 auto;
 }
 
@@ -717,20 +749,15 @@ input[type="date"] {
   margin-bottom: 150px;
 }
 /* line 141, ../scss/modules/_components.scss */
-.listWrapper h1 {
+.listWrapper h2 {
   margin: 20px;
   margin-bottom: 10px;
 }
 /* line 146, ../scss/modules/_components.scss */
-.listWrapper h5 {
+.listWrapper h4 {
   margin: 20px;
   margin-top: 0px;
   margin-bottom: 5px;
-}
-/* line 152, ../scss/modules/_components.scss */
-.listWrapper h3 {
-  margin: 20px;
-  margin-top: 27px;
 }
 
 /* line 158, ../scss/modules/_components.scss */
@@ -842,20 +869,15 @@ input[type="date"] {
     margin-bottom: 80px;
   }
   /* line 277, ../scss/modules/_components.scss */
-  .listWrapper h1 {
+  .listWrapper h2 {
     margin: 5px;
     margin-bottom: 5px;
   }
   /* line 282, ../scss/modules/_components.scss */
-  .listWrapper h5 {
+  .listWrapper h4 {
     margin: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-  /* line 288, ../scss/modules/_components.scss */
-  .listWrapper h3 {
-    margin: 5px;
-    margin-top: 15px;
   }
 
   /* line 294, ../scss/modules/_components.scss */
@@ -881,24 +903,17 @@ input[type="date"] {
     margin-bottom: 80px;
   }
   /* line 315, ../scss/modules/_components.scss */
-  .listWrapper h1 {
+  .listWrapper h2 {
     clear: both;
     margin: 5px;
     margin-bottom: 5px;
   }
   /* line 321, ../scss/modules/_components.scss */
-  .listWrapper h5 {
+  .listWrapper h4 {
     clear: both;
     margin: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-  /* line 328, ../scss/modules/_components.scss */
-  .listWrapper h3 {
-    clear: both;
-    float: left !important;
-    margin: 5px;
-    margin-top: 0px;
   }
 
   /* line 336, ../scss/modules/_components.scss */
@@ -941,10 +956,26 @@ input[type="date"] {
 }
 /* line 373, ../scss/modules/_components.scss */
 .listComponent button {
-  margin-top: -6px;
+  margin-top: -40px;
 }
-/* line 377, ../scss/modules/_components.scss */
+/* line 380, ../scss/modules/_components.scss */
+.listComponent .checkItemBtn:hover,
+.listComponent .checkItemBtn:active,
+.listComponent .checkItemBtn:focus,
+.listComponent .checkItemBtn:active:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* line 387, ../scss/modules/_components.scss */
+.listComponent .btnUnchecked,
+.listComponent .btnUnchecked:active {
+  background-color: #ddd;
+  color: white;
+}
+/* line 392, ../scss/modules/_components.scss */
 .listComponent p {
+  margin-top: 10px !important;
+  margin-left: -1px !important;
   width: 70% !important;
   line-height: 50px;
   background-color: #ffffff;
@@ -957,25 +988,19 @@ input[type="date"] {
   font-size: 120%;
   color: #909090;
 }
-/* line 391, ../scss/modules/_components.scss */
-.listComponent .checkCircle {
-  color: #cccccc;
-  margin-top: 15px;
-  margin-right: 10px;
-}
-/* line 397, ../scss/modules/_components.scss */
+/* line 411, ../scss/modules/_components.scss */
 .listComponent .lowImportance {
   background-color: #CFEDF6;
   border: 1px solid #428bca;
   color: #428bca;
 }
-/* line 403, ../scss/modules/_components.scss */
+/* line 417, ../scss/modules/_components.scss */
 .listComponent .moderateImportance {
   background-color: #FFE7D8;
   border: 1px solid #f0ad4e;
   color: #f0ad4e;
 }
-/* line 409, ../scss/modules/_components.scss */
+/* line 423, ../scss/modules/_components.scss */
 .listComponent .highImportance {
   background-color: #F7C0C0;
   border: 1px solid #d9534f;
@@ -983,52 +1008,58 @@ input[type="date"] {
 }
 
 @media screen and (max-width: 315px) {
-  /* line 417, ../scss/modules/_components.scss */
+  /* line 431, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 421, ../scss/modules/_components.scss */
+  /* line 435, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 424, ../scss/modules/_components.scss */
+  /* line 438, ../scss/modules/_components.scss */
   .listComponent p {
     width: 70% !important;
     padding-left: 5px;
     font-size: 100%;
   }
-  /* line 430, ../scss/modules/_components.scss */
+  /* line 444, ../scss/modules/_components.scss */
   .listComponent .checkCircle {
     margin-top: 20px;
     margin-right: 2px;
   }
 }
-/* line 437, ../scss/modules/_components.scss */
+/* line 451, ../scss/modules/_components.scss */
 .listHr {
   border: 0;
   height: 1px !important;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
 }
 
-/* line 444, ../scss/modules/_components.scss */
-.taskAchieved .checkCircle {
-  color: #5cb85c;
+/* line 457, ../scss/modules/_components.scss */
+.taskAchieved {
+  transition: 5s;
 }
-/* line 448, ../scss/modules/_components.scss */
+/* line 459, ../scss/modules/_components.scss */
+.taskAchieved button.checkItemBtn {
+  background-color: #5cb85c;
+  color: white;
+  border: 1px solid #5cb85c;
+}
+/* line 465, ../scss/modules/_components.scss */
 .taskAchieved p {
   background-color: #B2E3BE!important;
   border: 1px solid #5cb85c !important;
   color: #5cb85c !important;
 }
 
-/* line 455, ../scss/modules/_components.scss */
+/* line 472, ../scss/modules/_components.scss */
 .defaultMsg {
   margin-top: 0px !important;
   margin-bottom: -16px !important;
 }
 
-/* line 460, ../scss/modules/_components.scss */
+/* line 477, ../scss/modules/_components.scss */
 .noListMsg {
   margin: 105.5px auto !important;
   color: #888;

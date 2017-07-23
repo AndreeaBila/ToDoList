@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $('.checkCircle').on('click', function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('.checkItemBtn').on('click', function() {
         //get the id of the item that has been selected
         var item = {
             itemID: $(this).parent().attr('id'),
@@ -7,13 +9,13 @@ $(document).ready(function() {
         };
         if ($(this).parent().hasClass("taskAchieved")) {
             $(this).parent().removeClass("taskAchieved");
-            $(this).removeClass("fa-check-circle-o");
-            $(this).addClass("fa-circle-o");
+            $(this).removeClass("btn-success");
+            $(this).addClass("btnUnchecked");
             item.status = false;
         } else {
-            $(this).parent().addClass("taskAchieved")
-            $(this).removeClass("fa-circle-o");
-            $(this).addClass("fa-check-circle-o");
+            $(this).parent().addClass("taskAchieved");
+            $(this).removeClass("btn-success");
+            $(this).addClass("btnUnchecked");
             item.status = true;
         }
         $.ajax({

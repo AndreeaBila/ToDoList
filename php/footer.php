@@ -24,7 +24,7 @@
       <div class="form-group">
           <label for="emailNewsletter"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></label>
           <input type="email" class="form-control" id="emailNewsletter" placeholder="Email">
-          <input type="submit" name="" value="Subscribe">
+          <input id="subscribeBtn" type="submit" name="" value="Subscribe">
      </div>
     </form>
   </div>
