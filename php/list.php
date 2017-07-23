@@ -62,15 +62,18 @@
         $stmt->fetch();
       ?>
       <div class="listWrapper text-center">
-        <h2 class="pull-left"><?php echo ucfirst($listInfo['Title']);?><button class="btn editListBtn" data-toggle='modal' data-target='.bs-example-modal-lg'><i class="fa fa-pencil-square-o fa-lg" data-toggle="tooltip" data-placement='bottom' title='Edit This List' aria-hidden="true"></i></button></h2>
-        
-        <h2 class="pull-right">Deadline</h2>
-        
-        <div class="clear"></div>
 
+        <div class="pull-left leftHead">
+          <h2><?php echo ucfirst($listInfo['Title']);?><button class="btn editListBtn" data-toggle='modal' data-target='.bs-example-modal-lg'><i class="fa fa-pencil-square-o fa-lg" data-toggle="tooltip" data-placement='bottom' title='Edit This List' aria-hidden="true"></i></button></h2>
+          
+          <h4 class="listDescription text-left"><?php echo ucfirst($listInfo['Description']);?></h4>
+        </div>
         
-        <h4 class="listDescription text-left pull-left"><?php echo ucfirst($listInfo['Description']);?></h4>
-        <h4 class="pull-right"><?php echo $listInfo['Deadline'];?></h4>
+        <div class="pull-right rightHead">
+          <h2>Deadline</h2>
+
+          <h4><?php echo $listInfo['Deadline'];?></h4>
+        </div>       
 
         <div class="clear"></div>
  

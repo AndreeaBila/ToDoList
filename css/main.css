@@ -872,81 +872,87 @@ input[type="date"] {
   .listWrapper h2 {
     margin: 5px;
     margin-bottom: 5px;
+    font-size: 200%;
   }
-  /* line 282, ../scss/modules/_components.scss */
+  /* line 283, ../scss/modules/_components.scss */
   .listWrapper h4 {
     margin: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
 
-  /* line 294, ../scss/modules/_components.scss */
+  /* line 295, ../scss/modules/_components.scss */
   .addNewTaskForm input, .addNewTaskForm button {
     width: 250px !important;
   }
-  /* line 298, ../scss/modules/_components.scss */
+  /* line 299, ../scss/modules/_components.scss */
   .addNewTaskForm select {
     width: 250px !important;
     margin-top: 1px !important;
     margin-left: -2px !important;
   }
-  /* line 304, ../scss/modules/_components.scss */
+  /* line 305, ../scss/modules/_components.scss */
   .addNewTaskForm .addNew {
     margin-top: 0px !important;
     width: 250px !important;
   }
 }
 @media screen and (max-width: 349.99999px) {
-  /* line 312, ../scss/modules/_components.scss */
+  /* line 313, ../scss/modules/_components.scss */
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
   }
-  /* line 315, ../scss/modules/_components.scss */
+  /* line 316, ../scss/modules/_components.scss */
   .listWrapper h2 {
     clear: both;
     margin: 5px;
     margin-bottom: 5px;
   }
-  /* line 321, ../scss/modules/_components.scss */
+  /* line 322, ../scss/modules/_components.scss */
   .listWrapper h4 {
     clear: both;
     margin: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
+    float: left !important;
+  }
+  /* line 330, ../scss/modules/_components.scss */
+  .listWrapper .rightHead {
+    float: left !important;
   }
 
-  /* line 336, ../scss/modules/_components.scss */
+  /* line 335, ../scss/modules/_components.scss */
   .addNewTaskForm input, .addNewTaskForm button {
     width: 250px !important;
   }
-  /* line 340, ../scss/modules/_components.scss */
+  /* line 339, ../scss/modules/_components.scss */
   .addNewTaskForm select {
     width: 250px !important;
     margin-top: 1px !important;
     margin-left: -2px !important;
   }
-  /* line 346, ../scss/modules/_components.scss */
+  /* line 345, ../scss/modules/_components.scss */
   .addNewTaskForm .addNew {
     margin-top: 0px !important;
     width: 250px !important;
   }
 }
-/* line 355, ../scss/modules/_components.scss */
+/* line 354, ../scss/modules/_components.scss */
 .listDescription {
   margin: 50px auto;
 }
 
-/* line 359, ../scss/modules/_components.scss */
+/* line 358, ../scss/modules/_components.scss */
 .listTasks {
   margin-bottom: 55px;
 }
 
-/* line 363, ../scss/modules/_components.scss */
+/* line 362, ../scss/modules/_components.scss */
 .listComponent {
   margin: 10px auto;
 }
-/* line 365, ../scss/modules/_components.scss */
+/* line 364, ../scss/modules/_components.scss */
 .listComponent p, .listComponent button {
   margin: -2px;
   display: inline-block;
@@ -954,11 +960,11 @@ input[type="date"] {
   width: 50px;
   border-radius: 0px;
 }
-/* line 373, ../scss/modules/_components.scss */
+/* line 372, ../scss/modules/_components.scss */
 .listComponent button {
   margin-top: -40px;
 }
-/* line 380, ../scss/modules/_components.scss */
+/* line 379, ../scss/modules/_components.scss */
 .listComponent .checkItemBtn:hover,
 .listComponent .checkItemBtn:active,
 .listComponent .checkItemBtn:focus,
@@ -966,16 +972,16 @@ input[type="date"] {
   outline: none !important;
   box-shadow: none !important;
 }
-/* line 387, ../scss/modules/_components.scss */
+/* line 386, ../scss/modules/_components.scss */
 .listComponent .btnUnchecked,
 .listComponent .btnUnchecked:active {
   background-color: #ddd;
   color: white;
 }
-/* line 392, ../scss/modules/_components.scss */
+/* line 391, ../scss/modules/_components.scss */
 .listComponent p {
   margin-top: 10px !important;
-  margin-left: -1px !important;
+  margin-left: -2px !important;
   width: 70% !important;
   line-height: 50px;
   background-color: #ffffff;
@@ -988,78 +994,136 @@ input[type="date"] {
   font-size: 120%;
   color: #909090;
 }
-/* line 411, ../scss/modules/_components.scss */
+/* line 410, ../scss/modules/_components.scss */
 .listComponent .lowImportance {
   background-color: #CFEDF6;
   border: 1px solid #428bca;
   color: #428bca;
 }
-/* line 417, ../scss/modules/_components.scss */
+/* line 416, ../scss/modules/_components.scss */
 .listComponent .moderateImportance {
   background-color: #FFE7D8;
   border: 1px solid #f0ad4e;
   color: #f0ad4e;
 }
-/* line 423, ../scss/modules/_components.scss */
+/* line 422, ../scss/modules/_components.scss */
 .listComponent .highImportance {
   background-color: #F7C0C0;
   border: 1px solid #d9534f;
   color: #d9534f;
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 539.9999px) and (min-width: 463px) {
   /* line 431, ../scss/modules/_components.scss */
+  .listComponent {
+    margin: 5px auto;
+  }
+  /* line 434, ../scss/modules/_components.scss */
+  .listComponent p {
+    width: 65% !important;
+    padding-left: 5px;
+    font-size: 115%;
+  }
+}
+@media screen and (max-width: 462.9999px) and (min-width: 405px) {
+  /* line 445, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 435, ../scss/modules/_components.scss */
+  /* line 449, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 438, ../scss/modules/_components.scss */
+  /* line 452, ../scss/modules/_components.scss */
   .listComponent p {
-    width: 70% !important;
+    width: 60% !important;
+    padding-left: 5px;
+    font-size: 110%;
+  }
+}
+@media screen and (max-width: 404.9999px) and (min-width: 360px) {
+  /* line 462, ../scss/modules/_components.scss */
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  /* line 466, ../scss/modules/_components.scss */
+  .listComponent {
+    margin: 5px auto;
+  }
+  /* line 469, ../scss/modules/_components.scss */
+  .listComponent p {
+    width: 55% !important;
+    padding-left: 5px;
+    font-size: 105%;
+  }
+}
+@media screen and (max-width: 359.9999px) and (min-width: 324px) {
+  /* line 479, ../scss/modules/_components.scss */
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  /* line 483, ../scss/modules/_components.scss */
+  .listComponent {
+    margin: 5px auto;
+  }
+  /* line 486, ../scss/modules/_components.scss */
+  .listComponent p {
+    width: 50% !important;
     padding-left: 5px;
     font-size: 100%;
   }
-  /* line 444, ../scss/modules/_components.scss */
-  .listComponent .checkCircle {
-    margin-top: 20px;
-    margin-right: 2px;
+}
+@media screen and (max-width: 359.9999px) {
+  /* line 495, ../scss/modules/_components.scss */
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  /* line 499, ../scss/modules/_components.scss */
+  .listComponent {
+    margin: 5px auto;
+  }
+  /* line 502, ../scss/modules/_components.scss */
+  .listComponent p {
+    width: 45% !important;
+    padding-left: 5px;
+    font-size: 95%;
   }
 }
-/* line 451, ../scss/modules/_components.scss */
+/* line 510, ../scss/modules/_components.scss */
 .listHr {
   border: 0;
   height: 1px !important;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
 }
 
-/* line 457, ../scss/modules/_components.scss */
+/* line 516, ../scss/modules/_components.scss */
 .taskAchieved {
   transition: 5s;
 }
-/* line 459, ../scss/modules/_components.scss */
+/* line 518, ../scss/modules/_components.scss */
 .taskAchieved button.checkItemBtn {
   background-color: #5cb85c;
   color: white;
   border: 1px solid #5cb85c;
 }
-/* line 465, ../scss/modules/_components.scss */
+/* line 524, ../scss/modules/_components.scss */
 .taskAchieved p {
   background-color: #B2E3BE!important;
   border: 1px solid #5cb85c !important;
   color: #5cb85c !important;
 }
 
-/* line 472, ../scss/modules/_components.scss */
+/* line 531, ../scss/modules/_components.scss */
 .defaultMsg {
   margin-top: 0px !important;
   margin-bottom: -16px !important;
 }
 
-/* line 477, ../scss/modules/_components.scss */
+/* line 536, ../scss/modules/_components.scss */
 .noListMsg {
   margin: 105.5px auto !important;
   color: #888;

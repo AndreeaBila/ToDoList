@@ -277,6 +277,7 @@ and (min-width: 350px) {
     h2 {
       margin: 5px;
       margin-bottom: 5px;
+      font-size: 200%;
     }
 
     h4 {
@@ -323,14 +324,12 @@ and (min-width: 350px) {
       margin: 5px;
       margin-top: 0px;
       margin-bottom: 0px;
+      float: left !important;
     }
 
-    // h4 {
-    //   clear: both;
-    //   float: left !important;
-    //   margin: 5px;
-    //   margin-top: 0px;
-    // }
+    .rightHead {
+      float: left !important;
+    }
   }
   .addNewTaskForm {
     input, button {
@@ -391,7 +390,7 @@ and (min-width: 350px) {
 
   p {
     margin-top: 10px !important;
-    margin-left: -1px !important;
+    margin-left: -2px !important;
     width: 70% !important;
     line-height: 50px;
     background-color: #ffffff;
@@ -427,7 +426,22 @@ and (min-width: 350px) {
   }
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 539.9999px)
+and (min-width: 463px) {
+  .listComponent {
+    margin: 5px auto;
+
+    p {
+      width: 65% !important;      
+      padding-left: 5px;
+      font-size: 115%;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 462.9999px)
+and (min-width: 405px) {
   .listTasks {
     margin-bottom: 55px;
   }
@@ -436,14 +450,59 @@ and (min-width: 350px) {
     margin: 5px auto;
 
     p {
-      width: 70% !important;      
+      width: 60% !important;      
+      padding-left: 5px;
+      font-size: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 404.9999px)
+and (min-width: 360px) {
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  .listComponent {
+    margin: 5px auto;
+
+    p {
+      width: 55% !important;      
+      padding-left: 5px;
+      font-size: 105%;
+    }
+  }
+}
+
+@media screen and (max-width: 359.9999px)
+and (min-width: 324px) {
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  .listComponent {
+    margin: 5px auto;
+
+    p {
+      width: 50% !important;      
       padding-left: 5px;
       font-size: 100%;
     }
-    
-    .checkCircle {
-      margin-top: 20px;
-      margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 359.9999px) {
+  .listTasks {
+    margin-bottom: 55px;
+  }
+
+  .listComponent {
+    margin: 5px auto;
+
+    p {
+      width: 45% !important;      
+      padding-left: 5px;
+      font-size: 95%;
     }
   }
 }
@@ -477,10 +536,4 @@ and (min-width: 350px) {
 .noListMsg {
   margin: 105.5px auto !important;
   color: #888;
-}
-
-.bs-example-modal-lg {
-  .alert {
-
-  }
 }
