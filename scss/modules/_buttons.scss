@@ -108,9 +108,11 @@ input[type="button"] {
   }
 
   .listName { 
-    line-height: 65px;
+    margin: 20px 0px -15px;
+    //line-height: 10px;
     height: 65px;
     font-size: 120%;
+    overflow: auto;
   }
 }
 
@@ -168,18 +170,18 @@ input[type="button"] {
   transform: scale(1.1,1.1);
 }
 
-@media screen and (max-width: 991.99999px) {
-  .listObject {
-    font-size: 120%;
-    .listSquare {
-      button {
-        i {
-          font-size: 140%
-        }
-      }
-    }
-  }
-}
+// @media screen and (max-width: 991.99999px) {
+//   .listObject {
+//     font-size: 120%;
+//     .listSquare {
+//       button {
+//         i {
+//           font-size: 140%
+//         }
+//       }
+//     }
+//   }
+// }
 
 .listBtns {
   margin: 40px auto !important;
@@ -197,7 +199,6 @@ input[type="button"] {
 
 .editListBtn {
   background-color: transparent;
-  display: none;
 }
 
 .editListBtn:hover,
@@ -209,8 +210,3 @@ input[type="button"] {
   box-shadow: none !important;
 }
 
-h2:hover {
-  .editListBtn {
-    display: initial;
-  }
-}

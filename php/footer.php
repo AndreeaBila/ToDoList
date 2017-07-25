@@ -11,10 +11,10 @@
 
   <div class="col-md-4 col-xs-12 footer-component text-center">
     <h3>Contact us</h3>
-    <p><i class="fa fa-envelope" aria-hidden="true"></i> listmanager@gmail.com</p>
-    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Studio M, 6th Floor,</p>
-    <p>Victoriei Street, Bucharest</p>
-    <p><i class="fa fa-phone" aria-hidden="true"></i> +40 723 538 293</p>
+    <p><i class="fa fa-envelope" aria-hidden="true"></i> office@appsolution.online</p>
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i> University of Birmingham, UK</p>
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i> University of Warwick, UK</p>
+    <p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+40733207003"> +40 733 207 003</a></p>
   </div>
 
   <div class="col-md-4 col-xs-12 footer-component text-center">
@@ -34,7 +34,7 @@
   <hr class="hrDefault">
 
   <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 pull-left">
-    <p>Created by &copy; Andreea & Vlad </p>
+    <p>Copyright &copy; AppSolution Team</p>
   </div>
 
   <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 below-footer">

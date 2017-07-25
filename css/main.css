@@ -69,7 +69,7 @@ html, body {
 
 /* line 5, ../scss/base/_base.scss */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif !important;
   min-width: 300px;
 }
 
@@ -297,86 +297,93 @@ footer #subscribeBtn {
   display: inline-block;
   height: 30px !important;
   width: 175px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
 }
-/* line 42, ../scss/layout/_footer.scss */
+/* line 45, ../scss/layout/_footer.scss */
 .footer-component input[type="submit"] {
   display: inline-block;
-  padding: 5px !important;
+  padding: 2px !important;
   width: 75px;
+  height: 30px;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
 }
 
-/* line 49, ../scss/layout/_footer.scss */
+/* line 56, ../scss/layout/_footer.scss */
 .clear {
   clear: both;
 }
 
-/* line 53, ../scss/layout/_footer.scss */
+/* line 60, ../scss/layout/_footer.scss */
 .below-footer {
   margin-top: -5px;
 }
 
 @media screen and (min-width: 1039px) and (max-width: 1200px) {
-  /* line 60, ../scss/layout/_footer.scss */
+  /* line 67, ../scss/layout/_footer.scss */
   footer {
     height: 250px;
   }
 
-  /* line 63, ../scss/layout/_footer.scss */
+  /* line 70, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 250px;
   }
 }
 @media screen and (max-width: 1038.99999px) and (min-width: 992px) {
-  /* line 70, ../scss/layout/_footer.scss */
+  /* line 77, ../scss/layout/_footer.scss */
   footer {
     height: 280px;
   }
 
-  /* line 73, ../scss/layout/_footer.scss */
+  /* line 80, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 280px;
   }
 }
 @media screen and (max-width: 991.99999px) and (min-width: 768px) {
-  /* line 80, ../scss/layout/_footer.scss */
+  /* line 87, ../scss/layout/_footer.scss */
   footer {
     height: 550px;
   }
 
-  /* line 83, ../scss/layout/_footer.scss */
+  /* line 90, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 550px;
   }
 }
 @media screen and (max-width: 767.99999px) and (min-width: 442px) {
-  /* line 90, ../scss/layout/_footer.scss */
+  /* line 97, ../scss/layout/_footer.scss */
   footer {
     height: 570px;
   }
 
-  /* line 93, ../scss/layout/_footer.scss */
+  /* line 100, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 570px;
   }
 }
 @media screen and (max-width: 441.99999px) and (min-width: 345px) {
-  /* line 100, ../scss/layout/_footer.scss */
+  /* line 107, ../scss/layout/_footer.scss */
   footer {
     height: 600px;
   }
 
-  /* line 103, ../scss/layout/_footer.scss */
+  /* line 110, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 600px;
   }
 }
 @media screen and (max-width: 344.99999px) {
-  /* line 109, ../scss/layout/_footer.scss */
+  /* line 116, ../scss/layout/_footer.scss */
   footer {
     height: 650px;
   }
 
-  /* line 112, ../scss/layout/_footer.scss */
+  /* line 119, ../scss/layout/_footer.scss */
   .wrapper {
     padding-bottom: 650px;
   }
@@ -498,19 +505,20 @@ input[type="button"] {
 }
 /* line 110, ../scss/modules/_buttons.scss */
 .listSquare .listName {
-  line-height: 65px;
+  margin: 20px 0px -15px;
   height: 65px;
   font-size: 120%;
+  overflow: auto;
 }
 
-/* line 119, ../scss/modules/_buttons.scss */
+/* line 121, ../scss/modules/_buttons.scss */
 .listSquare:active,
 .listSquare:focus,
 .listSquare:active:focus {
   border: 0.1px solid #e1e1e1;
 }
 
-/* line 126, ../scss/modules/_buttons.scss */
+/* line 128, ../scss/modules/_buttons.scss */
 .deleteBtn:hover,
 .deleteBtn:active,
 .deleteBtn:focus,
@@ -520,7 +528,7 @@ input[type="button"] {
   outline: none;
 }
 
-/* line 135, ../scss/modules/_buttons.scss */
+/* line 137, ../scss/modules/_buttons.scss */
 .checkBtn:hover,
 .checkBtn:active,
 .checkBtn:focus,
@@ -528,31 +536,31 @@ input[type="button"] {
   outline: none;
 }
 
-/* line 139, ../scss/modules/_buttons.scss */
+/* line 141, ../scss/modules/_buttons.scss */
 .checkBtn:hover {
   color: #5cb85c;
   transform: scale(1.1, 1.1);
 }
 
-/* line 144, ../scss/modules/_buttons.scss */
+/* line 146, ../scss/modules/_buttons.scss */
 .checked {
   border: 3px solid #5cb85c;
   border-radius: 5px;
 }
-/* line 147, ../scss/modules/_buttons.scss */
+/* line 149, ../scss/modules/_buttons.scss */
 .checked .checkBtn {
   color: #5cb85c;
   transform: scale(1.1, 1.1);
 }
 
-/* line 155, ../scss/modules/_buttons.scss */
+/* line 157, ../scss/modules/_buttons.scss */
 .checked:active,
 .checked:focus,
 .checked:active:focus {
   border: 2px solid #5cb85c;
 }
 
-/* line 162, ../scss/modules/_buttons.scss */
+/* line 164, ../scss/modules/_buttons.scss */
 .editBtn:hover,
 .editBtn:active,
 .editBtn:focus,
@@ -560,46 +568,35 @@ input[type="button"] {
   outline: none;
 }
 
-/* line 166, ../scss/modules/_buttons.scss */
+/* line 168, ../scss/modules/_buttons.scss */
 .editBtn:hover {
   color: #428bca;
   transform: scale(1.1, 1.1);
 }
 
-@media screen and (max-width: 991.99999px) {
-  /* line 172, ../scss/modules/_buttons.scss */
-  .listObject {
-    font-size: 120%;
-  }
-  /* line 176, ../scss/modules/_buttons.scss */
-  .listObject .listSquare button i {
-    font-size: 140%;
-  }
-}
-/* line 184, ../scss/modules/_buttons.scss */
+/* line 186, ../scss/modules/_buttons.scss */
 .listBtns {
   margin: 40px auto !important;
   margin-bottom: 120px !important;
 }
-/* line 187, ../scss/modules/_buttons.scss */
+/* line 189, ../scss/modules/_buttons.scss */
 .listBtns button, .listBtns a {
   width: 120px;
   height: 40px;
   line-height: 27px;
 }
-/* line 192, ../scss/modules/_buttons.scss */
+/* line 194, ../scss/modules/_buttons.scss */
 .listBtns .backBtn {
   background-color: #191919;
   color: #7f8c8d;
 }
 
-/* line 198, ../scss/modules/_buttons.scss */
+/* line 200, ../scss/modules/_buttons.scss */
 .editListBtn {
   background-color: transparent;
-  display: none;
 }
 
-/* line 206, ../scss/modules/_buttons.scss */
+/* line 207, ../scss/modules/_buttons.scss */
 .editListBtn:hover,
 .editListBtn:active,
 .editListBtn:focus,
@@ -607,11 +604,6 @@ input[type="button"] {
   outline: none !important;
   border: none !important;
   box-shadow: none !important;
-}
-
-/* line 213, ../scss/modules/_buttons.scss */
-h2:hover .editListBtn {
-  display: initial;
 }
 
 /* line 2, ../scss/modules/_components.scss */
@@ -697,75 +689,77 @@ input[type="date"] {
 .modal-body input[type="text"],
 .modal-body input[type="date"] {
   width: 90% !important;
+  border-radius: 0px !important;
+  height: 50px !important;
 }
 
-/* line 98, ../scss/modules/_components.scss */
+/* line 100, ../scss/modules/_components.scss */
 .modal-body label {
   margin-top: 10px !important;
 }
 
 @media screen and (max-width: 500px) and (min-width: 391px) {
-  /* line 104, ../scss/modules/_components.scss */
+  /* line 106, ../scss/modules/_components.scss */
   .modal-dialog {
     width: 380px !important;
   }
 
-  /* line 108, ../scss/modules/_components.scss */
+  /* line 110, ../scss/modules/_components.scss */
   .modal-sm {
     margin-top: 20% !important;
   }
 
-  /* line 113, ../scss/modules/_components.scss */
+  /* line 115, ../scss/modules/_components.scss */
   .modal-body input[type="text"],
   .modal-body input[type="date"] {
     width: 85% !important;
   }
 }
 @media screen and (max-width: 390.99999px) {
-  /* line 119, ../scss/modules/_components.scss */
+  /* line 121, ../scss/modules/_components.scss */
   .modal-dialog {
     margin: 0 auto;
     width: 290px !important;
     margin-top: 10% !important;
   }
 
-  /* line 125, ../scss/modules/_components.scss */
+  /* line 127, ../scss/modules/_components.scss */
   .modal-sm {
     margin: 0 auto;
     width: 290px !important;
     margin-top: 20% !important;
   }
 
-  /* line 132, ../scss/modules/_components.scss */
+  /* line 134, ../scss/modules/_components.scss */
   .modal-body input[type="text"],
   .modal-body input[type="date"] {
     width: 85% !important;
   }
 }
-/* line 137, ../scss/modules/_components.scss */
+/* line 139, ../scss/modules/_components.scss */
 .listWrapper {
   width: 60%;
   margin: 10px auto;
   margin-bottom: 150px;
 }
-/* line 141, ../scss/modules/_components.scss */
+/* line 143, ../scss/modules/_components.scss */
 .listWrapper h2 {
   margin: 20px;
   margin-bottom: 10px;
 }
-/* line 146, ../scss/modules/_components.scss */
+/* line 148, ../scss/modules/_components.scss */
 .listWrapper h4 {
   margin: 20px;
   margin-top: 0px;
   margin-bottom: 5px;
 }
 
-/* line 158, ../scss/modules/_components.scss */
+/* line 160, ../scss/modules/_components.scss */
 .addNewTaskForm {
   margin: 50px auto;
   margin-bottom: 65px !important;
 }
-/* line 161, ../scss/modules/_components.scss */
+/* line 163, ../scss/modules/_components.scss */
 .addNewTaskForm input, .addNewTaskForm button {
   margin: -1.6px !important;
   margin-top: -8px !important;
@@ -774,17 +768,17 @@ input[type="date"] {
   width: 400px !important;
   display: inline-block;
 }
-/* line 170, ../scss/modules/_components.scss */
+/* line 172, ../scss/modules/_components.scss */
 .addNewTaskForm select:active, .addNewTaskForm select:hover {
   outline: none !important;
   box-shadow: none;
 }
-/* line 173, ../scss/modules/_components.scss */
+/* line 175, ../scss/modules/_components.scss */
 .addNewTaskForm select:active option:active, .addNewTaskForm select:active option:hover, .addNewTaskForm select:hover option:active, .addNewTaskForm select:hover option:hover {
   outline: none !important;
   box-shadow: none;
 }
-/* line 179, ../scss/modules/_components.scss */
+/* line 181, ../scss/modules/_components.scss */
 .addNewTaskForm select {
   display: inline-block;
   margin-left: -3px !important;
@@ -804,112 +798,112 @@ input[type="date"] {
   padding-left: 10px;
   color: #bbbbbb;
 }
-/* line 199, ../scss/modules/_components.scss */
+/* line 201, ../scss/modules/_components.scss */
 .addNewTaskForm select #selectName {
   color: #cfcfcf;
 }
-/* line 203, ../scss/modules/_components.scss */
+/* line 205, ../scss/modules/_components.scss */
 .addNewTaskForm select option {
   color: #888888;
 }
-/* line 207, ../scss/modules/_components.scss */
+/* line 209, ../scss/modules/_components.scss */
 .addNewTaskForm select #low {
   color: #428bca !important;
 }
-/* line 211, ../scss/modules/_components.scss */
+/* line 213, ../scss/modules/_components.scss */
 .addNewTaskForm select #moderate {
   color: #f0ad4e !important;
 }
-/* line 215, ../scss/modules/_components.scss */
+/* line 217, ../scss/modules/_components.scss */
 .addNewTaskForm select #high {
   color: #d9534f !important;
 }
-/* line 238, ../scss/modules/_components.scss */
+/* line 240, ../scss/modules/_components.scss */
 .addNewTaskForm .addNew {
   width: 50px !important;
 }
-/* line 242, ../scss/modules/_components.scss */
+/* line 244, ../scss/modules/_components.scss */
 .addNewTaskForm input:focus {
   outline: none !important;
 }
 
 @media screen and (max-width: 768.99999px) and (min-width: 400px) {
-  /* line 249, ../scss/modules/_components.scss */
+  /* line 251, ../scss/modules/_components.scss */
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
   }
 
-  /* line 253, ../scss/modules/_components.scss */
+  /* line 255, ../scss/modules/_components.scss */
   .addNewTaskForm {
     margin-bottom: 30px !important;
   }
-  /* line 255, ../scss/modules/_components.scss */
+  /* line 257, ../scss/modules/_components.scss */
   .addNewTaskForm input, .addNewTaskForm button {
     width: 200px !important;
   }
-  /* line 258, ../scss/modules/_components.scss */
+  /* line 260, ../scss/modules/_components.scss */
   .addNewTaskForm button {
     margin-top: -5px !important;
   }
-  /* line 261, ../scss/modules/_components.scss */
+  /* line 263, ../scss/modules/_components.scss */
   .addNewTaskForm select {
     padding-top: 0px !important;
     width: 110px !important;
   }
-  /* line 265, ../scss/modules/_components.scss */
+  /* line 267, ../scss/modules/_components.scss */
   .addNewTaskForm .addNew {
     width: 50px !important;
   }
 }
 @media screen and (max-width: 399.99999px) and (min-width: 350px) {
-  /* line 274, ../scss/modules/_components.scss */
+  /* line 276, ../scss/modules/_components.scss */
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
   }
-  /* line 277, ../scss/modules/_components.scss */
+  /* line 279, ../scss/modules/_components.scss */
   .listWrapper h2 {
     margin: 5px;
     margin-bottom: 5px;
     font-size: 200%;
   }
-  /* line 283, ../scss/modules/_components.scss */
+  /* line 285, ../scss/modules/_components.scss */
   .listWrapper h4 {
     margin: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
 
-  /* line 295, ../scss/modules/_components.scss */
+  /* line 297, ../scss/modules/_components.scss */
   .addNewTaskForm input, .addNewTaskForm button {
     width: 250px !important;
   }
-  /* line 299, ../scss/modules/_components.scss */
+  /* line 301, ../scss/modules/_components.scss */
   .addNewTaskForm select {
     width: 250px !important;
     margin-top: 1px !important;
     margin-left: -2px !important;
   }
-  /* line 305, ../scss/modules/_components.scss */
+  /* line 307, ../scss/modules/_components.scss */
   .addNewTaskForm .addNew {
     margin-top: 0px !important;
     width: 250px !important;
   }
 }
 @media screen and (max-width: 349.99999px) {
-  /* line 313, ../scss/modules/_components.scss */
+  /* line 315, ../scss/modules/_components.scss */
   .listWrapper {
     width: 90%;
     margin-bottom: 80px;
   }
-  /* line 316, ../scss/modules/_components.scss */
+  /* line 318, ../scss/modules/_components.scss */
   .listWrapper h2 {
     clear: both;
     margin: 5px;
     margin-bottom: 5px;
   }
-  /* line 322, ../scss/modules/_components.scss */
+  /* line 324, ../scss/modules/_components.scss */
   .listWrapper h4 {
     clear: both;
     margin: 5px;
@@ -917,42 +911,42 @@ input[type="date"] {
     margin-bottom: 0px;
     float: left !important;
   }
-  /* line 330, ../scss/modules/_components.scss */
+  /* line 332, ../scss/modules/_components.scss */
   .listWrapper .rightHead {
     float: left !important;
   }
 
-  /* line 335, ../scss/modules/_components.scss */
+  /* line 337, ../scss/modules/_components.scss */
   .addNewTaskForm input, .addNewTaskForm button {
     width: 250px !important;
   }
-  /* line 339, ../scss/modules/_components.scss */
+  /* line 341, ../scss/modules/_components.scss */
   .addNewTaskForm select {
     width: 250px !important;
     margin-top: 1px !important;
     margin-left: -2px !important;
   }
-  /* line 345, ../scss/modules/_components.scss */
+  /* line 347, ../scss/modules/_components.scss */
   .addNewTaskForm .addNew {
     margin-top: 0px !important;
     width: 250px !important;
   }
 }
-/* line 354, ../scss/modules/_components.scss */
+/* line 356, ../scss/modules/_components.scss */
 .listDescription {
   margin: 50px auto;
 }
 
-/* line 358, ../scss/modules/_components.scss */
+/* line 360, ../scss/modules/_components.scss */
 .listTasks {
   margin-bottom: 55px;
 }
 
-/* line 362, ../scss/modules/_components.scss */
+/* line 364, ../scss/modules/_components.scss */
 .listComponent {
   margin: 10px auto;
 }
-/* line 364, ../scss/modules/_components.scss */
+/* line 366, ../scss/modules/_components.scss */
 .listComponent p, .listComponent button {
   margin: -2px;
   display: inline-block;
@@ -960,11 +954,11 @@ input[type="date"] {
   width: 50px;
   border-radius: 0px;
 }
-/* line 372, ../scss/modules/_components.scss */
+/* line 374, ../scss/modules/_components.scss */
 .listComponent button {
   margin-top: -40px;
 }
-/* line 379, ../scss/modules/_components.scss */
+/* line 381, ../scss/modules/_components.scss */
 .listComponent .checkItemBtn:hover,
 .listComponent .checkItemBtn:active,
 .listComponent .checkItemBtn:focus,
@@ -972,13 +966,13 @@ input[type="date"] {
   outline: none !important;
   box-shadow: none !important;
 }
-/* line 386, ../scss/modules/_components.scss */
+/* line 388, ../scss/modules/_components.scss */
 .listComponent .btnUnchecked,
 .listComponent .btnUnchecked:active {
   background-color: #ddd;
   color: white;
 }
-/* line 391, ../scss/modules/_components.scss */
+/* line 393, ../scss/modules/_components.scss */
 .listComponent p {
   margin-top: 10px !important;
   margin-left: -2px !important;
@@ -994,19 +988,19 @@ input[type="date"] {
   font-size: 120%;
   color: #909090;
 }
-/* line 410, ../scss/modules/_components.scss */
+/* line 412, ../scss/modules/_components.scss */
 .listComponent .lowImportance {
   background-color: #CFEDF6;
   border: 1px solid #428bca;
   color: #428bca;
 }
-/* line 416, ../scss/modules/_components.scss */
+/* line 418, ../scss/modules/_components.scss */
 .listComponent .moderateImportance {
   background-color: #FFE7D8;
   border: 1px solid #f0ad4e;
   color: #f0ad4e;
 }
-/* line 422, ../scss/modules/_components.scss */
+/* line 424, ../scss/modules/_components.scss */
 .listComponent .highImportance {
   background-color: #F7C0C0;
   border: 1px solid #d9534f;
@@ -1014,11 +1008,11 @@ input[type="date"] {
 }
 
 @media screen and (max-width: 539.9999px) and (min-width: 463px) {
-  /* line 431, ../scss/modules/_components.scss */
+  /* line 433, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 434, ../scss/modules/_components.scss */
+  /* line 436, ../scss/modules/_components.scss */
   .listComponent p {
     width: 65% !important;
     padding-left: 5px;
@@ -1026,16 +1020,16 @@ input[type="date"] {
   }
 }
 @media screen and (max-width: 462.9999px) and (min-width: 405px) {
-  /* line 445, ../scss/modules/_components.scss */
+  /* line 447, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 449, ../scss/modules/_components.scss */
+  /* line 451, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 452, ../scss/modules/_components.scss */
+  /* line 454, ../scss/modules/_components.scss */
   .listComponent p {
     width: 60% !important;
     padding-left: 5px;
@@ -1043,16 +1037,16 @@ input[type="date"] {
   }
 }
 @media screen and (max-width: 404.9999px) and (min-width: 360px) {
-  /* line 462, ../scss/modules/_components.scss */
+  /* line 464, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 466, ../scss/modules/_components.scss */
+  /* line 468, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 469, ../scss/modules/_components.scss */
+  /* line 471, ../scss/modules/_components.scss */
   .listComponent p {
     width: 55% !important;
     padding-left: 5px;
@@ -1060,16 +1054,16 @@ input[type="date"] {
   }
 }
 @media screen and (max-width: 359.9999px) and (min-width: 324px) {
-  /* line 479, ../scss/modules/_components.scss */
+  /* line 481, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 483, ../scss/modules/_components.scss */
+  /* line 485, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 486, ../scss/modules/_components.scss */
+  /* line 488, ../scss/modules/_components.scss */
   .listComponent p {
     width: 50% !important;
     padding-left: 5px;
@@ -1077,54 +1071,124 @@ input[type="date"] {
   }
 }
 @media screen and (max-width: 359.9999px) {
-  /* line 495, ../scss/modules/_components.scss */
+  /* line 497, ../scss/modules/_components.scss */
   .listTasks {
     margin-bottom: 55px;
   }
 
-  /* line 499, ../scss/modules/_components.scss */
+  /* line 501, ../scss/modules/_components.scss */
   .listComponent {
     margin: 5px auto;
   }
-  /* line 502, ../scss/modules/_components.scss */
+  /* line 504, ../scss/modules/_components.scss */
   .listComponent p {
     width: 45% !important;
     padding-left: 5px;
     font-size: 95%;
   }
 }
-/* line 510, ../scss/modules/_components.scss */
+/* line 512, ../scss/modules/_components.scss */
 .listHr {
   border: 0;
   height: 1px !important;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
 }
 
-/* line 516, ../scss/modules/_components.scss */
+/* line 518, ../scss/modules/_components.scss */
 .taskAchieved {
   transition: 5s;
 }
-/* line 518, ../scss/modules/_components.scss */
+/* line 520, ../scss/modules/_components.scss */
 .taskAchieved button.checkItemBtn {
   background-color: #5cb85c;
   color: white;
   border: 1px solid #5cb85c;
 }
-/* line 524, ../scss/modules/_components.scss */
+/* line 526, ../scss/modules/_components.scss */
 .taskAchieved p {
   background-color: #B2E3BE!important;
   border: 1px solid #5cb85c !important;
   color: #5cb85c !important;
 }
 
-/* line 531, ../scss/modules/_components.scss */
+/* line 533, ../scss/modules/_components.scss */
 .defaultMsg {
   margin-top: 0px !important;
   margin-bottom: -16px !important;
 }
 
-/* line 536, ../scss/modules/_components.scss */
+/* line 538, ../scss/modules/_components.scss */
 .noListMsg {
   margin: 105.5px auto !important;
   color: #888;
+}
+
+/* line 546, ../scss/modules/_components.scss */
+.changeItemModal .modal-body .addNewTaskForm {
+  margin: 20px !important;
+}
+/* line 548, ../scss/modules/_components.scss */
+.changeItemModal .modal-body .addNewTaskForm label {
+  margin-right: 10px;
+}
+/* line 551, ../scss/modules/_components.scss */
+.changeItemModal .modal-body .addNewTaskForm input, .changeItemModal .modal-body .addNewTaskForm select {
+  width: 92% !important;
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+
+@media screen and (max-width: 500.99999px) {
+  /* line 564, ../scss/modules/_components.scss */
+  .changeItemModal .modal-body .addNewTaskForm input, .changeItemModal .modal-body .addNewTaskForm select {
+    width: 85% !important;
+  }
+}
+/* line 572, ../scss/modules/_components.scss */
+.modal-header {
+  color: #7f8c8d;
+  border-radius: 0 !important;
+  background-color: #191919 !important;
+}
+/* line 576, ../scss/modules/_components.scss */
+.modal-header h4 {
+  font-size: 1.5em;
+}
+
+/* line 581, ../scss/modules/_components.scss */
+button.close {
+  color: white!important;
+}
+
+/* line 585, ../scss/modules/_components.scss */
+button.dismissBtn {
+  color: #7f8c8d;
+  background-color: #191919 !important;
+}
+
+/* line 591, ../scss/modules/_components.scss */
+button.dismissBtn:hover {
+  color: #777;
+  background-color: black !important;
+}
+
+/* line 599, ../scss/modules/_components.scss */
+.modal-content,
+.btn, button,
+.progress {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+/* line 607, ../scss/modules/_components.scss */
+.leftHead h2 i {
+  font-size: 1.7em;
+  color: #428bca;
+}
+
+/* line 614, ../scss/modules/_components.scss */
+.listComponent p {
+  word-wrap: break-word;
+  overflow-y: scroll;
 }

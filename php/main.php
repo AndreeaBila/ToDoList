@@ -65,7 +65,7 @@
       <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm" role="document">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header modal-delete">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="gridSystemModalLabel">Remove List</h4>
             </div>
@@ -73,7 +73,7 @@
               <p>Are you sure you want to delete this list?</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" id="btnCancelDelete" data-dismiss="modal">Close</button>
+              <button type="button" class="btn dismissBtn" id="btnCancelDelete" data-dismiss="modal">Dismiss</button>
               <button type="button" class="btn btn-danger" id="btnConfirmDelete" data-dismiss="modal">Delete</button> 
             </div>
           </div>
@@ -84,7 +84,7 @@
       <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header modal-create">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
             </div>
@@ -112,7 +112,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn dismissBtn" data-dismiss="modal">Dismiss</button>
               <button type="button" class="btn btn-success" id='btnCreateList'>Create List</button>
             </div>
           </div>

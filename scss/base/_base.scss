@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  font-family: $default-font;
+  font-family: $default-font !important;
   min-width: 300px;
   
 }

@@ -93,6 +93,8 @@ input[type="date"] {
 .modal-body input[type="text"],
 .modal-body input[type="date"] {
   width: 90% !important;
+  border-radius: 0px !important;
+  height: 50px !important;
 }
 
 .modal-body label {
@@ -537,3 +539,80 @@ and (min-width: 324px) {
   margin: 105.5px auto !important;
   color: #888;
 }
+
+
+.changeItemModal {
+  .modal-body {
+    .addNewTaskForm {
+      margin: 20px !important;
+      label {
+        margin-right: 10px;
+      }
+      input, select {
+        width: 92% !important;
+        display: inline-block !important;
+        margin: 0 auto !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500.99999px) {
+  .changeItemModal {
+    .modal-body {
+      .addNewTaskForm {
+        input, select {
+          width: 85% !important;
+        }
+      }
+    }
+  }
+}
+
+.modal-header {
+  color: $footer-text-color;
+  border-radius: 0 !important;
+  background-color: $footer-color !important;
+  h4 {
+    font-size: 1.5em;
+  }
+}
+
+button.close {
+  color: white!important;
+}
+
+button.dismissBtn {
+  color: $footer-text-color;
+ // font-weight: bold !important;
+  background-color: $footer-color !important;
+}
+
+button.dismissBtn:hover {
+  color: #777;
+  
+  background-color: black !important;
+}
+
+.modal-content,
+.btn, button,
+.progress {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; 
+}
+
+.leftHead {
+  h2 {
+    i {
+      font-size: 1.7em;
+      color: $primary-color;
+    }
+  }
+}
+
+.listComponent p{
+  word-wrap: break-word; 
+  overflow-y: scroll;
+}
+
