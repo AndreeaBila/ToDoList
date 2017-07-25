@@ -92,7 +92,7 @@
               <form id='createListForm'>
                 <div class="form-group form-inline">
                   <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
-                  <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" required>
+                  <input type="text" class="form-control newListInput" name="listName" id="newListName" placeholder="List Name" maxlength="25" required>
                 </div>
 
                 <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
