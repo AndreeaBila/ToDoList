@@ -114,4 +114,44 @@ $(document).ready(function() {
             });
         }
     });
+
+    //check if the change item has been pressed
+    $('.listComponent .btn-primary').click(function() {
+        //get the id of the item that is being changed
+        var itemID = $(this).parent().attr('id');
+        $('#changedItemID').val(itemID);
+        //get the item data
+        var selectedText = $(this).parent().children().first().next().text();
+        var selectedImportance = $(this).parent().children().first().next().attr("class");
+        $('#changeTask').val(selectedText);
+        switch (selectedImportance) {
+            case "placeholderImportance":
+                $('#changeImportanceSelector').val("placeholder");
+                break;
+            case "lowImportance":
+                $('#changeImportanceSelector').val("low");
+                break;
+            case "moderateImportance":
+                $('#changeImportanceSelector').val("moderate");
+                break;
+            case "highImportance":
+                $('#changeImportanceSelector').val("high");
+                break;
+        }
+    });
+
+    $('#btnChangeItem').click(function() {
+        var data = $('#changeItemForm').serialize();
+        $.ajax({
+            data: data,
+            url: "../php/changeItem.php",
+            type: "post",
+            success: function() {
+                location.reload();
+            },
+            error: function() {
+                alert("An error has occured");
+            }
+        });
+    });
 });

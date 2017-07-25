@@ -102,7 +102,7 @@
               echo "<div class='listComponent ".$className."' id='".$row['ItemID']."'>
                       <button class=' btn btn-default ".$btnClass." checkItemBtn'><i class='fa ".$circleClass." fa-2x' aria-hidden='true' data-toggle='tooltip' data-placement='bottom' title='Check Item'></i></button>
                       <p class='".$row['Importance']."Importance'>".ucfirst($row['Content'])."</p>
-                      <button class='btn btn-default btn-primary' data-toggle='modal' data-target='.editModal'><i class='fa fa-pencil fa-2x' data-toggle='tooltip' data-placement='bottom' title='Edit Item' aria-hidden='true'></i></button>
+                      <button class='btn btn-default btn-primary' data-toggle='modal' data-target='.changeItemModal'><i class='fa fa-pencil fa-2x' data-toggle='tooltip' data-placement='bottom' title='Edit Item' aria-hidden='true'></i></button>
                       <button type='submit' class='addNew btn btn-default btn-danger' data-toggle='tooltip' data-placement='bottom' title='Delete Item'><i class='fa fa-times fa-lg' aria-hidden='true'></i></button>
                       <div class='clear'></div> 
                       </div>";
@@ -207,6 +207,36 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
               <button type="button" class="btn btn-success" id="btnChangeList">Apply Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change Item modal -->
+      <div class="modal fade changeItemModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">Change Item</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline addNewTaskForm text-center" id="changeItemForm">
+                <div class="form-group">
+                  <input type="text" name="changeTask" class="form-control" id="changeTask" placeholder="New Task" data-toggle='tooltip' data-placement='bottom' title='Insert new item' required>
+                    <select id='changeImportanceSelector' name="changeImportanceSelector" data-toggle='tooltip' data-placement='bottom' title='Is this item prioritary?' required>
+                      <option value="placeholder" id="selectName" selected>Importance</option>
+                      <option value="low" id="low">Low</option>
+                      <option value="moderate" id="moderate">Moderate</option>
+                      <option value="high" id="high">High</option>
+                    </select>
+                <input type="hidden" name="changedItemID" id="changedItemID">
+                </div>  
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn btn-success" id="btnChangeItem">Apply Changes</button>
             </div>
           </div>
         </div>
