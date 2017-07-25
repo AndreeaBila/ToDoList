@@ -147,7 +147,7 @@
       <hr>
 
       <div class="listWrapper listBtns">
-      <a class="pull-left btn btn-default backBtn" href="main.php" data-toggle='tooltip' data-placement='bottom' title='Return to Your Lists'><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</a>
+      <a class="pull-left btn btn-default backBtn" href="main" data-toggle='tooltip' data-placement='bottom' title='Return to Your Lists'><i class="fa fa-arrow-left" aria-hidden="true"></i>  Back</a>
 
       <button type="button" class="pull-right btn btn-default btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-trash" aria-hidden="true"></i> Drop List</button>
       </div>
@@ -179,13 +179,13 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="gridSystemModalLabel">Create New List</h4>
+              <h4 class="modal-title" id="gridSystemModalLabel">Change List</h4>
             </div>
             <div class="modal-body">
-              <form id='createListForm'>
+              <form id='changeListForm'>
                 <div class="form-group form-inline">
                   <label for="listName"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></label>
-                  <input type="text" class="form-control newListInput" name="listName" id="newListName" data-toggle="tooltip" data-placement="bottom" title="What is this list for?" placeholder="List Name" required>
+                  <input type="text" class="form-control newListInput" name="listName" id="listName" data-toggle="tooltip" data-placement="bottom" title="What is this list for?" placeholder="List Name" required>
                 </div>
 
                 <div class="alert alert-info alert-dismissable alert-custom" id="createListAlert">
@@ -195,18 +195,18 @@
 
                 <div class="form-group form-inline">
                   <label for="listName"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></label>
-                  <input type="text" class="form-control newListInput" name="details" id="listDetails" placeholder="Description" data-toggle="tooltip" data-placement="bottom" title="Give aditional details"  required>
+                  <input type="text" class="form-control newListInput" name="listDetails" id="listDetails" placeholder="Description" data-toggle="tooltip" data-placement="bottom" title="Give aditional details"  required>
                 </div>
                 
                 <div class="form-group form-inline">
                   <label for="listName"><i class="fa fa-calendar-o fa-lg" aria-hidden="true"></i></label>
-                  <input class="form-control newListInput" type="date" name="deadline" id="listDeadline" min="<?php echo date("Y-m-d") ?>" data-toggle="tooltip" data-placement="bottom" title="Choose your deadline" required>
-                </div> 
+                  <input class="form-control newListInput" type="date" name="listDeadline" id="listDeadline" min="<?php echo date("Y-m-d") ?>" data-toggle="tooltip" data-placement="bottom" title="Choose your deadline" required>
+                </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
-              <button type="button" class="btn btn-success">Apply Changes</button>
+              <button type="button" class="btn btn-success" id="btnChangeList">Apply Changes</button>
             </div>
           </div>
         </div>

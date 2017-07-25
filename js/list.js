@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    //make sure every alert disappears by default
+    $('.alert').hide();
+    //if the alert close button is clicked close the alert
+    $('.close').click(function() {
+        $(this).parent().hide(300);
+    });
+
     $('[data-toggle="tooltip"]').tooltip();
 
     $('.checkItemBtn').on('click', function() {
@@ -73,5 +80,38 @@ $(document).ready(function() {
         //redirect the user to the login page
         location.href = 'index';
         //the session will then be destroyed on the index page
+    });
+
+    //check if the user is submitting the change of the list
+    $('#btnChangeList').click(function() {
+        //verify that every detail has been completed
+        if ($("#listName").val() == "" || $("#listDetails").val() == "" || $('#listDeadline').val() == "") {
+            $('.alert').show(300);
+        } else {
+            //verify that the list name is unique
+            //get the list name entered by the user and the id of the list that he is changeing
+            var list = {
+                listTitle: $("#listName").val(),
+                listDetails: $("#listDetails").val(),
+                listDeadline: $("#listDeadline").val(),
+                listID: /listID=([^&]+)/.exec(location.href)[1]
+            };
+            //send the data to the server and verify if the list is unique
+            $.ajax({
+                data: list,
+                url: "../php/changeList.php",
+                type: "post",
+                success: function(response) {
+                    if (response == "error") {
+                        $('.alert').show(300);
+                    } else {
+                        location.reload();
+                    }
+                },
+                error: function(response) {
+                    alert("Oops! It appears we have encountered an error");
+                }
+            });
+        }
     });
 });
