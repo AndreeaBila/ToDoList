@@ -82,6 +82,18 @@ $(document).ready(function() {
         //the session will then be destroyed on the index page
     });
 
+    //check if the user tries to open the change list dialog box
+    $('.editListBtn').click(function() {
+        //get the information about the list from the page and populate the form with it
+        var list = {
+            title: $('.leftHead h2').text().replace('Edit This List', ''),
+            description: $('.listDescription').text(),
+            deadline: $('#deadline').text()
+        };
+        $('#listName').val(list.title);
+        $('#listDetails').val(list.description);
+        $('#listDeadline').val(list.deadline);
+    });
     //check if the user is submitting the change of the list
     $('#btnChangeList').click(function() {
         //verify that every detail has been completed

@@ -72,7 +72,7 @@
         <div class="pull-right rightHead">
           <h2>Deadline</h2>
 
-          <h4><?php echo $listInfo['Deadline'];?></h4>
+          <h4 id="deadline"><?php echo $listInfo['Deadline'];?></h4>
         </div>       
 
         <div class="clear"></div>
