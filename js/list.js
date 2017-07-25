@@ -21,8 +21,8 @@ $(document).ready(function() {
             item.status = false;
         } else {
             $(this).parent().addClass("taskAchieved");
-            $(this).removeClass("btn-success");
-            $(this).addClass("btnUnchecked");
+            $(this).addClass("btn-success");
+            $(this).removeClass("btnUnchecked");
             item.status = true;
         }
         $.ajax({
