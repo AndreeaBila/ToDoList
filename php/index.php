@@ -12,6 +12,9 @@
 
     <title>List Manager</title>
 
+    <meta name="description" content="You can manage your to do list, your shopping list and any other list with
+     our easy to use list manager. Add, remove and edit any list and any item with ease.">
+
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
