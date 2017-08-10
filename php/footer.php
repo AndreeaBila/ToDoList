@@ -6,7 +6,6 @@
       <li><a href="#"><img src="../img/googleplus.png" alt="Not Available"></a></li>
       <li><a href="#"><img src="../img/facebook.png" alt="Not Available"></a></li>
     </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   </div>
 
   <div class="col-md-4 col-xs-12 footer-component text-center">
