@@ -128,13 +128,6 @@
           <label for="dateOfBirth"><i class="fa fa-birthday-cake" aria-hidden="true"></i></label>
           <input class="form-control" type="text" name="signupDoB" id="signupDoB" onfocus="(this.type='date')" placeholder="Date of Birth" required>
         </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" required> <a href="#">I agree with the Terms and Conditions</a>
-          </label>
-        </div>
-
         <input class="myBtn" type="submit" name="submit" id="signupSubmit" value="Sign Up"><br>
         
         <a href="#" class="redirects" id="signupBackToLogin">Already Have An Account</a>
