@@ -128,6 +128,13 @@
           <label for="dateOfBirth"><i class="fa fa-birthday-cake" aria-hidden="true"></i></label>
           <input class="form-control" type="text" name="signupDoB" id="signupDoB" onfocus="(this.type='date')" placeholder="Date of Birth" required>
         </div>
+
+        <div class="form-group form-inline">
+          <input type="checkbox" name="termsCheckbox" required><span class="check">By checking this box you confirm that you 
+          have read and agreed to our <a href='terms.php' target='_blank'>Terms and Conditions</a>, 
+          including our <a href='cookiePolicy.php' target='_blank'>Cookie Policy</a></span>
+        </div>
+
         <input class="myBtn" type="submit" name="submit" id="signupSubmit" value="Sign Up"><br>
         
         <a href="#" class="redirects" id="signupBackToLogin">Already Have An Account</a>

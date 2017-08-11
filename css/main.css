@@ -169,6 +169,29 @@ hr {
   clear: both;
 }
 
+/* line 98, ../scss/base/_base.scss */
+.terms {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 101, ../scss/base/_base.scss */
+.terms h1, .terms h2, .terms h3, .terms h4, .terms h5, .terms h6 {
+  margin: 15px 0px;
+}
+/* line 104, ../scss/base/_base.scss */
+.terms p, .terms h4 {
+  text-align: justify;
+}
+/* line 107, ../scss/base/_base.scss */
+.terms h4 {
+  text-decoration: underline;
+}
+/* line 112, ../scss/base/_base.scss */
+.terms ul li {
+  margin-left: 50px;
+  text-align: justify;
+}
+
 /* line 7, ../scss/layout/_nav.scss */
 header {
   box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5) !important;

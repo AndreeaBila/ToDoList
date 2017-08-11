@@ -94,3 +94,24 @@ hr {
 .clear {
   clear: both;
 }
+
+.terms {
+  width: 70%;
+  margin: 0 auto;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 15px 0px;
+  }
+  p, h4 {
+    text-align: justify;
+  }
+  h4 {
+    text-decoration: underline;
+  }
+
+  ul {
+    li {
+      margin-left: 50px;
+      text-align: justify;
+    }
+  }
+}
