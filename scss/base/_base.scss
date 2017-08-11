@@ -115,3 +115,79 @@ hr {
     }
   }
 }
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+
+.settings {
+  h1 {
+    margin: 30px;
+  }
+  margin: 0 auto;
+  width: 30%;  
+  input, label {
+    display: block !important;
+    margin: 20px 0px 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"] {
+    width: 100% !important;
+    height: 45px !important;
+  }
+  input[type="submit"] {
+    margin: 30px auto;
+  }
+
+}
+
+@media screen and (max-width: 1220px)
+and (min-width: 910px) {
+  .settings {
+    width: 40%;  
+  }
+}
+
+@media screen and (max-width: 999.9999px)
+and (min-width: 730px) {
+  .settings {
+    width: 50%;  
+  }
+}
+
+
+@media screen and (max-width: 729.9999px)
+and (min-width: 610px) {
+  .settings {
+    width: 60%;  
+  }
+}
+
+
+@media screen and (max-width: 609.9999px)
+and (min-width: 520px) {
+  .settings {
+    width: 70%;  
+  }
+}
+
+@media screen and (max-width: 519.9999px)
+and (min-width: 460px) {
+  .settings {
+    width: 80%;  
+  }
+}
+
+@media screen and (max-width: 459.9999px)
+and (min-width: 160px) {
+  .settings {
+    width: 90%;  
+  }
+}
+
+
+

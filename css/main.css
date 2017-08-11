@@ -192,6 +192,75 @@ hr {
   text-align: justify;
 }
 
+/* line 119, ../scss/base/_base.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 124, ../scss/base/_base.scss */
+.settings {
+  margin: 0 auto;
+  width: 30%;
+}
+/* line 125, ../scss/base/_base.scss */
+.settings h1 {
+  margin: 30px;
+}
+/* line 130, ../scss/base/_base.scss */
+.settings input, .settings label {
+  display: block !important;
+  margin: 20px 0px 5px;
+}
+/* line 138, ../scss/base/_base.scss */
+.settings input[type="text"],
+.settings input[type="email"],
+.settings input[type="password"],
+.settings input[type="date"] {
+  width: 100% !important;
+  height: 45px !important;
+}
+/* line 142, ../scss/base/_base.scss */
+.settings input[type="submit"] {
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 1220px) and (min-width: 910px) {
+  /* line 150, ../scss/base/_base.scss */
+  .settings {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 999.9999px) and (min-width: 730px) {
+  /* line 157, ../scss/base/_base.scss */
+  .settings {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 729.9999px) and (min-width: 610px) {
+  /* line 165, ../scss/base/_base.scss */
+  .settings {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 609.9999px) and (min-width: 520px) {
+  /* line 173, ../scss/base/_base.scss */
+  .settings {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 519.9999px) and (min-width: 460px) {
+  /* line 180, ../scss/base/_base.scss */
+  .settings {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 459.9999px) and (min-width: 160px) {
+  /* line 187, ../scss/base/_base.scss */
+  .settings {
+    width: 90%;
+  }
+}
 /* line 7, ../scss/layout/_nav.scss */
 header {
   box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5) !important;
@@ -227,14 +296,14 @@ header ul li .active {
   margin: 10px;
 }
 
-@media screen and (max-width: 435px) and (min-width: 367px) {
+@media screen and (max-width: 551px) and (min-width: 444pc) {
   /* line 41, ../scss/layout/_nav.scss */
   header {
     font-size: 18px;
   }
   /* line 45, ../scss/layout/_nav.scss */
   header ul li a {
-    padding: 25px 10px;
+    padding: 25px 5px;
   }
 
   /* line 52, ../scss/layout/_nav.scss */
@@ -243,14 +312,14 @@ header ul li .active {
     margin: 15px 10px;
   }
 }
-@media screen and (max-width: 367px) and (min-width: 323px) {
+@media screen and (max-width: 444px) and (min-width: 400px) {
   /* line 60, ../scss/layout/_nav.scss */
   header {
     font-size: 16px;
   }
   /* line 64, ../scss/layout/_nav.scss */
   header ul li a {
-    padding: 26px 8px;
+    padding: 27px 5px;
   }
 
   /* line 71, ../scss/layout/_nav.scss */
@@ -259,20 +328,36 @@ header ul li .active {
     margin: 17.5px 10px;
   }
 }
-@media screen and (max-width: 367px) {
-  /* line 79, ../scss/layout/_nav.scss */
+@media screen and (max-width: 400px) and (min-width: 365px) {
+  /* line 80, ../scss/layout/_nav.scss */
   header {
     font-size: 15px;
   }
-  /* line 83, ../scss/layout/_nav.scss */
+  /* line 84, ../scss/layout/_nav.scss */
   header ul li a {
-    padding: 26px 8px;
+    padding: 27px 5px;
   }
 
-  /* line 90, ../scss/layout/_nav.scss */
+  /* line 91, ../scss/layout/_nav.scss */
   #logo {
     height: 30px;
-    margin: 15px 10px;
+    margin: 20px 10px;
+  }
+}
+@media screen and (max-width: 365px) {
+  /* line 98, ../scss/layout/_nav.scss */
+  header {
+    font-size: 12px;
+  }
+  /* line 102, ../scss/layout/_nav.scss */
+  header ul li a {
+    padding: 28px 6px;
+  }
+
+  /* line 109, ../scss/layout/_nav.scss */
+  #logo {
+    height: 25px;
+    margin: 21px 4px;
   }
 }
 /* line 1, ../scss/layout/_footer.scss */
