@@ -3,7 +3,7 @@
   <nav>
     <div class="pull-left"><a href="main.php"><img id="logo" src="../img/logo2.png" alt="Lists"></a></div> 
   
-    <ul class="pull-right" id='btnLogIn_Out'>
+    <ul class="pull-right">
       <li><a href="main"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
       
       <?php
@@ -12,7 +12,7 @@
         }else{
           echo '';
         }?>
-      <li><a href="#"><?php
+      <li><a href="#" id='btnLogIn_Out'><?php
         if(isset($_SESSION['ID'])){
           echo '<i class="fa fa-sign-out" aria-hidden="true"></i> Log Out';
         }else{

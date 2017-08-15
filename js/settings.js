@@ -7,6 +7,21 @@ $(function() {
         $(this).parent().hide(500);
     });
 
+    $('#btnLogIn_Out').click(function() {
+        //delete cookie
+        document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/php;";
+        //redirect the user to the login page
+        location.href = 'index';
+        //the session will then be destroyed on the index page
+    });
+
+    //check if the user has pressed the enter key
+    $('.settings').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $("#saveChanges").click();
+        }
+    })
+
     //variable needed to save information about the user from the database
     var userInfo;
     //get the user information from the database
