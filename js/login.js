@@ -64,7 +64,7 @@ function verifySignUp() {
             type: "get",
             url: "../php/checkUsername.php",
             success: function(response) {
-                if (response == "success") {
+                if (response == 0) {
                     return true;
                 } else {
                     result = false;

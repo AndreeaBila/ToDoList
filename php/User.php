@@ -1,11 +1,11 @@
 <?php
   class User{
-    private $userID;
-    private $userName;
-    private $password;
-    private $salt;
-    private $email;
-    private $birth;
+    public $userID;
+    public $userName;
+    public $password;
+    public $salt;
+    public $email;
+    public $birth;
 
     function __construct($userID, $userName, $password, $salt, $email , $birth){
       $this->userID = $userID;

@@ -33,7 +33,7 @@
     <!-- My CSS -->
     <link href="../css/main.css" rel="stylesheet"> 
     <!-- Icon -->
-     <link rel="shortcut icon" href="../img/small.png"> 
+    <link rel="shortcut icon" href="../img/small.png"> 
 
     <!-- JavaScript -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,12 +52,15 @@
         include 'header.php';
       ?>
 
-      <div class="settings">
+      <form class="settings">
         <h1 class="text-center"><i class="fa fa-wrench" aria-hidden="true"></i>Account Settings</h1>
-
+        <div class="text-center alert alert-success alert-dismissable alert-custom" id="signup_successAlert">
+          <a class="close" aria-label="close">&times;</a>
+          <strong>Success!</strong> Your changes have been saved.
+        </div>
         <div class="form-group">
           <label for="username"><i class="fa fa-user-circle" aria-hidden="true"></i>Username</label>
-          <input class="form-control" type="text" name="username" id="signupUsername" placeholder="Username" required>
+          <input class="form-control" type="text" name="settingsName" id="settingsName" placeholder="Username" required>
         </div>
         <div class="text-center alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
           <a class="close" aria-label="close">&times;</a>
@@ -66,38 +69,30 @@
           
         <div class="form-group">
           <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>Email</label>
-          <input class="form-control" type="email" name="email" id="signupEmail" placeholder="Email" required>
-        </div>
-        <div class="text-center alert alert-danger alert-dismissable alert-custom" id="signup_generalAlert">
-          <a class="close" aria-label="close">&times;</a>
-          <strong>Error!</strong> The provided email address is already in use.
-        </div>
-        <div class="text-center alert alert-info alert-dismissable alert-custom" id="signup_fillDetailsAlert">
-          <a class="close" aria-label="close">&times;</a>
-          <strong>Sorry!</strong>You have to fill in all the details and a valid email adress!
+          <input class="form-control" type="email" name="settingsEmail" id="settingsEmail" placeholder="Email" required>
         </div>
 
         <div class="form-group">
           <label for="dateOfBirth"><i class="fa fa-birthday-cake" aria-hidden="true"></i>Date of Birth</label>
-          <input class="form-control" type="date" name="signupDoB" id="signupDoB" required>
+          <input class="form-control" type="date" name="settingsDob" id="settingsDob" required>
         </div>
 
         <div class="form-group">
           <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i>New Password</label>
-          <input class="form-control" type="password" name="password" id="signupPassword" placeholder="Password" required>
+          <input class="form-control" type="password" name="settingsPassword" id="settingsPassword" placeholder="Password" required>
         </div>
 
         <div class="form-group">
           <label for="Retype Password"><i class="fa fa-unlock-alt" aria-hidden="true"></i>Retype New Password</label>
-          <input class="form-control" type="password" name="password" id="signupRePassword" placeholder="Retype Password" required>
+          <input class="form-control" type="password" name="settingsRePassword" id="settingsRePassword" placeholder="Retype Password" required>
         </div>
         <div class="text-center alert alert-warning alert-dismissable alert-custom" id="signup_passwordAlert">
           <a class="close" aria-label="close">&times;</a>
           <strong>Warning!</strong> The two passwords do not match.
         </div>
 
-        <input class="myBtn" type="submit" name="saveChanges" id="saveChanges" value="Save Changes"><br>
-      </div>
+        <input class="myBtn" type="button" name="saveChanges" id="saveChanges" value="Save Changes"><br>
+      </form>
 
       
     
@@ -115,6 +110,6 @@
  
 
     <!-- The js script for this file -->
-    <script src="../js/login.js"></script>
+    <script src="../js/settings.js"></script>
   </body>
 </html>

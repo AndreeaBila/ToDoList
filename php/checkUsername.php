@@ -12,9 +12,5 @@
   $stmt->fetch();
   $stmt->close();
 
-  if($count != 0){
-    echo "error";
-  }else{
-    echo "success";
-  }
+  echo $count;
 ?>
