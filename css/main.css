@@ -221,7 +221,7 @@ html {
   height: 45px !important;
 }
 /* line 142, ../scss/base/_base.scss */
-.settings input[type="submit"] {
+.settings input[type="button"] {
   margin: 30px auto;
 }
 
