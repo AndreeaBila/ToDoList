@@ -25,7 +25,7 @@
 
   $query = "UPDATE users SET Username = ?,  Password = ?, Salt = ?, Email = ?, Birth = ? WHERE(UserID = $user->userID)";
   $stmt = $db->prepare($query);
-  $stmt->bind_param("sssss", $user->userName, $user->password, $user->salt, $user->email, $user->dob);
+  $stmt->bind_param("sssss", $user->userName, $user->password, $user->salt, $user->email, $user->birth);
   $stmt->execute();
   $stmt->close();
 ?>
